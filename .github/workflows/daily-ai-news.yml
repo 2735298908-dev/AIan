@@ -2,6 +2,7 @@ name: AI前沿日报
 
 on:
   push:
+    # 临时用于验证模型雷达的硬过滤；验证后移除。
     paths:
       - ".github/workflows/daily-ai-news.yml"
   schedule:
