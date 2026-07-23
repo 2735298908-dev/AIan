@@ -1,4 +1,51 @@
 {
   "version": 1,
-  "items": []
+  "updated_at": "2026-07-23T11:22:30.391848+00:00",
+  "items": [
+    {
+      "url": "https://www.anthropic.com/news/claude-sonnet-4-6",
+      "title_key": "introducingsonnet46",
+      "reported_at": "2026-07-23T11:22:30.391848+00:00"
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-sonnet-5",
+      "title_key": "introducingclaudesonnet5",
+      "reported_at": "2026-07-23T11:22:30.391848+00:00"
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-opus-4-8",
+      "title_key": "introducingclaudeopus48",
+      "reported_at": "2026-07-23T11:22:30.391848+00:00"
+    },
+    {
+      "url": "https://openai.com/index/ntt-data",
+      "title_key": "nttdatagroupcutsincidentanalysisto30minuteswithcodex",
+      "reported_at": "2026-07-23T11:22:30.391848+00:00"
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-for-small-business",
+      "title_key": "introducingclaudeforsmallbusiness",
+      "reported_at": "2026-07-23T11:22:30.391848+00:00"
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
+      "title_key": "introducingclaudedesignbyanthropiclabs",
+      "reported_at": "2026-07-23T11:22:30.391848+00:00"
+    },
+    {
+      "url": "https://www.anthropic.com/news/skills",
+      "title_key": "introducingagentskillsclaudebyanthropic",
+      "reported_at": "2026-07-23T11:22:30.391848+00:00"
+    },
+    {
+      "url": "https://openai.com/index/introducing-openai-presence",
+      "title_key": "introducingopenaipresence",
+      "reported_at": "2026-07-23T11:22:30.391848+00:00"
+    },
+    {
+      "url": "https://deepmind.google/blog/accelerating-the-frontiers-of-scientific-discovery-googles-40m-commitment-to-the-genesis-mission",
+      "title_key": "acceleratingthefrontiersofscientificdiscoverygoogles40mcommitmenttothegenesismission",
+      "reported_at": "2026-07-23T11:22:30.391848+00:00"
+    }
+  ]
 }
