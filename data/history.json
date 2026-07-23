@@ -1,4 +1,31 @@
 {
   "version": 1,
-  "items": []
+  "updated_at": "2026-07-23T11:32:05.222592+00:00",
+  "items": [
+    {
+      "url": "https://openai.com/index/introducing-openai-presence",
+      "title_key": "introducingopenaipresence",
+      "reported_at": "2026-07-23T11:32:05.222592+00:00"
+    },
+    {
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.145.0",
+      "title_key": "01450",
+      "reported_at": "2026-07-23T11:32:05.222592+00:00"
+    },
+    {
+      "url": "https://openai.com/index/ntt-data",
+      "title_key": "nttdatagroupcutsincidentanalysisto30minuteswithcodex",
+      "reported_at": "2026-07-23T11:32:05.222592+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/medical-physics-simulation-open-source",
+      "title_key": "nvidiaopensourcesfirstgpuacceleratedmedicalphysicssimulationframework",
+      "reported_at": "2026-07-23T11:32:05.222592+00:00"
+    },
+    {
+      "url": "https://deepmind.google/blog/accelerating-the-frontiers-of-scientific-discovery-googles-40m-commitment-to-the-genesis-mission",
+      "title_key": "acceleratingthefrontiersofscientificdiscoverygoogles40mcommitmenttothegenesismission",
+      "reported_at": "2026-07-23T11:32:05.222592+00:00"
+    }
+  ]
 }
