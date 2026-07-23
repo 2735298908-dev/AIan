@@ -1,6 +1,11 @@
 name: AI前沿日报
 
 on:
+  # 临时/配置变更验证：仅工作流文件本身更新时触发。
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/daily-ai-news.yml"
   schedule:
     # GitHub Actions 使用 UTC；01:00 UTC = 北京时间/台北时间 09:00。
     - cron: "0 1 * * *"
