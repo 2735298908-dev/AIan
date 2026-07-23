@@ -490,6 +490,33 @@ def is_model_relevant(item: NewsItem) -> bool:
     return has_capability_term and has_update_action and not has_noise and not is_unstable_tool_build
 
 
+def should_keep_selected(item: NewsItem, importance: str, capability_change: str) -> bool:
+    if not is_model_relevant(item):
+        return False
+    # GitHub release feeds are noisy and often publish SDK/CLI patch versions.
+    # B-level entries from these feeds are not strong enough for a PM daily.
+    if item.source_type == "official_github_release" and importance == "B":
+        return False
+    generic_change = clean_text(capability_change, 300).lower()
+    if re.fullmatch(
+        r"(?:发布了?|released?)?(?:版本|version)?\s*v?\d+(?:\.\d+){1,3}[。.]?",
+        generic_change,
+        flags=re.I,
+    ):
+        return False
+    if any(
+        phrase in generic_change
+        for phrase in (
+            "详情请查看原文",
+            "check the release notes",
+            "可能包含重要",
+            "may include improvements",
+        )
+    ):
+        return False
+    return True
+
+
 def extract_json_object(value: str) -> dict[str, Any]:
     value = value.strip()
     if value.startswith("```"):
@@ -583,6 +610,11 @@ B：与模型选型有关但影响较小的能力或可用范围扩展。
         if importance not in {"S", "A", "B"}:
             continue
         source = items[item_id]
+        capability_change = clean_text(
+            str(analysis.get("capability_change") or source.description), 300
+        )
+        if not should_keep_selected(source, importance, capability_change):
+            continue
         used_ids.add(item_id)
         valid.append(
             {
@@ -592,9 +624,7 @@ B：与模型选型有关但影响较小的能力或可用范围扩展。
                     str(analysis.get("model_or_product") or source.platform), 80
                 ),
                 "version": clean_text(str(analysis.get("version") or ""), 40),
-                "capability_change": clean_text(
-                    str(analysis.get("capability_change") or source.description), 300
-                ),
+                "capability_change": capability_change,
                 "type": clean_text(str(analysis.get("type") or source.category), 40),
                 "pm_judgement": clean_text(
                     str(
