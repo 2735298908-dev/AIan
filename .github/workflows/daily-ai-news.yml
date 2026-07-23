@@ -1,10 +1,6 @@
 name: AI前沿日报
 
 on:
-  push:
-    # 临时用于验证模型雷达的硬过滤；验证后移除。
-    paths:
-      - ".github/workflows/daily-ai-news.yml"
   schedule:
     # GitHub Actions 使用 UTC；01:00 UTC = 北京时间/台北时间 09:00。
     - cron: "0 1 * * *"
