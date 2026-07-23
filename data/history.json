@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-07-23T11:32:05.222592+00:00",
+  "updated_at": "2026-07-23T12:01:53.622705+00:00",
   "items": [
     {
       "url": "https://openai.com/index/introducing-openai-presence",
@@ -26,6 +26,46 @@
       "url": "https://deepmind.google/blog/accelerating-the-frontiers-of-scientific-discovery-googles-40m-commitment-to-the-genesis-mission",
       "title_key": "acceleratingthefrontiersofscientificdiscoverygoogles40mcommitmenttothegenesismission",
       "reported_at": "2026-07-23T11:32:05.222592+00:00"
+    },
+    {
+      "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.4.0",
+      "title_key": "langchainopenai140",
+      "reported_at": "2026-07-23T12:01:53.622705+00:00"
+    },
+    {
+      "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-xai%3D%3D1.3.0",
+      "title_key": "langchainxai130",
+      "reported_at": "2026-07-23T12:01:53.622705+00:00"
+    },
+    {
+      "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-fireworks%3D%3D1.5.0",
+      "title_key": "langchainfireworks150",
+      "reported_at": "2026-07-23T12:01:53.622705+00:00"
+    },
+    {
+      "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-anthropic%3D%3D1.5.0",
+      "title_key": "langchainanthropic150",
+      "reported_at": "2026-07-23T12:01:53.622705+00:00"
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.217",
+      "title_key": "v21217",
+      "reported_at": "2026-07-23T12:01:53.622705+00:00"
+    },
+    {
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.52.0-nightly.20260722.gc776c665b",
+      "title_key": "releasev0520nightly20260722gc776c665b",
+      "reported_at": "2026-07-23T12:01:53.622705+00:00"
+    },
+    {
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.146.0-alpha.1",
+      "title_key": "01460alpha1",
+      "reported_at": "2026-07-23T12:01:53.622705+00:00"
+    },
+    {
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.146.0-alpha.2",
+      "title_key": "01460alpha2",
+      "reported_at": "2026-07-23T12:01:53.622705+00:00"
     }
   ]
 }
