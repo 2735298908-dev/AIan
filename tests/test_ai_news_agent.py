@@ -28,6 +28,21 @@ RSS = b"""<?xml version="1.0"?>
   </item>
 </channel></rss>"""
 
+SITEMAP = b"""<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://example.com/news/old-post</loc>
+    <lastmod>2026-07-22T08:00:00Z</lastmod>
+  </url>
+</urlset>"""
+
+OLD_PAGE = b"""<!doctype html><html><head>
+<title>Old announcement</title>
+<script type="application/ld+json">
+{"@type":"NewsArticle","datePublished":"2025-10-16T08:00:00Z"}
+</script>
+</head><body><h1>Old announcement</h1></body></html>"""
+
 
 class AgentTests(unittest.TestCase):
     def setUp(self):
@@ -76,6 +91,24 @@ class AgentTests(unittest.TestCase):
         serialized = json.dumps(payload, ensure_ascii=False)
         self.assertIn("AI前沿日报", serialized)
         self.assertIn("2026-07-22", serialized)
+
+    def test_sitemap_lastmod_does_not_republish_old_article(self):
+        source = {
+            "platform": "Example",
+            "category": "全球大模型",
+            "kind": "sitemap",
+            "source_type": "official_sitemap",
+            "url": "https://example.com/sitemap.xml",
+            "include": ["/news/"],
+            "max_pages": 5,
+        }
+
+        def fake_fetch(url, timeout=agent.REQUEST_TIMEOUT):
+            return SITEMAP if url.endswith("sitemap.xml") else OLD_PAGE
+
+        with patch.object(agent, "fetch_bytes", side_effect=fake_fetch):
+            items = agent.parse_sitemap(source, self.start, self.end)
+        self.assertEqual(items, [])
 
     def test_report_day_defaults_to_yesterday(self):
         with patch.dict(os.environ, {"REPORT_DATE": "2026-07-22"}):
