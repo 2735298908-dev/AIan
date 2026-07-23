@@ -66,12 +66,21 @@ class PageMetadataParser(HTMLParser):
         super().__init__()
         self.title_parts: list[str] = []
         self.in_title = False
+        self.in_json_ld = False
+        self.current_json_ld: list[str] = []
+        self.json_ld_blocks: list[str] = []
+        self.time_values: list[str] = []
         self.meta: dict[str, str] = {}
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         attrs_dict = {k.lower(): v or "" for k, v in attrs}
         if tag.lower() == "title":
             self.in_title = True
+        if tag.lower() == "script" and attrs_dict.get("type", "").lower() == "application/ld+json":
+            self.in_json_ld = True
+            self.current_json_ld = []
+        if tag.lower() == "time" and attrs_dict.get("datetime"):
+            self.time_values.append(attrs_dict["datetime"].strip())
         if tag.lower() == "meta":
             key = (attrs_dict.get("property") or attrs_dict.get("name") or "").lower()
             content = attrs_dict.get("content", "").strip()
@@ -81,14 +90,50 @@ class PageMetadataParser(HTMLParser):
     def handle_endtag(self, tag: str) -> None:
         if tag.lower() == "title":
             self.in_title = False
+        if tag.lower() == "script" and self.in_json_ld:
+            self.in_json_ld = False
+            block = "".join(self.current_json_ld).strip()
+            if block:
+                self.json_ld_blocks.append(block)
+            self.current_json_ld = []
 
     def handle_data(self, data: str) -> None:
         if self.in_title:
             self.title_parts.append(data)
+        if self.in_json_ld:
+            self.current_json_ld.append(data)
 
     @property
     def title(self) -> str:
         return " ".join(part.strip() for part in self.title_parts if part.strip())
+
+    @property
+    def json_ld_published(self) -> str:
+        def find_date(value: Any) -> str:
+            if isinstance(value, dict):
+                published = value.get("datePublished")
+                if isinstance(published, str) and published.strip():
+                    return published.strip()
+                for child in value.values():
+                    found = find_date(child)
+                    if found:
+                        return found
+            elif isinstance(value, list):
+                for child in value:
+                    found = find_date(child)
+                    if found:
+                        return found
+            return ""
+
+        for block in self.json_ld_blocks:
+            try:
+                found = find_date(json.loads(block))
+            except json.JSONDecodeError:
+                match = re.search(r'"datePublished"\s*:\s*"([^"]+)"', block, flags=re.I)
+                found = match.group(1) if match else ""
+            if found:
+                return found
+        return ""
 
 
 def log(message: str) -> None:
@@ -152,7 +197,13 @@ def parse_datetime(value: str) -> datetime | None:
             parsed = parsed.replace(tzinfo=timezone.utc)
         return parsed.astimezone(timezone.utc)
     except ValueError:
-        return None
+        pass
+    for pattern in ("%b %d, %Y", "%B %d, %Y"):
+        try:
+            return datetime.strptime(value, pattern).replace(tzinfo=REPORT_TZ).astimezone(timezone.utc)
+        except ValueError:
+            continue
+    return None
 
 
 def clean_text(value: str, limit: int = 700) -> str:
@@ -236,8 +287,9 @@ def sitemap_records(raw: bytes) -> tuple[str, list[tuple[str, str]]]:
 
 def page_metadata(url: str) -> tuple[str, str, datetime | None]:
     raw = fetch_bytes(url)
+    raw_text = raw.decode("utf-8", errors="ignore")
     parser = PageMetadataParser()
-    parser.feed(raw.decode("utf-8", errors="ignore"))
+    parser.feed(raw_text)
     title = (
         parser.meta.get("og:title")
         or parser.meta.get("twitter:title")
@@ -249,12 +301,51 @@ def page_metadata(url: str) -> tuple[str, str, datetime | None]:
         or parser.meta.get("description")
         or ""
     )
-    published = parse_datetime(
+    published_raw = (
         parser.meta.get("article:published_time")
         or parser.meta.get("date")
         or parser.meta.get("datepublished")
+        or parser.json_ld_published
+        or (parser.time_values[0] if parser.time_values else "")
         or ""
     )
+    if not published_raw:
+        # Some Next.js/Sanity sites expose the canonical post creation timestamp
+        # only inside their serialized page state.
+        state_match = re.search(
+            r'(?:\\?"post\\?"\s*:\s*\{.{0,500}?\\?"_createdAt\\?"\s*:\s*\\?")'
+            r'([^"\\]+)',
+            raw_text,
+            flags=re.I | re.S,
+        )
+        if state_match:
+            published_raw = state_match.group(1)
+    if not published_raw:
+        # Final fallback for official article templates that print the date near
+        # the heading but omit machine-readable publication metadata.
+        visible = re.sub(r"<script\b[^>]*>.*?</script>", " ", raw_text, flags=re.I | re.S)
+        visible = re.sub(r"<style\b[^>]*>.*?</style>", " ", visible, flags=re.I | re.S)
+        visible = clean_text(visible, 1800)
+        date_match = re.search(
+            r"\b(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|"
+            r"Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|"
+            r"Nov(?:ember)?|Dec(?:ember)?)\s+\d{1,2},\s+\d{4}\b",
+            visible,
+            flags=re.I,
+        )
+        if date_match:
+            try:
+                published_raw = datetime.strptime(date_match.group(0), "%b %d, %Y").replace(
+                    tzinfo=REPORT_TZ
+                ).isoformat()
+            except ValueError:
+                try:
+                    published_raw = datetime.strptime(
+                        date_match.group(0), "%B %d, %Y"
+                    ).replace(tzinfo=REPORT_TZ).isoformat()
+                except ValueError:
+                    published_raw = ""
+    published = parse_datetime(published_raw)
     return clean_text(title, 300), clean_text(description, 700), published
 
 
@@ -289,8 +380,9 @@ def parse_sitemap(source: dict[str, Any], start: datetime, end: datetime) -> lis
         except Exception as exc:  # noqa: BLE001
             log(f"页面元数据读取失败：{url} ({exc})")
             continue
-        effective_time = published or modified
-        if not title or not within_window(effective_time, start, end):
+        # Sitemap lastmod is only a fetch hint. A page is eligible only when the
+        # page itself exposes a publication timestamp inside the report window.
+        if not title or published is None or not within_window(published, start, end):
             continue
         items.append(
             NewsItem(
@@ -299,7 +391,7 @@ def parse_sitemap(source: dict[str, Any], start: datetime, end: datetime) -> lis
                 source_type=source.get("source_type", "official_sitemap"),
                 title=title,
                 url=normalize_url(url),
-                published_at=effective_time.astimezone(REPORT_TZ).isoformat(),
+                published_at=published.astimezone(REPORT_TZ).isoformat(),
                 description=description,
             )
         )
