@@ -54,6 +54,15 @@
       "url": "https://huggingface.co/blog/feed.xml"
     },
     {
+      "platform": "FLUX / Black Forest Labs",
+      "category": "多模态与图像",
+      "kind": "sitemap",
+      "source_type": "official_sitemap",
+      "url": "https://bfl.ai/sitemap.xml",
+      "include": ["/blog/"],
+      "max_pages": 12
+    },
+    {
       "platform": "GitHub AI",
       "category": "AI编程",
       "kind": "feed",
@@ -78,7 +87,7 @@
     },
     {
       "platform": "Stability AI",
-      "category": "AIGC视频",
+      "category": "多模态与图像",
       "kind": "sitemap",
       "source_type": "official_sitemap",
       "url": "https://stability.ai/sitemap.xml",
@@ -93,6 +102,31 @@
       "url": "https://runwayml.com/sitemap.xml",
       "include": ["/news/", "/research/", "/blog/"],
       "max_pages": 12
+    },
+    {
+      "platform": "Midjourney",
+      "category": "多模态与图像",
+      "kind": "sitemap",
+      "source_type": "official_sitemap",
+      "url": "https://updates.midjourney.com/sitemap.xml",
+      "include": ["updates.midjourney.com/"],
+      "max_pages": 12
+    },
+    {
+      "platform": "Luma AI",
+      "category": "AIGC视频",
+      "kind": "sitemap",
+      "source_type": "official_sitemap",
+      "url": "https://lumalabs.ai/news/sitemap.xml",
+      "include": ["/news/"],
+      "max_pages": 12
+    },
+    {
+      "platform": "PixVerse",
+      "category": "AIGC视频",
+      "kind": "feed",
+      "source_type": "official_github_release",
+      "url": "https://github.com/PixVerseAI/cli/releases.atom"
     },
     {
       "platform": "LangChain",
@@ -156,6 +190,15 @@
       "kind": "feed",
       "source_type": "official_github_release",
       "url": "https://github.com/QwenLM/Qwen3/releases.atom"
+    },
+    {
+      "platform": "豆包 / ByteDance Seed",
+      "category": "国内大模型与多模态",
+      "kind": "sitemap",
+      "source_type": "official_sitemap",
+      "url": "https://seed.bytedance.com/sitemap.xml",
+      "include": ["/blog/"],
+      "max_pages": 12
     },
     {
       "platform": "DeepSeek",
