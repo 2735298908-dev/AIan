@@ -1,0 +1,217 @@
+{
+  "sources": [
+    {
+      "platform": "OpenAI",
+      "category": "全球大模型",
+      "kind": "feed",
+      "source_type": "official_feed",
+      "url": "https://openai.com/news/rss.xml"
+    },
+    {
+      "platform": "Google AI",
+      "category": "全球大模型",
+      "kind": "feed",
+      "source_type": "official_feed",
+      "url": "https://blog.google/technology/ai/rss/"
+    },
+    {
+      "platform": "Google DeepMind",
+      "category": "全球大模型",
+      "kind": "feed",
+      "source_type": "official_feed",
+      "url": "https://deepmind.google/blog/rss.xml"
+    },
+    {
+      "platform": "Anthropic",
+      "category": "全球大模型",
+      "kind": "sitemap",
+      "source_type": "official_sitemap",
+      "url": "https://www.anthropic.com/sitemap.xml",
+      "include": ["/news/", "/research/"],
+      "max_pages": 12
+    },
+    {
+      "platform": "Meta Llama",
+      "category": "全球大模型",
+      "kind": "feed",
+      "source_type": "official_github_release",
+      "url": "https://github.com/meta-llama/llama-models/releases.atom"
+    },
+    {
+      "platform": "Mistral AI",
+      "category": "全球大模型",
+      "kind": "sitemap",
+      "source_type": "official_sitemap",
+      "url": "https://mistral.ai/sitemap-index.xml",
+      "include": ["/news/"],
+      "max_pages": 12
+    },
+    {
+      "platform": "Hugging Face",
+      "category": "开源生态",
+      "kind": "feed",
+      "source_type": "official_feed",
+      "url": "https://huggingface.co/blog/feed.xml"
+    },
+    {
+      "platform": "GitHub AI",
+      "category": "AI编程",
+      "kind": "feed",
+      "source_type": "official_feed",
+      "url": "https://github.blog/ai-and-ml/feed/"
+    },
+    {
+      "platform": "Microsoft AI",
+      "category": "全球大模型",
+      "kind": "sitemap",
+      "source_type": "official_sitemap",
+      "url": "https://news.microsoft.com/source/sitemap.xml",
+      "include": ["/ai/"],
+      "max_pages": 12
+    },
+    {
+      "platform": "NVIDIA Generative AI",
+      "category": "开源生态",
+      "kind": "feed",
+      "source_type": "official_feed",
+      "url": "https://blogs.nvidia.com/blog/category/generative-ai/feed/"
+    },
+    {
+      "platform": "Stability AI",
+      "category": "AIGC视频",
+      "kind": "sitemap",
+      "source_type": "official_sitemap",
+      "url": "https://stability.ai/sitemap.xml",
+      "include": ["/news/"],
+      "max_pages": 12
+    },
+    {
+      "platform": "Runway",
+      "category": "AIGC视频",
+      "kind": "sitemap",
+      "source_type": "official_sitemap",
+      "url": "https://runwayml.com/sitemap.xml",
+      "include": ["/news/", "/research/", "/blog/"],
+      "max_pages": 12
+    },
+    {
+      "platform": "LangChain",
+      "category": "Agent",
+      "kind": "feed",
+      "source_type": "official_github_release",
+      "url": "https://github.com/langchain-ai/langchain/releases.atom"
+    },
+    {
+      "platform": "OpenAI Codex",
+      "category": "AI编程",
+      "kind": "feed",
+      "source_type": "official_github_release",
+      "url": "https://github.com/openai/codex/releases.atom"
+    },
+    {
+      "platform": "Claude Code",
+      "category": "AI编程",
+      "kind": "feed",
+      "source_type": "official_github_release",
+      "url": "https://github.com/anthropics/claude-code/releases.atom"
+    },
+    {
+      "platform": "Gemini CLI",
+      "category": "AI编程",
+      "kind": "feed",
+      "source_type": "official_github_release",
+      "url": "https://github.com/google-gemini/gemini-cli/releases.atom"
+    },
+    {
+      "platform": "Model Context Protocol",
+      "category": "Agent",
+      "kind": "feed",
+      "source_type": "official_github_release",
+      "url": "https://github.com/modelcontextprotocol/specification/releases.atom"
+    },
+    {
+      "platform": "Transformers",
+      "category": "开源生态",
+      "kind": "feed",
+      "source_type": "official_github_release",
+      "url": "https://github.com/huggingface/transformers/releases.atom"
+    },
+    {
+      "platform": "LangGraph",
+      "category": "Agent",
+      "kind": "feed",
+      "source_type": "official_github_release",
+      "url": "https://github.com/langchain-ai/langgraph/releases.atom"
+    },
+    {
+      "platform": "Microsoft AutoGen",
+      "category": "Agent",
+      "kind": "feed",
+      "source_type": "official_github_release",
+      "url": "https://github.com/microsoft/autogen/releases.atom"
+    },
+    {
+      "platform": "Qwen",
+      "category": "国内大模型",
+      "kind": "feed",
+      "source_type": "official_github_release",
+      "url": "https://github.com/QwenLM/Qwen3/releases.atom"
+    },
+    {
+      "platform": "DeepSeek",
+      "category": "国内大模型",
+      "kind": "feed",
+      "source_type": "official_github_release",
+      "url": "https://github.com/deepseek-ai/DeepSeek-V3/releases.atom"
+    },
+    {
+      "platform": "智谱 GLM",
+      "category": "国内大模型",
+      "kind": "feed",
+      "source_type": "official_github_release",
+      "url": "https://github.com/THUDM/GLM-4/releases.atom"
+    },
+    {
+      "platform": "腾讯混元",
+      "category": "国内大模型",
+      "kind": "feed",
+      "source_type": "official_github_release",
+      "url": "https://github.com/Tencent-Hunyuan/HunyuanVideo/releases.atom"
+    },
+    {
+      "platform": "Kimi",
+      "category": "国内大模型",
+      "kind": "feed",
+      "source_type": "official_github_release",
+      "url": "https://github.com/MoonshotAI/Kimi-K2/releases.atom"
+    },
+    {
+      "platform": "MiniMax",
+      "category": "国内大模型",
+      "kind": "feed",
+      "source_type": "official_github_release",
+      "url": "https://github.com/MiniMax-AI/MiniMax-01/releases.atom"
+    },
+    {
+      "platform": "ComfyUI",
+      "category": "AIGC视频",
+      "kind": "feed",
+      "source_type": "official_github_release",
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases.atom"
+    },
+    {
+      "platform": "LTX Video",
+      "category": "AIGC视频",
+      "kind": "feed",
+      "source_type": "official_github_release",
+      "url": "https://github.com/Lightricks/LTX-Video/releases.atom"
+    },
+    {
+      "platform": "Wan Video",
+      "category": "AIGC视频",
+      "kind": "feed",
+      "source_type": "official_github_release",
+      "url": "https://github.com/Wan-Video/Wan2.1/releases.atom"
+    }
+  ]
+}
