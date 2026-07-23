@@ -147,6 +147,32 @@ class AgentTests(unittest.TestCase):
         self.assertFalse(agent.is_model_relevant(item))
         self.assertEqual(agent.fallback_analysis([item]), [])
 
+    def test_llm_postfilter_excludes_b_level_github_patch(self):
+        item = agent.NewsItem(
+            platform="Example SDK",
+            category="Agent",
+            source_type="official_github_release",
+            title="Example SDK 1.4.0 released",
+            url="https://example.com/releases/1.4.0",
+            published_at="2026-07-22T16:30:00+08:00",
+            description="Added model reasoning support.",
+        )
+        self.assertTrue(agent.is_model_relevant(item))
+        self.assertFalse(
+            agent.should_keep_selected(
+                item,
+                "B",
+                "新增 reasoning_effort 作为标准聊天模型参数。",
+            )
+        )
+        self.assertTrue(
+            agent.should_keep_selected(
+                item,
+                "A",
+                "新增 reasoning_effort 作为标准聊天模型参数。",
+            )
+        )
+
     def test_empty_report_is_concise(self):
         markdown = agent.build_markdown(date(2026, 7, 22), [])
         self.assertEqual(
