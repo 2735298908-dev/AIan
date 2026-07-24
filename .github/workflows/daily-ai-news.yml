@@ -2,8 +2,8 @@ name: AI前沿日报
 
 on:
   schedule:
-    # GitHub Actions 使用 UTC；01:00 UTC = 北京时间/台北时间 09:00。
-    - cron: "0 1 * * *"
+    # GitHub Actions 使用 UTC；01:07 UTC = 北京时间/台北时间 09:07。
+    - cron: "7 1 * * *"
   workflow_dispatch:
     inputs:
       report_date:
