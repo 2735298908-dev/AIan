@@ -1,0 +1,16 @@
+{
+  "providers": {
+    "Anthropic": {},
+    "OpenAI": {
+      "01KY7SX5MYJ2BP51X5MXAPYX71": {
+        "last_seen_at": "2026-07-24T10:53:41.734385+00:00",
+        "seen_update_ids": [
+          "01KY9SDQCZZJEW0Y4H1ZGFZTDE"
+        ],
+        "status": "investigating",
+        "url": "https://status.openai.com/incidents/01KY7SX5MYJ2BP51X5MXAPYX71"
+      }
+    }
+  },
+  "version": 1
+}
