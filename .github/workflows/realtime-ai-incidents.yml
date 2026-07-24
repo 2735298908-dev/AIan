@@ -1,0 +1,48 @@
+name: AI重大事件实时提醒
+
+on:
+  schedule:
+    # 避开整点拥堵；每小时第 17 分钟检查一次官方状态页。
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: realtime-ai-incidents
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run unit tests
+        run: python -m unittest tests/test_realtime_incidents.py
+
+      - name: Check official status pages and notify Feishu
+        run: python scripts/realtime_incidents.py
+
+      - name: Save incident history and archive
+        run: |
+          if [ -z "$(git status --porcelain -- data/incident_history.json reports/incidents)" ]; then
+            echo "No incident history changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/incident_history.json reports/incidents
+          git commit -m "chore: archive AI incident updates"
+          git push
