@@ -1,6 +1,12 @@
 name: AI重大事件实时提醒
 
 on:
+  push:
+    branches: ["main"]
+    paths:
+      - "scripts/realtime_incidents.py"
+      - "tests/test_realtime_incidents.py"
+      - ".github/workflows/realtime-ai-incidents.yml"
   schedule:
     # 避开整点拥堵；每小时第 17 分钟检查一次官方状态页。
     - cron: "17 * * * *"
