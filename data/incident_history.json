@@ -3,11 +3,22 @@
     "Anthropic": {},
     "OpenAI": {
       "01KY7SX5MYJ2BP51X5MXAPYX71": {
-        "last_seen_at": "2026-07-24T10:53:41.734385+00:00",
+        "last_seen_at": "2026-07-24T12:48:11.306732+00:00",
         "seen_update_ids": [
-          "01KY9SDQCZZJEW0Y4H1ZGFZTDE"
+          "01KY9SDQCZZJEW0Y4H1ZGFZTDE",
+          "01KY7SX5MYV7JPQM5NH3SNH78C",
+          "01KY7V3ER2KQJ6D9CZS7RWYFY3",
+          "01KY7VRTRVZW4P8CP2HD3QDA2B",
+          "01KY7Y2JHMRDD5J152X07QDXN6",
+          "01KY80SSJRNY7HQTN6EAMRPXTM",
+          "01KY821XANJW81DRW1QM1DT8T1",
+          "01KY851B3YG8BZ4G0FH47HBHNT",
+          "01KY87Q0KM4ZVYQF7ZYRCYZ0Y9",
+          "01KY8AA832N7X7DPQDE6ZQDEKD",
+          "01KY9RWP44A0CW91SNMP7328X4",
+          "01KY9YFAD7CTCVSCF24EZEKQDQ"
         ],
-        "status": "investigating",
+        "status": "monitoring",
         "url": "https://status.openai.com/incidents/01KY7SX5MYJ2BP51X5MXAPYX71"
       }
     }
