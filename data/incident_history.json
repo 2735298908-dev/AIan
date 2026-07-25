@@ -21,6 +21,14 @@
         ],
         "status": "resolved",
         "url": "https://status.openai.com/incidents/01KY7SX5MYJ2BP51X5MXAPYX71"
+      },
+      "01KYC921K145JTR1JK7DYKGWH1": {
+        "last_seen_at": "2026-07-25T10:47:41.390935+00:00",
+        "seen_update_ids": [
+          "01KYCBMHZXTH3570W6N4JB1TN5"
+        ],
+        "status": "monitoring",
+        "url": "https://status.openai.com/incidents/01KYC921K145JTR1JK7DYKGWH1"
       }
     }
   },
