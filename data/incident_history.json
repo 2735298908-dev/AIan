@@ -2,11 +2,13 @@
   "providers": {
     "Anthropic": {
       "f1q2wvw4qj4j": {
-        "last_seen_at": "2026-07-25T19:37:18.191584+00:00",
+        "last_seen_at": "2026-07-25T21:11:24.308265+00:00",
         "seen_update_ids": [
-          "sc3crgr5vkm5"
+          "sc3crgr5vkm5",
+          "yfq1ldw442g1",
+          "86083w73kt6t"
         ],
-        "status": "identified",
+        "status": "resolved",
         "url": "https://stspg.io/zkm687kx885m"
       }
     },
