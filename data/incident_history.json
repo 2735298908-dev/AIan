@@ -1,6 +1,15 @@
 {
   "providers": {
-    "Anthropic": {},
+    "Anthropic": {
+      "f1q2wvw4qj4j": {
+        "last_seen_at": "2026-07-25T19:37:18.191584+00:00",
+        "seen_update_ids": [
+          "sc3crgr5vkm5"
+        ],
+        "status": "identified",
+        "url": "https://stspg.io/zkm687kx885m"
+      }
+    },
     "OpenAI": {
       "01KY7SX5MYJ2BP51X5MXAPYX71": {
         "last_seen_at": "2026-07-24T20:41:54.495888+00:00",
