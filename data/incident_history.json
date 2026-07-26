@@ -12,11 +12,15 @@
         "url": "https://stspg.io/zkm687kx885m"
       },
       "zftg3gqkmv18": {
-        "last_seen_at": "2026-07-26T10:13:54.302798+00:00",
+        "last_seen_at": "2026-07-26T11:39:01.303613+00:00",
         "seen_update_ids": [
-          "m9v3mctj9zz8"
+          "m9v3mctj9zz8",
+          "g9fbzqlcyz73",
+          "zgdkyczhzhr7",
+          "lryn3d5jly81",
+          "n9qv2c3yn4nv"
         ],
-        "status": "identified",
+        "status": "resolved",
         "url": "https://stspg.io/jrz1yk46f9xp"
       }
     },
