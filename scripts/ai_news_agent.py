@@ -531,6 +531,28 @@ def extract_json_object(value: str) -> dict[str, Any]:
         return json.loads(match.group(0))
 
 
+def normalize_evaluation_fields(analysis: dict[str, Any]) -> dict[str, str]:
+    """Keep evaluation claims traceable and never present official claims as hands-on tests."""
+    basis = clean_text(str(analysis.get("evaluation_basis") or "待实测"), 40)
+    if basis not in {"官方基准", "官方案例", "待实测"}:
+        basis = "待实测"
+
+    if basis == "待实测":
+        return {
+            "evaluation_basis": basis,
+            "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+            "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+        }
+
+    strengths = clean_text(str(analysis.get("evaluation_strengths") or ""), 220)
+    weaknesses = clean_text(str(analysis.get("evaluation_weaknesses") or ""), 220)
+    return {
+        "evaluation_basis": basis,
+        "evaluation_strengths": strengths or f"{basis}显示能力有所提升，仍需用自有业务样本复核。",
+        "evaluation_weaknesses": weaknesses or "官方材料未披露明确不足，仍需验证边界场景、稳定性、时延与成本。",
+    }
+
+
 def call_github_models(items: list[NewsItem], report_day: date) -> list[dict[str, Any]]:
     token = os.getenv("GITHUB_TOKEN", "").strip()
     if not token:
@@ -566,7 +588,14 @@ B：与模型选型有关但影响较小的能力或可用范围扩展。
 "capability_change":"核心变化，1-2句，只写已核验事实",
 "type":"旗舰模型|模型升级|多模态|图像生成|视频生成|音频语音|API与价格|开源权重|Agent与编程",
 "pm_judgement":"对能力边界、模型选型、成本或产品体验的判断，1句",
+"evaluation_basis":"只能是：官方基准|官方案例|待实测",
+"evaluation_strengths":"有官方评测证据时写其显示的优点；无证据时写建议验证的优点方向，1句",
+"evaluation_weaknesses":"有官方评测证据时写其显示的不足；无证据时写建议验证的风险方向，1句",
 "recommended_action":"AI产品经理下一步建议，1句"}]}
+测评字段规则：输入只有官方材料。只有原文明确提供基准结果或生成案例时，evaluation_basis 才能写
+“官方基准”或“官方案例”；否则必须写“待实测”。不得把官方宣传写成独立实测，也不得声称你亲自
+调用过模型。待实测时只给出后续应验证的方向，不得下确定性优缺点结论。
+
 最多选择 10 条。id 必须来自输入；不要修改或编造链接。若没有符合标准的内容，返回 {"items":[]}。"""
     user_prompt = json.dumps(
         {"report_date": report_day.isoformat(), "candidates": candidates},
@@ -576,7 +605,7 @@ B：与模型选型有关但影响较小的能力或可用范围扩展。
     payload = {
         "model": MODEL_NAME,
         "temperature": 0.1,
-        "max_tokens": 2600,
+        "max_tokens": 3800,
         "response_format": {"type": "json_object"},
         "messages": [
             {"role": "system", "content": system_prompt},
@@ -616,6 +645,7 @@ B：与模型选型有关但影响较小的能力或可用范围扩展。
         if not should_keep_selected(source, importance, capability_change):
             continue
         used_ids.add(item_id)
+        evaluation = normalize_evaluation_fields(analysis)
         valid.append(
             {
                 "importance": importance,
@@ -633,6 +663,7 @@ B：与模型选型有关但影响较小的能力或可用范围扩展。
                     ),
                     220,
                 ),
+                **evaluation,
                 "recommended_action": clean_text(
                     str(
                         analysis.get("recommended_action")
@@ -677,6 +708,9 @@ def fallback_analysis(items: list[NewsItem]) -> list[dict[str, Any]]:
                 "capability_change": item.description or "官方信源发布了模型或能力更新。",
                 "type": item.category,
                 "pm_judgement": "该更新可能影响 AI 产品的能力边界、模型选型或成本。",
+                "evaluation_basis": "待实测",
+                "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+                "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
                 "recommended_action": "建议阅读官方原文，并结合业务场景完成小样本评测。",
                 "platform": item.platform,
                 "url": item.url,
@@ -758,6 +792,9 @@ def build_markdown(report_day: date, items: list[dict[str, Any]]) -> str:
                 + (f"（{item['version']}）" if item["version"] else ""),
                 f"- 核心变化：{item['capability_change']}",
                 f"- PM 判断：{item['pm_judgement']}",
+                f"- 测评依据：{item.get('evaluation_basis', '待实测')}",
+                f"- 测评优点：{item.get('evaluation_strengths', '待实测')}",
+                f"- 测评不足：{item.get('evaluation_weaknesses', '待实测')}",
                 f"- 建议动作：{item['recommended_action']}",
                 f"- 官方来源：{item['url']}",
                 "",
@@ -800,6 +837,9 @@ def build_feishu_payload(report_day: date, items: list[dict[str, Any]]) -> dict[
                         f"**模型/产品：** {escape_markdown(model)}\n"
                         f"**核心变化：** {escape_markdown(item['capability_change'])}\n"
                         f"**PM 判断：** {escape_markdown(item['pm_judgement'])}\n"
+                        f"**测评依据：** {escape_markdown(item.get('evaluation_basis', '待实测'))}\n"
+                        f"**测评优点：** {escape_markdown(item.get('evaluation_strengths', '待实测'))}\n"
+                        f"**测评不足：** {escape_markdown(item.get('evaluation_weaknesses', '待实测'))}\n"
                         f"**建议动作：** {escape_markdown(item['recommended_action'])}\n"
                         f"[查看官方来源]({item['url']}) · {escape_markdown(item['platform'])} · {published}"
                     ),
