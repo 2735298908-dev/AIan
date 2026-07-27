@@ -35,9 +35,22 @@
     },
     "OpenAI": {
       "01KY23YCPJ9M5BFFT6ZHKQE9MP": {
-        "last_seen_at": "2026-07-27T15:54:47.326588+00:00",
+        "last_seen_at": "2026-07-27T17:57:48.895898+00:00",
         "seen_update_ids": [
-          "01KYHY95XY2C83FKK09CN0AM5C"
+          "01KYHY95XY2C83FKK09CN0AM5C",
+          "01KY23YCPJAR3H55XMVGTPV1C3",
+          "01KY270JV9PMQDF6DW2BNPQY21",
+          "01KY29XRKJNWVZV13E6FJKM030",
+          "01KY2A0T7F3H3P0TBP6W3XA9GM",
+          "01KY2A6349N393251JEN85BQSQ",
+          "01KY2C0JCFXBQ9EPGY28EJFBJ6",
+          "01KY2DZZA7TS1B2SBTQDT6M6T2",
+          "01KY2ECTZMW2QKEK0QPJVH0TH8",
+          "01KY2FWZ1MAQ499PWJPRXVJJ6K",
+          "01KY2HR4E2KBFR0FH7BBEM5HEA",
+          "01KY2KY0YX8R4DTGWHKEVQ1VKP",
+          "01KY3VPBQGBDK1FHRAZWTE44GX",
+          "01KYJ7WC24NN7Q8NKY5E5KSBB8"
         ],
         "status": "investigating",
         "url": "https://status.openai.com/incidents/01KY23YCPJ9M5BFFT6ZHKQE9MP"
@@ -73,13 +86,14 @@
         "url": "https://status.openai.com/incidents/01KYC921K145JTR1JK7DYKGWH1"
       },
       "01KYDN6YPS6ARY1EC9089N089G": {
-        "last_seen_at": "2026-07-26T01:01:33.384699+00:00",
+        "last_seen_at": "2026-07-27T17:57:49.592277+00:00",
         "seen_update_ids": [
           "01KYDN6YPSZHX1S6N1EJPVJHDW",
           "01KYDS167T8MM52AAXV82R9V8T",
-          "01KYDVD3AC4RVNAGYQ6SGPCX67"
+          "01KYDVD3AC4RVNAGYQ6SGPCX67",
+          "01KYJ6PRXMC407ZPPG5FGDVKJX"
         ],
-        "status": "monitoring",
+        "status": "resolved",
         "url": "https://status.openai.com/incidents/01KYDN6YPS6ARY1EC9089N089G"
       }
     }
