@@ -2,14 +2,22 @@ name: AI前沿日报
 
 on:
   schedule:
-    # GitHub Actions 使用 UTC；01:07 UTC = 北京时间/台北时间 09:07。
-    - cron: "7 1 * * *"
+    # 主任务提前唤醒并等待到 09:00，降低 GitHub 定时队列造成的延迟。
+    - cron: "45 0 * * *"
+    # 两次补偿检查；当天日报已成功发送时会自动跳过，避免重复推送。
+    - cron: "12 1 * * *"
+    - cron: "32 1 * * *"
   workflow_dispatch:
     inputs:
       report_date:
         description: "指定报告日期（YYYY-MM-DD）；留空则检查前一天"
         required: false
         type: string
+      force_send:
+        description: "当天报告已发送时是否强制重发"
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -22,14 +30,14 @@ concurrency:
 jobs:
   build-and-send:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 40
     env:
       REPORT_TIMEZONE: Asia/Shanghai
       REPORT_DATE: ${{ github.event.inputs.report_date }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
       GITHUB_MODEL: openai/gpt-4o-mini
-      SEND_EMPTY_REPORT: "false"
+      SEND_EMPTY_REPORT: "true"
 
     steps:
       - name: Checkout repository
@@ -40,10 +48,64 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Resolve report date
+        id: report
+        shell: bash
+        run: |
+          python - <<'PY'
+          import os
+          from datetime import date, datetime, timedelta
+          from zoneinfo import ZoneInfo
+
+          configured = os.getenv("REPORT_DATE", "").strip()
+          report_day = (
+              date.fromisoformat(configured)
+              if configured
+              else datetime.now(ZoneInfo("Asia/Shanghai")).date() - timedelta(days=1)
+          )
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as output:
+              output.write(f"date={report_day.isoformat()}\n")
+          PY
+
+      - name: Check whether today's delivery is already complete
+        id: delivery
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          FORCE_SEND: ${{ github.event.inputs.force_send || 'false' }}
+          REPORT_DAY: ${{ steps.report.outputs.date }}
+        run: |
+          if [[ -f "reports/${REPORT_DAY}.md" ]] \
+            && [[ "${EVENT_NAME}" == "schedule" || "${FORCE_SEND}" != "true" ]]; then
+            echo "should_run=false" >> "${GITHUB_OUTPUT}"
+            echo "${REPORT_DAY} 已成功发送并归档，本次补偿任务跳过。"
+          else
+            echo "should_run=true" >> "${GITHUB_OUTPUT}"
+          fi
+
+      - name: Wait until 09:00 UTC+8
+        if: steps.delivery.outputs.should_run == 'true' && github.event_name == 'schedule' && github.event.schedule == '45 0 * * *'
+        run: |
+          python - <<'PY'
+          import time
+          from datetime import datetime, time as clock_time
+          from zoneinfo import ZoneInfo
+
+          timezone = ZoneInfo("Asia/Shanghai")
+          now = datetime.now(timezone)
+          target = datetime.combine(now.date(), clock_time(9, 0), timezone)
+          seconds = max(0, (target - now).total_seconds())
+          if seconds:
+              print(f"距离 09:00 还有 {int(seconds)} 秒，等待后开始生成日报。")
+              time.sleep(seconds)
+          PY
+
       - name: Generate and send AI daily report
+        if: steps.delivery.outputs.should_run == 'true'
         run: python scripts/ai_news_agent.py
 
       - name: Save report and deduplication history
+        if: steps.delivery.outputs.should_run == 'true'
         run: |
           if [[ -z "$(git status --porcelain -- data reports)" ]]; then
             echo "No report state changes."
