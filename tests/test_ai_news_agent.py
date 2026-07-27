@@ -103,6 +103,9 @@ class AgentTests(unittest.TestCase):
                 "capability_change": "新增视频生成与原生音频能力。",
                 "type": "多模态",
                 "pm_judgement": "可减少视频与音频分段生成的产品链路。",
+                "evaluation_basis": "官方基准",
+                "evaluation_strengths": "官方基准显示视频与音频协同能力提升。",
+                "evaluation_weaknesses": "官方材料未披露复杂场景下的稳定性。",
                 "recommended_action": "使用现有业务素材完成质量、时延与成本评测。",
                 "platform": "Example",
                 "url": "https://example.com/news/model",
@@ -113,13 +116,44 @@ class AgentTests(unittest.TestCase):
         markdown = agent.build_markdown(date(2026, 7, 22), items)
         self.assertIn("| 平台 | 模型/产品 | 级别 | 核心变化 | 类型 | 官方来源 |", markdown)
         self.assertIn("PM 判断", markdown)
+        self.assertIn("测评依据", markdown)
+        self.assertIn("测评优点", markdown)
+        self.assertIn("测评不足", markdown)
         self.assertIn("建议动作", markdown)
 
         payload = agent.build_feishu_payload(date(2026, 7, 22), items)
         serialized = json.dumps(payload, ensure_ascii=False)
         self.assertIn("Example Omni（2.0）", serialized)
         self.assertIn("核心变化", serialized)
+        self.assertIn("测评依据", serialized)
+        self.assertIn("测评优点", serialized)
+        self.assertIn("测评不足", serialized)
         self.assertIn("建议动作", serialized)
+
+    def test_evaluation_without_evidence_is_marked_pending(self):
+        evaluation = agent.normalize_evaluation_fields(
+            {
+                "evaluation_basis": "独立实测",
+                "evaluation_strengths": "质量显著提升。",
+                "evaluation_weaknesses": "速度较慢。",
+            }
+        )
+        self.assertEqual(evaluation["evaluation_basis"], "待实测")
+        self.assertTrue(evaluation["evaluation_strengths"].startswith("待实测："))
+        self.assertTrue(evaluation["evaluation_weaknesses"].startswith("待实测："))
+        self.assertNotIn("质量显著提升", evaluation["evaluation_strengths"])
+
+    def test_official_evaluation_evidence_is_preserved(self):
+        evaluation = agent.normalize_evaluation_fields(
+            {
+                "evaluation_basis": "官方案例",
+                "evaluation_strengths": "人物质感和构图更稳定。",
+                "evaluation_weaknesses": "未披露复杂文字生成表现。",
+            }
+        )
+        self.assertEqual(evaluation["evaluation_basis"], "官方案例")
+        self.assertIn("人物质感", evaluation["evaluation_strengths"])
+        self.assertIn("复杂文字", evaluation["evaluation_weaknesses"])
 
     def test_fallback_excludes_non_model_marketing_news(self):
         item = agent.NewsItem(
