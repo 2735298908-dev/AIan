@@ -1,6 +1,9 @@
 name: AI前沿日报
 
 on:
+  push:
+    paths:
+      - "data/daily-trigger.txt"
   schedule:
     # 主任务提前唤醒并等待到 09:00，降低 GitHub 定时队列造成的延迟。
     - cron: "45 0 * * *"
