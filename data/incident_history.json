@@ -98,11 +98,12 @@
         "url": "https://status.openai.com/incidents/01KYDN6YPS6ARY1EC9089N089G"
       },
       "01KYJFG4S86K8FMTB4N6BDZS7F": {
-        "last_seen_at": "2026-07-27T19:58:24.373476+00:00",
+        "last_seen_at": "2026-07-27T21:31:37.181817+00:00",
         "seen_update_ids": [
-          "01KYJFG4S8C081J2GS9PYFN000"
+          "01KYJFG4S8C081J2GS9PYFN000",
+          "01KYJM0W1HCCHMQ14H9DBJW3VQ"
         ],
-        "status": "investigating",
+        "status": "resolved",
         "url": "https://status.openai.com/incidents/01KYJFG4S86K8FMTB4N6BDZS7F"
       }
     }
