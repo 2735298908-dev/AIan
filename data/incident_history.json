@@ -34,6 +34,14 @@
       }
     },
     "OpenAI": {
+      "01KY23YCPJ9M5BFFT6ZHKQE9MP": {
+        "last_seen_at": "2026-07-27T15:54:47.326588+00:00",
+        "seen_update_ids": [
+          "01KYHY95XY2C83FKK09CN0AM5C"
+        ],
+        "status": "investigating",
+        "url": "https://status.openai.com/incidents/01KY23YCPJ9M5BFFT6ZHKQE9MP"
+      },
       "01KY7SX5MYJ2BP51X5MXAPYX71": {
         "last_seen_at": "2026-07-24T20:41:54.495888+00:00",
         "seen_update_ids": [
