@@ -90,7 +90,7 @@ class AgentTests(unittest.TestCase):
         payload = agent.build_feishu_payload(date(2026, 7, 22), [])
         serialized = json.dumps(payload, ensure_ascii=False)
         self.assertIn("AI前沿日报", serialized)
-        self.assertIn("模型与多模态", serialized)
+        self.assertIn("多模态模型与 AIGC", serialized)
         self.assertIn("2026-07-22", serialized)
 
     def test_model_report_contains_pm_fields_and_table(self):
@@ -181,7 +181,7 @@ class AgentTests(unittest.TestCase):
         self.assertFalse(agent.is_model_relevant(item))
         self.assertEqual(agent.fallback_analysis([item]), [])
 
-    def test_llm_postfilter_excludes_b_level_github_patch(self):
+    def test_ai_coding_release_is_excluded_even_at_a_level(self):
         item = agent.NewsItem(
             platform="Example SDK",
             category="Agent",
@@ -191,15 +191,8 @@ class AgentTests(unittest.TestCase):
             published_at="2026-07-22T16:30:00+08:00",
             description="Added model reasoning support.",
         )
-        self.assertTrue(agent.is_model_relevant(item))
+        self.assertFalse(agent.is_model_relevant(item))
         self.assertFalse(
-            agent.should_keep_selected(
-                item,
-                "B",
-                "新增 reasoning_effort 作为标准聊天模型参数。",
-            )
-        )
-        self.assertTrue(
             agent.should_keep_selected(
                 item,
                 "A",
@@ -207,11 +200,43 @@ class AgentTests(unittest.TestCase):
             )
         )
 
+    def test_multimodal_aigc_release_is_included(self):
+        item = agent.NewsItem(
+            platform="Example Video",
+            category="AIGC视频",
+            source_type="official_feed",
+            title="Introducing Example Video 3",
+            url="https://example.com/news/video-3",
+            published_at="2026-07-22T16:30:00+08:00",
+            description="Released with image-to-video, camera control, and native audio.",
+        )
+        self.assertTrue(agent.is_model_relevant(item))
+        self.assertTrue(
+            agent.should_keep_selected(
+                item,
+                "A",
+                "新增图生视频、镜头控制与原生音频能力。",
+            )
+        )
+
+    def test_realtime_service_incident_is_excluded(self):
+        item = agent.NewsItem(
+            platform="OpenAI",
+            category="全球大模型",
+            source_type="official_feed",
+            title="Image generation unavailable in ChatGPT",
+            url="https://status.example/incidents/1",
+            published_at="2026-07-22T16:30:00+08:00",
+            description="We are investigating elevated error rates and service disruption.",
+        )
+        self.assertFalse(agent.is_model_relevant(item))
+        self.assertEqual(agent.fallback_analysis([item]), [])
+
     def test_empty_report_is_concise(self):
         markdown = agent.build_markdown(date(2026, 7, 22), [])
         self.assertEqual(
             markdown,
-            "今日（2026-07-22）所有监控平台均无经官方核验的模型、多模态或 AIGC 能力更新\n",
+            "今日（2026-07-22）所有监控平台均无经官方核验的多模态模型或 AIGC 能力更新\n",
         )
 
     def test_sitemap_lastmod_does_not_republish_old_article(self):
