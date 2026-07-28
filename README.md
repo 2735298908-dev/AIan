@@ -1,13 +1,13 @@
-# AIan｜AI 产品经理模型雷达
+# AIan｜多模态模型与 AIGC 雷达
 
-一个适合 AI 产品经理作品集展示的自动化 Agent：每天采集全球大模型、Agent、AI 编程、
-图像、视频与语音模型的官方动态，使用 GitHub Models 完成筛选和产品判断，去重后推送到飞书群。
+一个适合 AI 产品经理作品集展示的自动化 Agent：每天采集多模态模型、图像生成、图像编辑、
+视频生成与音频语音生成的官方动态，使用 GitHub Models 完成筛选和产品判断，去重后推送到飞书群。
 
 ## 核心能力
 
 - **多源采集**：官方 RSS、官方站点 Sitemap、官方 GitHub Releases。
 - **每日必达**：每天 09:00（UTC+8）开始生成前一自然日的日报；主任务提前唤醒，并通过两次补偿检查降低 GitHub 定时延迟与漏跑风险。
-- **模型导向筛选**：重点识别模型版本、能力边界、API/价格、多模态与 AIGC 更新。
+- **垂直领域筛选**：只识别多模态模型与 AIGC 的版本、能力边界、API/价格和开放范围变化。
 - **AI 分析**：用 GitHub Models 将动态分为 S/A/B 三级，并生成“核心变化、PM 判断、测评优劣、建议动作”。
 - **可信与去重**：只收录带官方原始链接的内容；利用 `data/history.json` 避免重复推送。
 - **企业 IM 触达**：以飞书交互卡片推送到指定群聊。
@@ -21,7 +21,7 @@ flowchart TD
     A["官方 RSS / Sitemap / GitHub"] --> B["前一自然日时间过滤"]
     B --> C["跨源与历史去重"]
     C --> D["模型/多模态硬筛选"]
-    D --> E["S/A/B 分级、PM 判断与测评结论"]
+    D --> E["多模态/AIGC 分级、PM 判断与测评结论"]
     E --> F["飞书卡片推送"]
     E --> G["保存日报与历史记录"]
 ```
@@ -61,28 +61,27 @@ GitHub Actions 的定时任务不提供严格的秒级准时保证；提前唤�
 
 ## 收录标准
 
-- 模型或明确版本的发布、升级、下线与可用范围变化
-- 推理、编程、Agent、视觉、图像、视频、语音等能力的实质变化
-- API endpoint、上下文、价格、限流、区域或商用权限变化
+- 多模态、视觉语言、图像、视频、音频或语音生成模型的发布、升级、下线与可用范围变化
 - AIGC 图像/视频在时长、分辨率、镜头控制、一致性、参考编辑、口型、原生音频等方面的更新
-- 官方开放权重、许可证、推理方式或关键基准变化
+- 与上述模型直接相关的 API、价格、限流、商用权限、开放权重或关键基准变化
 
 以下内容默认排除：企业客户案例、融资招聘、一般公司新闻、泛基础设施合作、没有可用模型或
-产品的研究、普通 SDK 维护与 alpha 小补丁、教程/SEO/比较文章、营销活动、观点和传闻。
+产品的研究、纯文本推理模型、Agent/AI 编程工具、普通 SDK 维护与 alpha 小补丁、教程/SEO/
+比较文章、营销活动、观点和传闻，以及服务故障、状态页告警、错误率和恢复进展。
 
 ## S/A/B 分级
 
-- **S**：旗舰模型正式发布；多模态生成能力出现代际提升；重要 API、价格、可用性或安全政策变化
-- **A**：重要模型版本或关键能力升级；重要开源模型；图像或视频能力明显增强
-- **B**：与模型选型有关、但影响范围较小的能力或可用范围扩展
+- **S**：重要多模态或 AIGC 模型正式发布；生成能力出现代际提升
+- **A**：重要版本或关键能力升级；图像、视频、音频能力明显增强
+- **B**：与多模态/AIGC 模型选型有关、但影响较小的能力或可用范围扩展
 
 ## 监控范围
 
-- 全球模型：OpenAI、Google AI / DeepMind、Anthropic、Meta、Mistral、Hugging Face、FLUX 等
-- 国内模型：Qwen、豆包 / ByteDance Seed、DeepSeek、智谱 GLM、腾讯混元、Kimi、MiniMax 等
-- Agent / AI 编程：Codex、Claude Code、Gemini CLI、MCP、LangGraph、AutoGen 等
-- 多模态与 AIGC：FLUX、Midjourney、Stability AI、Runway、Luma AI、PixVerse、ComfyUI、
+- 综合官方源：OpenAI、Google AI / DeepMind、Anthropic、Meta、Mistral、Hugging Face 等，
+  仅保留其中的多模态与 AIGC 更新
+- 图像与视频：FLUX、Midjourney、Stability AI、Runway、Luma AI、PixVerse、ComfyUI、
   LTX Video、Wan Video 等
+- 国内多模态：Qwen3-VL、Qwen Image、豆包 / ByteDance Seed、智谱 GLM-4.1V、腾讯混元等
 
 可在 `config/sources.json` 增删信源。部分厂商没有公开 RSS，因此以官方 Sitemap 或官方
 GitHub Releases 补充；没有稳定官方机器可读信源的平台不会用媒体爆料强行补齐。单个信源失败
