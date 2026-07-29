@@ -573,8 +573,6 @@ def is_model_relevant(item: NewsItem) -> bool:
     )
 
 
-def should_keep_selected
-
 def should_keep_selected(item: NewsItem, importance: str, capability_change: str) -> bool:
     if not is_model_relevant(item):
         return False
