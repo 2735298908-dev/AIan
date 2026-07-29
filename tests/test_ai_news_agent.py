@@ -90,7 +90,7 @@ class AgentTests(unittest.TestCase):
         payload = agent.build_feishu_payload(date(2026, 7, 22), [])
         serialized = json.dumps(payload, ensure_ascii=False)
         self.assertIn("AI前沿日报", serialized)
-        self.assertIn("多模态模型与 AIGC", serialized)
+        self.assertIn("AI 模型、Agent 与 AIGC", serialized)
         self.assertIn("2026-07-22", serialized)
 
     def test_model_report_contains_pm_fields_and_table(self):
@@ -181,7 +181,7 @@ class AgentTests(unittest.TestCase):
         self.assertFalse(agent.is_model_relevant(item))
         self.assertEqual(agent.fallback_analysis([item]), [])
 
-    def test_ai_coding_release_is_excluded_even_at_a_level(self):
+    def test_minor_ai_coding_sdk_release_is_excluded(self):
         item = agent.NewsItem(
             platform="Example SDK",
             category="Agent",
@@ -219,6 +219,72 @@ class AgentTests(unittest.TestCase):
             )
         )
 
+    def test_important_general_text_model_is_included(self):
+        item = agent.NewsItem(
+            platform="OpenAI",
+            category="全球大模型",
+            source_type="official_feed",
+            title="Introducing GPT-Next",
+            url="https://example.com/news/gpt-next",
+            published_at="2026-07-22T16:30:00+08:00",
+            description=(
+                "A new flagship reasoning model with a larger context window "
+                "is now available through the model API."
+            ),
+        )
+        self.assertTrue(agent.is_model_relevant(item))
+        self.assertTrue(
+            agent.should_keep_selected(
+                item,
+                "S",
+                "旗舰推理模型正式上线，并扩大上下文窗口与 API 可用范围。",
+            )
+        )
+
+    def test_major_agent_capability_update_is_included(self):
+        item = agent.NewsItem(
+            platform="Example Agent",
+            category="Agent与AI编程",
+            source_type="official_feed",
+            title="Introducing Agent Mode",
+            url="https://example.com/news/agent-mode",
+            published_at="2026-07-22T16:30:00+08:00",
+            description=(
+                "The coding agent adds computer use, tool calling, subagents, "
+                "and long-running workflow support."
+            ),
+        )
+        self.assertTrue(agent.is_model_relevant(item))
+        self.assertTrue(
+            agent.should_keep_selected(
+                item,
+                "A",
+                "新增计算机操作、工具调用、子 Agent 与长任务能力。",
+            )
+        )
+
+    def test_material_api_pricing_change_is_included(self):
+        item = agent.NewsItem(
+            platform="Example Models",
+            category="全球大模型",
+            source_type="official_feed",
+            title="New API pricing for Example Model",
+            url="https://example.com/news/api-pricing",
+            published_at="2026-07-22T16:30:00+08:00",
+            description=(
+                "The model API input token price is reduced by 50% and "
+                "rate limits are increased."
+            ),
+        )
+        self.assertTrue(agent.is_model_relevant(item))
+        self.assertTrue(
+            agent.should_keep_selected(
+                item,
+                "A",
+                "输入 Token 价格降低 50%，同时提高 API 限流额度。",
+            )
+        )
+
     def test_realtime_service_incident_is_excluded(self):
         item = agent.NewsItem(
             platform="OpenAI",
@@ -236,7 +302,7 @@ class AgentTests(unittest.TestCase):
         markdown = agent.build_markdown(date(2026, 7, 22), [])
         self.assertEqual(
             markdown,
-            "今日（2026-07-22）所有监控平台均无经官方核验的多模态模型或 AIGC 能力更新\n",
+            "今日（2026-07-22）所有监控平台均无经官方核验的重要通用模型、多模态/AIGC、Agent 或 API/价格更新\n",
         )
 
     def test_sitemap_lastmod_does_not_republish_old_article(self):
