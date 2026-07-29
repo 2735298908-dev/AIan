@@ -130,9 +130,6 @@ GITHUB_RELEASE_MATERIAL_KEYWORDS = (
 
 
 
-@dataclass
-
-
 @dataclass(frozen=True)
 class NewsItem:
     platform: str
@@ -686,7 +683,6 @@ B：已具备产品决策价值、但影响相对有限的能力、接入或开�
 调用过模型。待实测时只给出后续应验证的方向，不得下确定性优缺点结论。
 
 最多选择 10 条。id 必须来自输入；不要修改或编造链接。若没有符合标准的内容，返回 {"items":[]}。"""
-    user_prompt = json.dumps
     user_prompt = json.dumps(
         {"report_date": report_day.isoformat(), "candidates": candidates},
         ensure_ascii=False,
