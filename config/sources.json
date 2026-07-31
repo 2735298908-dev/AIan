@@ -178,13 +178,11 @@
     {
       "platform": "豆包 / ByteDance Seed",
       "category": "国内大模型与多模态",
-      "kind": "sitemap",
-      "source_type": "official_sitemap",
-      "url": "https://seed.bytedance.com/sitemap.xml",
-      "include": [
-        "/blog/"
-      ],
-      "max_pages": 12
+      "kind": "embedded_article_list",
+      "source_type": "official_page_list",
+      "url": "https://seed.bytedance.com/en/blog",
+      "article_base_url": "https://seed.bytedance.com/en/blog/",
+      "language": "en"
     },
     {
       "platform": "智谱 GLM-4.1V",
