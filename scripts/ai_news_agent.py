@@ -492,12 +492,13 @@ def parse_embedded_article_list(
         flags=re.S,
     )
     language = str(source.get("language", "en")).lower()
-    content_group = 3 if language.startswith("zh") else 2
     items: list[NewsItem] = []
     for match in pattern.finditer(raw_text):
         try:
             metadata = json.loads(match.group(1))
-            content = json.loads(match.group(content_group))
+            english_content = json.loads(match.group(2))
+            chinese_content = json.loads(match.group(3))
+            content = chinese_content if language.startswith("zh") else english_content
             published_ms = float(metadata["PublishDate"])
             published = datetime.fromtimestamp(published_ms / 1000, tz=timezone.utc)
         except (KeyError, TypeError, ValueError, json.JSONDecodeError):
@@ -506,7 +507,8 @@ def parse_embedded_article_list(
             continue
         title = clean_text(str(content.get("Title") or ""), 300)
         description = clean_text(str(content.get("Abstract") or ""), 700)
-        slug = str(content.get("TitleKey") or "").strip("/")
+        # Keep the stable English slug even when the user-facing copy is Chinese.
+        slug = str(english_content.get("TitleKey") or "").strip("/")
         if not title or not slug:
             continue
         base_url = source.get("article_base_url") or source["url"].rstrip("/") + "/"
@@ -864,13 +866,10 @@ def analyze(items: list[NewsItem], report_day: date) -> list[dict[str, Any]]:
         return []
     ranked = sorted(items, key=lambda item: (candidate_score(item), item.published_at), reverse=True)
     ranked = ranked[:MAX_CANDIDATES]
-    try:
-        result = call_github_models(ranked, report_day)
-        log(f"GitHub Models 完成筛选：{len(result)} 条")
-        return result
-    except Exception as exc:  # noqa: BLE001
-        log(f"GitHub Models 调用失败，使用规则降级：{exc}")
-        return fallback_analysis(ranked)
+    # GitHub Models inference was retired on 2026-07-30. Keep the collector
+    # self-contained and deterministic instead of calling a permanently gone API.
+    log("使用本地规则完成筛选与分级")
+    return fallback_analysis(ranked)
 
 
 def escape_markdown(value: str) -> str:
