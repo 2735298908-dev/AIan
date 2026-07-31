@@ -44,6 +44,13 @@ OLD_PAGE = b"""<!doctype html><html><head>
 </head><body><h1>Old announcement</h1></body></html>"""
 
 
+EMBEDDED_ARTICLE_LIST = b"""<script>
+{"ArticleMeta":{"PublishDate":1784649600000,"ResearchArea":[{"ResearchAreaName":"Models"}]},
+"ArticleSubContentEn":{"Title":"Introducing Seedance 2.5","Abstract":"A video creation model with upgraded multimodal referencing.","TitleKey":"introducing-seedance-2-5"},
+"ArticleSubContentZh":{"Title":"Seedance 2.5 \\u6b63\\u5f0f\\u53d1\\u5e03","Abstract":"","TitleKey":"seedance-2-5"}}]
+</script>""".replace(b"\n", b"")
+
+
 class AgentTests(unittest.TestCase):
     def setUp(self):
         self.tz = ZoneInfo("Asia/Shanghai")
@@ -304,6 +311,39 @@ class AgentTests(unittest.TestCase):
             markdown,
             "今日（2026-07-22）所有监控平台均无经官方核验的重要通用模型、多模态/AIGC、Agent 或 API/价格更新\n",
         )
+
+    @patch.object(agent, "fetch_bytes", return_value=EMBEDDED_ARTICLE_LIST)
+    def test_embedded_article_list_catches_fresh_model_release(self, _fetch):
+        source = {
+            "platform": "ByteDance Seed",
+            "category": "AIGC视频",
+            "kind": "embedded_article_list",
+            "source_type": "official_page_list",
+            "url": "https://seed.example/en/blog",
+            "article_base_url": "https://seed.example/en/blog/",
+            "language": "en",
+        }
+        items = agent.parse_embedded_article_list(source, self.start, self.end)
+        self.assertEqual(len(items), 1)
+        self.assertEqual(items[0].title, "Introducing Seedance 2.5")
+        self.assertEqual(
+            items[0].url,
+            "https://seed.example/en/blog/introducing-seedance-2-5",
+        )
+        self.assertTrue(agent.is_model_relevant(items[0]))
+        self.assertGreaterEqual(agent.candidate_score(items[0]), 7)
+
+    def test_customer_story_url_is_excluded(self):
+        item = agent.NewsItem(
+            platform="Runway",
+            category="AIGC视频",
+            source_type="official_sitemap",
+            title="How a travel company changed preproduction",
+            url="https://runway.example/news/customers/example",
+            published_at="2026-07-22T16:30:00+08:00",
+            description="A new video production workflow.",
+        )
+        self.assertFalse(agent.is_model_relevant(item))
 
     def test_sitemap_lastmod_does_not_republish_old_article(self):
         source = {

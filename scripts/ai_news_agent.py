@@ -101,6 +101,9 @@ NOISE_KEYWORDS = (
     "客户案例", "活动回顾", "合作伙伴", "融资", "招聘", "教程", "营销",
     "对比文章",
 )
+NOISE_URL_PARTS = (
+    "/customers/", "/customer-stories/", "/case-studies/", "/case-study/",
+)
 REALTIME_EVENT_KEYWORDS = (
     "status page", "service incident", "incident update", "service outage",
     "outage", "unavailable", "elevated error", "error rate", "degraded",
@@ -478,11 +481,56 @@ def parse_sitemap(source: dict[str, Any], start: datetime, end: datetime) -> lis
     return items
 
 
+def parse_embedded_article_list(
+    source: dict[str, Any], start: datetime, end: datetime
+) -> list[NewsItem]:
+    """Parse official article metadata embedded in a server-rendered listing page."""
+    raw_text = fetch_bytes(source["url"]).decode("utf-8", errors="ignore")
+    pattern = re.compile(
+        r'"ArticleMeta":(\{.*?\}),"ArticleSubContentEn":(\{.*?\}),'
+        r'"ArticleSubContentZh":(\{.*?\})\}(?=,\{"ArticleMeta"|\])',
+        flags=re.S,
+    )
+    language = str(source.get("language", "en")).lower()
+    content_group = 3 if language.startswith("zh") else 2
+    items: list[NewsItem] = []
+    for match in pattern.finditer(raw_text):
+        try:
+            metadata = json.loads(match.group(1))
+            content = json.loads(match.group(content_group))
+            published_ms = float(metadata["PublishDate"])
+            published = datetime.fromtimestamp(published_ms / 1000, tz=timezone.utc)
+        except (KeyError, TypeError, ValueError, json.JSONDecodeError):
+            continue
+        if not within_window(published, start, end):
+            continue
+        title = clean_text(str(content.get("Title") or ""), 300)
+        description = clean_text(str(content.get("Abstract") or ""), 700)
+        slug = str(content.get("TitleKey") or "").strip("/")
+        if not title or not slug:
+            continue
+        base_url = source.get("article_base_url") or source["url"].rstrip("/") + "/"
+        items.append(
+            NewsItem(
+                platform=source["platform"],
+                category=source["category"],
+                source_type=source.get("source_type", "official_page_list"),
+                title=title,
+                url=normalize_url(urllib.parse.urljoin(base_url, slug)),
+                published_at=published.astimezone(REPORT_TZ).isoformat(),
+                description=description,
+            )
+        )
+    return items
+
+
 def collect_source(source: dict[str, Any], start: datetime, end: datetime) -> list[NewsItem]:
     if source["kind"] == "feed":
         return parse_feed(source, start, end)
     if source["kind"] == "sitemap":
         return parse_sitemap(source, start, end)
+    if source["kind"] == "embedded_article_list":
+        return parse_embedded_article_list(source, start, end)
     raise ValueError(f"不支持的信源类型：{source['kind']}")
 
 
@@ -530,7 +578,7 @@ def candidate_score(item: NewsItem) -> int:
     score -= sum(6 for keyword in NOISE_KEYWORDS if keyword in text)
     if item.category in DIRECT_SCOPE_CATEGORIES:
         score += 2
-    if item.source_type in {"official_feed", "official_sitemap"}:
+    if item.source_type in {"official_feed", "official_sitemap", "official_page_list"}:
         score += 3
     if item.source_type == "official_github_release":
         score += 1
@@ -543,7 +591,9 @@ def is_model_relevant(item: NewsItem) -> bool:
     has_scope_term = any(keyword in text for keyword in PRODUCT_RELEVANCE_KEYWORDS)
     has_direct_category = item.category in DIRECT_SCOPE_CATEGORIES
     has_update_action = any(keyword in text for keyword in UPDATE_ACTION_KEYWORDS)
-    has_noise = any(keyword in text for keyword in NOISE_KEYWORDS)
+    has_noise = any(keyword in text for keyword in NOISE_KEYWORDS) or any(
+        part in item.url.lower() for part in NOISE_URL_PARTS
+    )
     has_realtime_event = any(keyword in text for keyword in REALTIME_EVENT_KEYWORDS)
     is_unstable_tool_build = (
         item.source_type == "official_github_release"
