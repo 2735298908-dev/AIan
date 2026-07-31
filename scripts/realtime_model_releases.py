@@ -15,7 +15,7 @@ from ai_news_agent import (
     REPORT_TZ,
     ROOT,
     NewsItem,
-    call_github_models,
+    analyze,
     collect_source,
     escape_markdown,
     is_model_relevant,
@@ -272,9 +272,9 @@ def main() -> int:
     if not candidates:
         return 0
 
-    # Use the model call directly. If it is unavailable, fail this run and retry
-    # next hour instead of silently marking an important release as processed.
-    selected = call_github_models(candidates, now.date())
+    # Reuse the daily analyzer so the conservative keyword fallback remains
+    # available when GitHub Models is temporarily unavailable.
+    selected = analyze(candidates, now.date())
     selected = [
         item for item in selected
         if item.get("importance", "").upper() in PUSH_LEVELS
