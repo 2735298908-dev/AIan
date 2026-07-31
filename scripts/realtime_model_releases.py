@@ -7,6 +7,7 @@ import json
 import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, time as dt_time, timedelta, timezone
+from pathlib import Path
 from typing import Any
 
 from ai_news_agent import (
