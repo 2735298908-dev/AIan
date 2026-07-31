@@ -47,7 +47,7 @@ OLD_PAGE = b"""<!doctype html><html><head>
 EMBEDDED_ARTICLE_LIST = b"""<script>
 {"ArticleMeta":{"PublishDate":1784649600000,"ResearchArea":[{"ResearchAreaName":"Models"}]},
 "ArticleSubContentEn":{"Title":"Introducing Seedance 2.5","Abstract":"A video creation model with upgraded multimodal referencing.","TitleKey":"introducing-seedance-2-5"},
-"ArticleSubContentZh":{"Title":"Seedance 2.5 \\u6b63\\u5f0f\\u53d1\\u5e03","Abstract":"","TitleKey":"seedance-2-5"}}]
+"ArticleSubContentZh":{"Title":"Seedance 2.5 \\u6b63\\u5f0f\\u53d1\\u5e03","Abstract":"30 \\u79d2\\u957f\\u53d9\\u4e8b\\uff0c\\u591a\\u6a21\\u6001\\u53c2\\u8003\\u80fd\\u529b\\u5168\\u9762\\u5347\\u7ea7","TitleKey":"seedance-2-5"}}]
 </script>""".replace(b"\n", b"")
 
 
@@ -321,11 +321,11 @@ class AgentTests(unittest.TestCase):
             "source_type": "official_page_list",
             "url": "https://seed.example/en/blog",
             "article_base_url": "https://seed.example/en/blog/",
-            "language": "en",
+            "language": "zh",
         }
         items = agent.parse_embedded_article_list(source, self.start, self.end)
         self.assertEqual(len(items), 1)
-        self.assertEqual(items[0].title, "Introducing Seedance 2.5")
+        self.assertEqual(items[0].title, "Seedance 2.5 正式发布")
         self.assertEqual(
             items[0].url,
             "https://seed.example/en/blog/introducing-seedance-2-5",
