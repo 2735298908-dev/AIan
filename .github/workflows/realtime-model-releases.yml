@@ -1,0 +1,54 @@
+name: AI产品与模型实时动态
+
+on:
+  schedule:
+    # 每小时第 23 分钟检查，避开整点队列高峰。
+    - cron: "23 * * * *"
+  push:
+    paths:
+      - "data/realtime-model-trigger.txt"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  models: read
+
+concurrency:
+  group: realtime-model-releases
+  cancel-in-progress: false
+
+jobs:
+  scan-and-send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      REPORT_TIMEZONE: Asia/Shanghai
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
+      GITHUB_MODEL: openai/gpt-4o-mini
+      REALTIME_PUSH_LEVELS: "S,A"
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check important AI product and model releases
+        run: python scripts/realtime_model_releases.py
+
+      - name: Save realtime history and reports
+        run: |
+          if [[ -z "$(git status --porcelain -- data reports)" ]]; then
+            echo "No realtime state changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data reports
+          git commit -m "chore: update realtime AI model alerts"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
