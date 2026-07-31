@@ -24,7 +24,6 @@ on:
 
 permissions:
   contents: write
-  models: read
 
 concurrency:
   group: daily-ai-news
@@ -39,7 +38,6 @@ jobs:
       REPORT_DATE: ${{ github.event.inputs.report_date }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
-      GITHUB_MODEL: openai/gpt-4o-mini
       SEND_EMPTY_REPORT: "true"
 
     steps:
