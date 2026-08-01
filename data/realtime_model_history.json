@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-07-31T08:42:33.254770+00:00",
+  "updated_at": "2026-08-01T06:42:41.815696+00:00",
   "seen": [
     {
       "url": "https://runway.com/news/customers/skyscanner",
@@ -21,6 +21,11 @@
       "url": "https://lumalabs.ai/news/introducing-layers",
       "title_key": "introducinglayersluma",
       "seen_at": "2026-07-31T08:42:33.254770+00:00"
+    },
+    {
+      "url": "https://runway.com/news/company-news/runway-characters-siggraph-2026",
+      "title_key": "runwaynewsbringingrunwaycharacterstosiggraphsbiggeststage",
+      "seen_at": "2026-08-01T06:42:41.815696+00:00"
     }
   ],
   "notifications": [
