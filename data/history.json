@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-07-31T00:58:14.513579+00:00",
+  "updated_at": "2026-08-01T00:54:23.854531+00:00",
   "items": [
     {
       "url": "https://openai.com/index/introducing-openai-presence",
@@ -81,6 +81,11 @@
       "url": "https://updates.midjourney.com/version-8-2",
       "title_key": "version82",
       "reported_at": "2026-07-26T04:33:23.512314+00:00"
+    },
+    {
+      "url": "https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
+      "title_key": "一镜成片随心参考seedance25正式发布",
+      "reported_at": "2026-08-01T00:54:23.854531+00:00"
     }
   ]
 }
