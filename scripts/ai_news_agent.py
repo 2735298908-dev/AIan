@@ -33,6 +33,10 @@ REPORT_TZ = ZoneInfo(os.getenv("REPORT_TIMEZONE", "Asia/Shanghai"))
 MODELS_ENDPOINT = "https://models.github.ai/inference/chat/completions"
 MODEL_NAME = os.getenv("GITHUB_MODEL", "openai/gpt-4o-mini")
 USER_AGENT = "AIan-News-Agent/1.0 (+https://github.com/2735298908-dev/AIan)"
+BROWSER_USER_AGENT = (
+    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/150.0 Safari/537.36 AIan/1.0"
+)
 REQUEST_TIMEOUT = int(os.getenv("REQUEST_TIMEOUT", "20"))
 MAX_CANDIDATES = int(os.getenv("MAX_CANDIDATES", "60"))
 MAX_REPORT_ITEMS = int(os.getenv("MAX_REPORT_ITEMS", "10"))
@@ -251,10 +255,13 @@ def log(message: str) -> None:
 
 
 def fetch_bytes(url: str, timeout: int = REQUEST_TIMEOUT) -> bytes:
+    hostname = urllib.parse.urlsplit(url).hostname or ""
     request = urllib.request.Request(
         url,
         headers={
-            "User-Agent": USER_AGENT,
+            # OpenAI's public article pages reject non-browser clients from some
+            # cloud runner ranges even though the same official pages are public.
+            "User-Agent": BROWSER_USER_AGENT if hostname.endswith("openai.com") else USER_AGENT,
             "Accept": "application/rss+xml, application/atom+xml, application/xml, text/xml, text/html;q=0.8",
         },
     )
