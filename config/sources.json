@@ -8,6 +8,17 @@
       "url": "https://openai.com/news/rss.xml"
     },
     {
+      "platform": "OpenAI Product Updates",
+      "category": "全球大模型",
+      "kind": "sitemap",
+      "source_type": "official_sitemap",
+      "url": "https://openai.com/sitemap.xml/product/",
+      "include": [
+        "/index/"
+      ],
+      "max_pages": 24
+    },
+    {
       "platform": "Google AI",
       "category": "全球大模型",
       "kind": "feed",

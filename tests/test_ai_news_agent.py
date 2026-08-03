@@ -43,6 +43,30 @@ OLD_PAGE = b"""<!doctype html><html><head>
 </script>
 </head><body><h1>Old announcement</h1></body></html>"""
 
+DELAYED_SITEMAP = b"""<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://example.com/news/introducing-layers</loc>
+    <lastmod>2026-07-31T03:06:55Z</lastmod>
+  </url>
+</urlset>"""
+
+DELAYED_PAGE = b"""<!doctype html><html><head>
+<title>Introducing Layers</title>
+<meta property="og:description" content="Precision editing for every element of an image">
+<meta property="article:published_time" content="2026-07-29T17:28:48Z">
+</head><body><h1>Introducing Layers</h1></body></html>"""
+
+UPDATED_MODEL_PAGE = b"""<!doctype html><html><head>
+<title>Introducing GPT-Live</title>
+<meta property="og:description" content="A new generation of voice models.">
+<meta property="article:published_time" content="2026-07-08T00:00:00Z">
+</head><body>
+<h1>Introducing GPT-Live</h1>
+<p><i><b>Update July 31, 2026:</b> Supported audio generated with GPT-Live now includes
+SynthID watermarking, and the verification tool now provides API access.</i></p>
+</body></html>"""
+
 
 EMBEDDED_ARTICLE_LIST = b"""<script>
 {"ArticleMeta":{"PublishDate":1784649600000,"ResearchArea":[{"ResearchAreaName":"Models"}]},
@@ -97,7 +121,7 @@ class AgentTests(unittest.TestCase):
         payload = agent.build_feishu_payload(date(2026, 7, 22), [])
         serialized = json.dumps(payload, ensure_ascii=False)
         self.assertIn("AI前沿日报", serialized)
-        self.assertIn("AI 模型、Agent 与 AIGC", serialized)
+        self.assertIn("多模态模型优先", serialized)
         self.assertIn("2026-07-22", serialized)
 
     def test_model_report_contains_pm_fields_and_table(self):
@@ -226,6 +250,54 @@ class AgentTests(unittest.TestCase):
             )
         )
 
+    def test_multimodal_capability_update_can_enter_as_b_level(self):
+        item = agent.NewsItem(
+            platform="Luma AI",
+            category="AIGC视频",
+            source_type="official_sitemap",
+            title="Introducing Layers",
+            url="https://lumalabs.ai/news/introducing-layers",
+            published_at="2026-07-29T16:30:00+08:00",
+            description="Released with precision editing and control over every element of an image.",
+        )
+        selected = agent.fallback_analysis([item])
+        self.assertEqual(len(selected), 1)
+        self.assertIn(selected[0]["importance"], {"A", "B"})
+
+    def test_multimodal_updates_rank_before_supplementary_updates(self):
+        multimodal = agent.NewsItem(
+            platform="Example Image",
+            category="多模态与图像",
+            source_type="official_sitemap",
+            title="New layered image editing is available",
+            url="https://example.com/image-editing",
+            published_at="2026-07-29T15:00:00+08:00",
+            description="Adds precision editing for generated and uploaded images.",
+        )
+        text_model = agent.NewsItem(
+            platform="Example Text",
+            category="全球大模型",
+            source_type="official_feed",
+            title="Introducing a flagship reasoning model",
+            url="https://example.com/text-model",
+            published_at="2026-07-29T16:00:00+08:00",
+            description="A frontier language model with reasoning and a larger context window.",
+        )
+        selected = agent.fallback_analysis([text_model, multimodal])
+        self.assertEqual(selected[0]["url"], multimodal.url)
+
+    def test_supplementary_b_level_update_is_excluded(self):
+        item = agent.NewsItem(
+            platform="Example Agent",
+            category="全球大模型",
+            source_type="official_feed",
+            title="Agent support updated",
+            url="https://example.com/agent-update",
+            published_at="2026-07-29T16:00:00+08:00",
+            description="Adds agent support.",
+        )
+        self.assertEqual(agent.fallback_analysis([item]), [])
+
     def test_important_general_text_model_is_included(self):
         item = agent.NewsItem(
             platform="OpenAI",
@@ -292,6 +364,33 @@ class AgentTests(unittest.TestCase):
             )
         )
 
+    def test_named_model_pricing_update_is_included_without_generic_model_words(self):
+        item = agent.NewsItem(
+            platform="OpenAI",
+            category="全球大模型",
+            source_type="official_feed",
+            title="Advancing the price-performance frontier with GPT-5.6",
+            url="https://example.com/gpt-5-6-pricing",
+            published_at="2026-07-30T16:00:00+08:00",
+            description="Explore lower GPT-5.6 pricing for Luna and Terra.",
+        )
+        self.assertTrue(agent.is_model_relevant(item))
+        selected = agent.fallback_analysis([item])
+        self.assertEqual(len(selected), 1)
+        self.assertEqual(selected[0]["importance"], "A")
+
+    def test_product_customer_story_is_excluded(self):
+        item = agent.NewsItem(
+            platform="OpenAI",
+            category="全球大模型",
+            source_type="official_feed",
+            title="How avatarin built a retail agent with GPT-Realtime",
+            url="https://example.com/avatarin",
+            published_at="2026-07-30T16:00:00+08:00",
+            description="A retailer uses the agent for multilingual customer support.",
+        )
+        self.assertFalse(agent.is_model_relevant(item))
+
     def test_realtime_service_incident_is_excluded(self):
         item = agent.NewsItem(
             platform="OpenAI",
@@ -309,7 +408,7 @@ class AgentTests(unittest.TestCase):
         markdown = agent.build_markdown(date(2026, 7, 22), [])
         self.assertEqual(
             markdown,
-            "今日（2026-07-22）所有监控平台均无经官方核验的重要通用模型、多模态/AIGC、Agent 或 API/价格更新\n",
+            "今日（2026-07-22）所有监控平台均无经官方核验的多模态模型重点动态或重大通用模型、Agent、API/价格更新\n",
         )
 
     @patch.object(agent, "fetch_bytes", return_value=EMBEDDED_ARTICLE_LIST)
@@ -362,6 +461,48 @@ class AgentTests(unittest.TestCase):
         with patch.object(agent, "fetch_bytes", side_effect=fake_fetch):
             items = agent.parse_sitemap(source, self.start, self.end)
         self.assertEqual(items, [])
+
+    def test_sitemap_accepts_short_publication_indexing_delay(self):
+        source = {
+            "platform": "Luma AI",
+            "category": "AIGC视频",
+            "kind": "sitemap",
+            "source_type": "official_sitemap",
+            "url": "https://example.com/sitemap.xml",
+            "include": ["/news/"],
+            "max_pages": 5,
+        }
+        start = datetime(2026, 7, 31, 0, 0, tzinfo=self.tz)
+        end = datetime(2026, 8, 1, 0, 0, tzinfo=self.tz)
+
+        def fake_fetch(url, timeout=agent.REQUEST_TIMEOUT):
+            return DELAYED_SITEMAP if url.endswith("sitemap.xml") else DELAYED_PAGE
+
+        with patch.object(agent, "fetch_bytes", side_effect=fake_fetch):
+            items = agent.parse_sitemap(source, start, end)
+        self.assertEqual(len(items), 1)
+        self.assertEqual(items[0].title, "Introducing Layers")
+        self.assertTrue(agent.is_multimodal_relevant(items[0]))
+
+    @patch.object(agent, "fetch_bytes", return_value=UPDATED_MODEL_PAGE)
+    def test_existing_launch_page_explicit_update_becomes_new_multimodal_event(self, _fetch):
+        title, description, published = agent.page_metadata(
+            "https://example.com/introducing-gpt-live"
+        )
+        self.assertEqual(title, "Introducing GPT-Live")
+        self.assertIn("SynthID watermarking", description)
+        self.assertEqual(published.astimezone(self.tz).date(), date(2026, 7, 31))
+        item = agent.NewsItem(
+            platform="OpenAI",
+            category="全球大模型",
+            source_type="official_sitemap",
+            title=title,
+            url="https://example.com/introducing-gpt-live",
+            published_at=published.astimezone(self.tz).isoformat(),
+            description=description,
+        )
+        self.assertTrue(agent.is_multimodal_relevant(item))
+        self.assertTrue(agent.is_model_relevant(item))
 
     def test_report_day_defaults_to_yesterday(self):
         with patch.dict(os.environ, {"REPORT_DATE": "2026-07-22"}):
