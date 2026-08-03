@@ -263,6 +263,44 @@ class AgentTests(unittest.TestCase):
         selected = agent.fallback_analysis([item])
         self.assertEqual(len(selected), 1)
         self.assertIn(selected[0]["importance"], {"A", "B"})
+        self.assertTrue(agent.contains_chinese(selected[0]["title"]))
+        self.assertTrue(agent.contains_chinese(selected[0]["capability_change"]))
+        self.assertEqual(selected[0]["model_or_product"], "Layers")
+
+    def test_english_multimodal_release_is_localized_for_feishu(self):
+        item = agent.NewsItem(
+            platform="Example Video",
+            category="AIGC视频",
+            source_type="official_feed",
+            title="Introducing Example Video 3",
+            url="https://example.com/news/video-3",
+            published_at="2026-08-03T16:30:00+08:00",
+            description=(
+                "Released with image-to-video, camera control, native audio, "
+                "and support for clips up to 30 seconds."
+            ),
+        )
+        selected = agent.fallback_analysis([item])
+        self.assertEqual(len(selected), 1)
+        self.assertEqual(selected[0]["model_or_product"], "Example Video 3")
+        self.assertIn("视频生成", selected[0]["capability_change"])
+        self.assertIn("30秒", selected[0]["capability_change"])
+        self.assertNotIn("Released with", selected[0]["capability_change"])
+
+    def test_chinese_source_copy_is_preserved(self):
+        item = agent.NewsItem(
+            platform="ByteDance Seed",
+            category="AIGC视频",
+            source_type="official_page_list",
+            title="Seedance 2.5 正式发布",
+            url="https://example.com/seedance-2-5",
+            published_at="2026-08-03T16:30:00+08:00",
+            description="30 秒长叙事，多模态参考能力全面升级。",
+        )
+        title, change, product = agent.localize_fallback_copy(item)
+        self.assertEqual(title, item.title)
+        self.assertEqual(change, item.description)
+        self.assertEqual(product, "Seedance 2.5")
 
     def test_multimodal_updates_rank_before_supplementary_updates(self):
         multimodal = agent.NewsItem(

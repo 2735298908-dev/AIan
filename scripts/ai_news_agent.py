@@ -806,6 +806,137 @@ def normalize_evaluation_fields(analysis: dict[str, Any]) -> dict[str, str]:
     }
 
 
+def contains_chinese(value: str) -> bool:
+    """Return whether text already contains user-facing Chinese copy."""
+    return bool(re.search(r"[\u3400-\u9fff]", value or ""))
+
+
+LOCALIZED_CAPABILITY_SIGNALS = (
+    (("multimodal", "omni", "vision-language"), "多模态能力"),
+    (("image generation", "text-to-image", "native image"), "图像生成"),
+    (("image editing", "visual editing", "precision editing", "layered image"), "图像编辑"),
+    (("video generation", "text-to-video", "image-to-video"), "视频生成"),
+    (("video editing", "video-to-video"), "视频编辑"),
+    (("native audio", "audio generation"), "原生音频"),
+    (("speech generation", "voice model", "voice cloning"), "语音生成"),
+    (("music generation",), "音乐生成"),
+    (("reference image", "reference video", "referencing"), "参考控制"),
+    (("character consistency",), "角色一致性"),
+    (("camera control",), "镜头控制"),
+    (("motion control",), "动作控制"),
+    (("lip sync",), "口型同步"),
+    (("synthid", "watermark", "provenance verification"), "内容水印与验证"),
+    (("tool calling", "function calling"), "工具调用"),
+    (("computer use", "browser use"), "计算机与浏览器操作"),
+    (("subagent", "multi-agent"), "多 Agent 协作"),
+    (("context window",), "上下文窗口"),
+    (("open weights",), "开放权重"),
+    (("api", "endpoint"), "API 接入"),
+    (("pricing", "price", "token cost"), "价格与成本"),
+    (("rate limit",), "限流额度"),
+)
+
+
+def localized_capabilities(item: NewsItem) -> list[str]:
+    text = f"{item.title} {item.description}".lower()
+    labels: list[str] = []
+    for keywords, label in LOCALIZED_CAPABILITY_SIGNALS:
+        if any(keyword in text for keyword in keywords) and label not in labels:
+            labels.append(label)
+    return labels[:4]
+
+
+def infer_product_name(item: NewsItem) -> str:
+    """Keep model/product names in their original spelling while removing English copy."""
+    title = clean_text(item.title, 180)
+    patterns = (
+        r"^(?:introducing|announcing|meet)\s+(.+?)(?:\s*[:|—–]\s*.*)?$",
+        r"^new\s+(?:api\s+)?pricing\s+for\s+(.+)$",
+        r"^(.+?)\s+(?:is\s+now\s+available|now\s+available|launches|released)\b",
+    )
+    for pattern in patterns:
+        match = re.match(pattern, title, flags=re.I)
+        if match:
+            name = clean_text(match.group(1), 80).strip(" .:-—–")
+            if name and not name.lower().startswith(("a ", "an ", "the ")):
+                return name
+    model_match = MODEL_NAME_PATTERN.search(title)
+    if model_match:
+        return clean_text(model_match.group(0), 80)
+    return clean_text(item.platform, 80)
+
+
+def infer_update_action(item: NewsItem) -> str:
+    text = f"{item.title} {item.description}".lower()
+    if any(keyword in text for keyword in ("deprecat", "retir", "sunset")):
+        return "下线或弃用调整"
+    if any(keyword in text for keyword in ("pricing", "price reduction", "lower price")):
+        return "价格调整"
+    if any(keyword in text for keyword in ("open weights", "open-weight")):
+        return "开放权重"
+    if any(keyword in text for keyword in ("general availability", "now available", "api access")):
+        return "开放使用"
+    if any(keyword in text for keyword in ("upgrade", "updated", "adds", "added", "support")):
+        return "能力升级"
+    return "正式发布"
+
+
+def extract_localized_metrics(item: NewsItem) -> list[str]:
+    """Preserve useful numeric facts without copying the surrounding English sentence."""
+    text = f"{item.title} {item.description}"
+    patterns = (
+        (r"\b(\d+(?:\.\d+)?)\s*(?:seconds?|secs?)\b", "秒"),
+        (r"\b(\d+(?:\.\d+)?)\s*(?:minutes?|mins?)\b", "分钟"),
+        (r"\b(\d+(?:\.\d+)?)\s*(?:frames? per second|fps)\b", "fps"),
+        (r"\b(\d+(?:\.\d+)?)\s*%", "%"),
+        (r"\b(\d+(?:\.\d+)?)\s*(k|p)\b", None),
+    )
+    metrics: list[str] = []
+    for pattern, suffix in patterns:
+        for match in re.finditer(pattern, text, flags=re.I):
+            if suffix is None:
+                value = f"{match.group(1)}{match.group(2).upper()}"
+            else:
+                value = f"{match.group(1)}{suffix}"
+            if value not in metrics:
+                metrics.append(value)
+            if len(metrics) >= 3:
+                return metrics
+    return metrics
+
+
+def localize_fallback_copy(item: NewsItem) -> tuple[str, str, str]:
+    """Build concise Chinese copy without relying on an external translation API."""
+    product = infer_product_name(item)
+    action = infer_update_action(item)
+    capabilities = localized_capabilities(item)
+    metrics = extract_localized_metrics(item)
+
+    if contains_chinese(item.title):
+        title = clean_text(item.title, 160)
+    elif capabilities and capabilities[0] not in {"价格与成本", "开放权重"}:
+        title = f"{product} {capabilities[0]}{action}"
+    else:
+        title = f"{product} {action}"
+
+    if contains_chinese(item.description):
+        change = clean_text(item.description, 300)
+    else:
+        focus = "、".join(capabilities) if capabilities else "模型或产品能力"
+        action_verb = {
+            "正式发布": "正式发布了",
+            "能力升级": "升级了",
+            "价格调整": "调整了",
+            "开放使用": "开放了",
+            "开放权重": "开放了",
+            "下线或弃用调整": "调整了",
+        }[action]
+        change = f"官方{action_verb} {product}，重点涉及{focus}。"
+        if metrics:
+            change += f"公开信息包含 {'、'.join(metrics)} 等关键参数。"
+    return clean_text(title, 160), clean_text(change, 300), product
+
+
 def call_github_models(items: list[NewsItem], report_day: date) -> list[dict[str, Any]]:
     token = os.getenv("GITHUB_TOKEN", "").strip()
     if not token:
@@ -965,13 +1096,14 @@ def fallback_analysis(items: list[NewsItem]) -> list[dict[str, Any]]:
             f"{item.title} {item.description}",
             flags=re.I,
         )
+        localized_title, localized_change, product_name = localize_fallback_copy(item)
         selected.append(
             {
                 "importance": importance,
-                "title": item.title,
-                "model_or_product": item.platform,
+                "title": localized_title,
+                "model_or_product": product_name,
                 "version": version_match.group(0) if version_match else "",
-                "capability_change": item.description or "官方信源发布了模型或能力更新。",
+                "capability_change": localized_change,
                 "type": item.category,
                 "pm_judgement": "该更新可能影响 AI 产品的能力边界、模型选型或成本。",
                 "evaluation_basis": "待实测",
