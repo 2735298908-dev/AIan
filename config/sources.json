@@ -16,7 +16,8 @@
       "include": [
         "/index/"
       ],
-      "max_pages": 24
+      "max_pages": 24,
+      "allow_page_fallback": true
     },
     {
       "platform": "Google AI",

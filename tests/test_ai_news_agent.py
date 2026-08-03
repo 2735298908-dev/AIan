@@ -504,6 +504,41 @@ class AgentTests(unittest.TestCase):
         self.assertTrue(agent.is_multimodal_relevant(item))
         self.assertTrue(agent.is_model_relevant(item))
 
+    def test_protected_official_model_page_uses_transparent_sitemap_fallback(self):
+        source = {
+            "platform": "OpenAI Product Updates",
+            "category": "全球大模型",
+            "source_type": "official_sitemap",
+            "allow_page_fallback": True,
+        }
+        modified = datetime(2026, 8, 3, 3, 38, tzinfo=self.tz)
+        item = agent.sitemap_page_fallback(
+            source,
+            "https://openai.com/index/introducing-gpt-live/",
+            modified,
+        )
+        self.assertIsNotNone(item)
+        self.assertIn("could not read", item.description)
+        self.assertTrue(agent.is_multimodal_relevant(item))
+        self.assertTrue(agent.is_model_relevant(item))
+        selected = agent.fallback_analysis([item])
+        self.assertEqual(selected[0]["importance"], "A")
+
+    def test_protected_non_model_page_does_not_use_sitemap_fallback(self):
+        source = {
+            "platform": "OpenAI Product Updates",
+            "category": "全球大模型",
+            "source_type": "official_sitemap",
+            "allow_page_fallback": True,
+        }
+        modified = datetime(2026, 8, 3, 3, 38, tzinfo=self.tz)
+        item = agent.sitemap_page_fallback(
+            source,
+            "https://openai.com/index/customer-success-story/",
+            modified,
+        )
+        self.assertIsNone(item)
+
     def test_report_day_defaults_to_yesterday(self):
         with patch.dict(os.environ, {"REPORT_DATE": "2026-07-22"}):
             self.assertEqual(agent.resolve_report_day(), date(2026, 7, 22))

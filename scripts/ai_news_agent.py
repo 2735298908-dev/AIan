@@ -65,6 +65,7 @@ A_KEYWORDS = (
     "text-to-video", "image-to-video", "reference image", "lip sync",
     "camera control", "character consistency", "benchmark", "checkpoint",
     "synthid", "watermarking", "provenance verification",
+    "gpt-live", "sora", "dall-e", "imagegen",
     "语言模型", "文本模型", "推理", "上下文窗口", "工具调用", "函数调用",
     "模型 api", "接口开放", "限流", "速率限制", "定价", "价格", "下线", "弃用",
     "智能体", "代码助手", "ai 编程", "子 agent", "多 agent", "多模态", "视觉",
@@ -106,6 +107,7 @@ MULTIMODAL_KEYWORDS = (
     "video-to-video", "reference image", "reference video", "native audio",
     "lip sync", "camera control", "character consistency", "motion control",
     "storyboard", "3d generation", "3d model", "synthid", "watermarking",
+    "gpt-live", "gpt live", "sora", "dall-e", "imagegen", "voice engine",
     "多模态", "全模态", "视觉语言", "视觉模型", "图像模型", "视频模型",
     "世界模型", "图像生成", "图像编辑", "视频生成", "视频编辑", "音频生成",
     "语音生成", "语音模型", "声音克隆", "音乐生成", "文生图", "生图", "文生视频",
@@ -156,9 +158,10 @@ GITHUB_RELEASE_MATERIAL_KEYWORDS = (
     "下线", "弃用", "图像生成", "视频生成", "原生音频",
 )
 MODEL_NAME_PATTERN = re.compile(
-    r"\b(?:gpt|claude|gemini|llama|mistral|qwen|glm|deepseek|kimi|minimax|"
-    r"flux|midjourney|seedance|veo|sora|kling|wan|ray)[\s._-]*"
-    r"(?:[a-z]+[\s._-]*)?\d[\w.-]*\b",
+    r"\b(?:(?:gpt[\s._-]*(?:live|imagegen))|(?:sora|dall-e)|"
+    r"(?:gpt|claude|gemini|llama|mistral|qwen|glm|deepseek|kimi|minimax|"
+    r"flux|midjourney|seedance|veo|kling|wan|ray)[\s._-]*"
+    r"(?:[a-z]+[\s._-]*)?\d[\w.-]*)\b",
     flags=re.I,
 )
 
@@ -486,6 +489,32 @@ def page_metadata(url: str) -> tuple[str, str, datetime | None]:
     return clean_text(title, 300), clean_text(description, 700), published
 
 
+def sitemap_page_fallback(
+    source: dict[str, Any], url: str, modified: datetime
+) -> NewsItem | None:
+    """Emit a transparent official-page signal when a protected page is unreadable."""
+    if not source.get("allow_page_fallback", False):
+        return None
+    slug = urllib.parse.unquote(urllib.parse.urlsplit(url).path.rstrip("/").rsplit("/", 1)[-1])
+    readable_name = re.sub(r"[-_]+", " ", slug).strip()
+    if not readable_name or not MODEL_NAME_PATTERN.search(readable_name):
+        return None
+    title = f"Official model page updated: {readable_name}"
+    description = (
+        "Official sitemap detected a fresh model API or product-page update. "
+        "The GitHub runner could not read the page body; review the official source for details."
+    )
+    return NewsItem(
+        platform=source["platform"],
+        category=source["category"],
+        source_type=source.get("source_type", "official_sitemap"),
+        title=title,
+        url=normalize_url(url),
+        published_at=modified.astimezone(REPORT_TZ).isoformat(),
+        description=description,
+    )
+
+
 def parse_sitemap(source: dict[str, Any], start: datetime, end: datetime) -> list[NewsItem]:
     raw = fetch_bytes(source["url"])
     root_type, records = sitemap_records(raw)
@@ -516,6 +545,9 @@ def parse_sitemap(source: dict[str, Any], start: datetime, end: datetime) -> lis
             title, description, published = page_metadata(url)
         except Exception as exc:  # noqa: BLE001
             log(f"页面元数据读取失败：{url} ({exc})")
+            fallback = sitemap_page_fallback(source, url, modified)
+            if fallback is not None:
+                items.append(fallback)
             continue
         if not title or published is None:
             continue
