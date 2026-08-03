@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-03T11:48:24.194227+00:00",
+  "updated_at": "2026-08-03T19:00:07.673306+00:00",
   "seen": [
     {
       "url": "https://runway.com/news/customers/skyscanner",
@@ -43,6 +43,18 @@
       "url": "https://lumalabs.ai/news/ai-tools-edit-text-images",
       "title_key": "7bestaitoolstoedittextinimages2026luma",
       "seen_at": "2026-08-03T11:48:24.194227+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://runway.com/news/company-news/spotify-block-ai-summit-2026",
+      "title_key": "howlegalleadersatblockandspotifygettoyesonairunwaynews",
+      "seen_at": "2026-08-03T19:00:07.673306+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://runway.com/news/company-news/netflix-aif-2026",
+      "title_key": "netflixfuturecelonaicraftandwhatgetsmaderunwaynews",
+      "seen_at": "2026-08-03T19:00:07.673306+00:00",
       "rule_version": 2
     }
   ],
