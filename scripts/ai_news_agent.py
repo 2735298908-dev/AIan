@@ -36,6 +36,7 @@ USER_AGENT = "AIan-News-Agent/1.0 (+https://github.com/2735298908-dev/AIan)"
 REQUEST_TIMEOUT = int(os.getenv("REQUEST_TIMEOUT", "20"))
 MAX_CANDIDATES = int(os.getenv("MAX_CANDIDATES", "60"))
 MAX_REPORT_ITEMS = int(os.getenv("MAX_REPORT_ITEMS", "10"))
+FILTER_RULE_VERSION = 2
 
 S_KEYWORDS = (
     "flagship model", "frontier model", "foundation model", "reasoning model",
@@ -59,6 +60,7 @@ A_KEYWORDS = (
     "audio generation", "speech generation", "voice cloning", "text-to-image",
     "text-to-video", "image-to-video", "reference image", "lip sync",
     "camera control", "character consistency", "benchmark", "checkpoint",
+    "synthid", "watermarking", "provenance verification",
     "语言模型", "文本模型", "推理", "上下文窗口", "工具调用", "函数调用",
     "模型 api", "接口开放", "限流", "速率限制", "定价", "价格", "下线", "弃用",
     "智能体", "代码助手", "ai 编程", "子 agent", "多 agent", "多模态", "视觉",
@@ -91,15 +93,34 @@ PRODUCT_RELEVANCE_KEYWORDS = (
     "声音克隆", "文生图", "生图", "文生视频", "图生视频", "生视频",
     "参考图", "参考视频", "口型同步", "镜头控制", "角色一致性", "动作控制",
 )
+MULTIMODAL_KEYWORDS = (
+    "multimodal", "omni", "vision-language", "vision model", "visual model",
+    "image model", "video model", "world model", "image generation",
+    "image editing", "visual editing", "precision editing", "video generation",
+    "video editing", "audio generation", "speech generation", "voice model", "voice cloning",
+    "music generation", "text-to-image", "text-to-video", "image-to-video",
+    "video-to-video", "reference image", "reference video", "native audio",
+    "lip sync", "camera control", "character consistency", "motion control",
+    "storyboard", "3d generation", "3d model", "synthid", "watermarking",
+    "多模态", "全模态", "视觉语言", "视觉模型", "图像模型", "视频模型",
+    "世界模型", "图像生成", "图像编辑", "视频生成", "视频编辑", "音频生成",
+    "语音生成", "语音模型", "声音克隆", "音乐生成", "文生图", "生图", "文生视频",
+    "图生视频", "生视频", "参考图", "参考视频", "原生音频", "口型同步",
+    "镜头控制", "角色一致性", "动作控制", "分镜", "3d 生成", "三维生成",
+)
+MULTIMODAL_CATEGORIES = {
+    "多模态与图像", "AIGC视频", "国内大模型与多模态"
+}
 DIRECT_SCOPE_CATEGORIES = {
     "多模态与图像", "AIGC视频", "国内大模型与多模态", "Agent与AI编程"
 }
 NOISE_KEYWORDS = (
     "customer story", "case study", "webinar", "event recap", "partnership",
     "funding", "hiring", "careers", "tutorial", "how to", "sponsored",
-    "seo", "comparison article", "customer spotlight",
+    "seo", "comparison article", "customer spotlight", "field report",
+    "alternatives", "statistics",
     "客户案例", "活动回顾", "合作伙伴", "融资", "招聘", "教程", "营销",
-    "对比文章",
+    "对比文章", "行业统计",
 )
 NOISE_URL_PARTS = (
     "/customers/", "/customer-stories/", "/case-studies/", "/case-study/",
@@ -129,6 +150,12 @@ GITHUB_RELEASE_MATERIAL_KEYWORDS = (
     "开放权重", "编程 agent", "智能体模式", "计算机使用", "浏览器操作",
     "多 agent", "子 agent", "工具调用", "深度研究", "api 定价", "模型降价",
     "下线", "弃用", "图像生成", "视频生成", "原生音频",
+)
+MODEL_NAME_PATTERN = re.compile(
+    r"\b(?:gpt|claude|gemini|llama|mistral|qwen|glm|deepseek|kimi|minimax|"
+    r"flux|midjourney|seedance|veo|sora|kling|wan|ray)[\s._-]*"
+    r"(?:[a-z]+[\s._-]*)?\d[\w.-]*\b",
+    flags=re.I,
 )
 
 
@@ -429,6 +456,26 @@ def page_metadata(url: str) -> tuple[str, str, datetime | None]:
                 except ValueError:
                     published_raw = ""
     published = parse_datetime(published_raw)
+
+    # Some vendors append material model/API changes to an existing launch page
+    # instead of publishing a new article or updating RSS. Treat an explicit
+    # "Update Month DD, YYYY" block as the effective event date and use its text
+    # for screening, while leaving ordinary page edits untouched.
+    visible = re.sub(r"<script\b[^>]*>.*?</script>", " ", raw_text, flags=re.I | re.S)
+    visible = re.sub(r"<style\b[^>]*>.*?</style>", " ", visible, flags=re.I | re.S)
+    visible = clean_text(visible, 6000)
+    update_match = re.search(
+        r"\bUpdate\s+((?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|"
+        r"Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|"
+        r"Nov(?:ember)?|Dec(?:ember)?)\s+\d{1,2},\s+\d{4})\s*:\s*(.{1,1200})",
+        visible,
+        flags=re.I,
+    )
+    if update_match:
+        updated = parse_datetime(update_match.group(1))
+        if updated is not None and (published is None or updated > published):
+            published = updated
+            description = clean_text(update_match.group(2), 700)
     return clean_text(title, 300), clean_text(description, 700), published
 
 
@@ -463,9 +510,19 @@ def parse_sitemap(source: dict[str, Any], start: datetime, end: datetime) -> lis
         except Exception as exc:  # noqa: BLE001
             log(f"页面元数据读取失败：{url} ({exc})")
             continue
-        # Sitemap lastmod is only a fetch hint. A page is eligible only when the
-        # page itself exposes a publication timestamp inside the report window.
-        if not title or published is None or not within_window(published, start, end):
+        if not title or published is None:
+            continue
+        # Sitemap lastmod is normally only a fetch hint. Some multimodal vendors
+        # publish the article first and update their sitemap hours or a day later,
+        # so accept a short delay without allowing an old page edit to masquerade
+        # as a fresh release.
+        published_in_window = within_window(published, start, end)
+        sitemap_delay = modified - published
+        recently_published_before_sitemap = (
+            timedelta(0) <= sitemap_delay <= timedelta(hours=96)
+            and within_window(modified, start, end)
+        )
+        if not published_in_window and not recently_published_before_sitemap:
             continue
         items.append(
             NewsItem(
@@ -572,6 +629,14 @@ def deduplicate(items: list[NewsItem], history: dict[str, Any]) -> list[NewsItem
     return unique
 
 
+def is_multimodal_relevant(item: NewsItem) -> bool:
+    """Return whether an update belongs to the user's primary multimodal focus."""
+    text = f"{item.title} {item.description}".lower()
+    return item.category in MULTIMODAL_CATEGORIES or any(
+        keyword in text for keyword in MULTIMODAL_KEYWORDS
+    )
+
+
 def candidate_score(item: NewsItem) -> int:
     text = f"{item.title} {item.description}".lower()
     score = 0
@@ -584,19 +649,35 @@ def candidate_score(item: NewsItem) -> int:
         score += 3
     if item.source_type == "official_github_release":
         score += 1
+    if MODEL_NAME_PATTERN.search(text):
+        score += 2
+    # Multimodal model changes are the primary signal. General models, Agent and
+    # API/pricing remain as a secondary radar rather than competing equally.
+    if is_multimodal_relevant(item):
+        score += 3
     return score
+
+
+def candidate_rank(item: NewsItem) -> tuple[int, int, str]:
+    return (int(is_multimodal_relevant(item)), candidate_score(item), item.published_at)
 
 
 def is_model_relevant(item: NewsItem) -> bool:
     text = f"{item.title} {item.description}".lower()
     title = item.title.lower()
     has_scope_term = any(keyword in text for keyword in PRODUCT_RELEVANCE_KEYWORDS)
+    has_named_model = bool(MODEL_NAME_PATTERN.search(text))
+    has_multimodal_signal = is_multimodal_relevant(item)
     has_direct_category = item.category in DIRECT_SCOPE_CATEGORIES
     has_update_action = any(keyword in text for keyword in UPDATE_ACTION_KEYWORDS)
     has_noise = any(keyword in text for keyword in NOISE_KEYWORDS) or any(
         part in item.url.lower() for part in NOISE_URL_PARTS
     )
     has_realtime_event = any(keyword in text for keyword in REALTIME_EVENT_KEYWORDS)
+    is_case_study = title.startswith("how ") and any(
+        phrase in title
+        for phrase in (" built ", " uses ", " used ", " transformed ", " created ", " scales ")
+    )
     is_unstable_tool_build = (
         item.source_type == "official_github_release"
         and bool(
@@ -613,9 +694,10 @@ def is_model_relevant(item: NewsItem) -> bool:
         and not any(keyword in text for keyword in GITHUB_RELEASE_MATERIAL_KEYWORDS)
     )
     return (
-        (has_scope_term or has_direct_category)
+        (has_scope_term or has_named_model or has_multimodal_signal or has_direct_category)
         and has_update_action
         and not has_noise
+        and not is_case_study
         and not has_realtime_event
         and not is_unstable_tool_build
         and not is_generic_github_release
@@ -823,15 +905,22 @@ B：已具备产品决策价值、但影响相对有限的能力、接入或开�
 
 def fallback_analysis(items: list[NewsItem]) -> list[dict[str, Any]]:
     selected: list[dict[str, Any]] = []
-    for item in sorted(items, key=candidate_score, reverse=True):
+    for item in sorted(items, key=candidate_rank, reverse=True):
         if not is_model_relevant(item):
             continue
         score = candidate_score(item)
-        # The rule-only path is intentionally conservative. If the model service
-        # is unavailable, silence is better than pushing a generic SDK patch.
-        if score < 7:
-            continue
-        importance = "S" if score >= 12 else "A" if score >= 7 else "B"
+        multimodal = is_multimodal_relevant(item)
+        # Keep useful B-level multimodal capability changes such as editing,
+        # reference control or availability updates. The supplementary text/
+        # Agent radar stays stricter and never emits B-level entries.
+        if multimodal:
+            if score < 5:
+                continue
+            importance = "S" if score >= 15 else "A" if score >= 9 else "B"
+        else:
+            if score < 8:
+                continue
+            importance = "S" if score >= 16 else "A"
         version_match = re.search(
             r"\bv?\d+(?:\.\d+){1,3}\b",
             f"{item.title} {item.description}",
@@ -864,7 +953,7 @@ def fallback_analysis(items: list[NewsItem]) -> list[dict[str, Any]]:
 def analyze(items: list[NewsItem], report_day: date) -> list[dict[str, Any]]:
     if not items:
         return []
-    ranked = sorted(items, key=lambda item: (candidate_score(item), item.published_at), reverse=True)
+    ranked = sorted(items, key=candidate_rank, reverse=True)
     ranked = ranked[:MAX_CANDIDATES]
     # GitHub Models inference was retired on 2026-07-30. Keep the collector
     # self-contained and deterministic instead of calling a permanently gone API.
@@ -886,11 +975,11 @@ def report_window_text(report_day: date) -> str:
 
 def build_markdown(report_day: date, items: list[dict[str, Any]]) -> str:
     if not items:
-        return f"今日（{report_day.isoformat()}）所有监控平台均无经官方核验的重要通用模型、多模态/AIGC、Agent 或 API/价格更新\n"
+        return f"今日（{report_day.isoformat()}）所有监控平台均无经官方核验的多模态模型重点动态或重大通用模型、Agent、API/价格更新\n"
 
     counts = {level: sum(1 for item in items if item["importance"] == level) for level in "SAB"}
     lines = [
-        f"# AI前沿日报｜AI 模型、Agent 与 AIGC｜{report_day.isoformat()}",
+        f"# AI前沿日报｜多模态模型优先｜{report_day.isoformat()}",
         "",
         f"- 监控时段：{report_window_text(report_day)}",
         f"- 收录：{len(items)} 条（S {counts['S']} / A {counts['A']} / B {counts['B']}）",
@@ -955,7 +1044,7 @@ def build_feishu_payload(report_day: date, items: list[dict[str, Any]]) -> dict[
         elements.append(
             {
                 "tag": "markdown",
-                "content": "昨日未发现经官方信源核验的重要通用模型、多模态/AIGC、Agent 或 API/价格更新。",
+                "content": "昨日未发现经官方信源核验的多模态模型重点动态或重大通用模型、Agent、API/价格更新。",
             }
         )
     else:
@@ -988,7 +1077,7 @@ def build_feishu_payload(report_day: date, items: list[dict[str, Any]]) -> dict[
                 "elements": [
                     {
                         "tag": "plain_text",
-                        "content": "AI前沿日报 · AI 模型、Agent 与 AIGC 雷达 · 重要结论请结合官方原文复核",
+                        "content": "AI前沿日报 · 多模态模型优先雷达 · 重要结论请结合官方原文复核",
                     }
                 ],
             },
@@ -1002,7 +1091,7 @@ def build_feishu_payload(report_day: date, items: list[dict[str, Any]]) -> dict[
                 "template": "blue",
                 "title": {
                     "tag": "plain_text",
-                    "content": f"🎬 AI前沿日报｜AI 模型、Agent 与 AIGC｜{report_day.isoformat()}",
+                    "content": f"🎬 AI前沿日报｜多模态模型优先｜{report_day.isoformat()}",
                 },
             },
             "elements": elements,
