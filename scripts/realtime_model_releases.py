@@ -11,6 +11,7 @@ from pathlib import Path
 from typing import Any
 
 from ai_news_agent import (
+    FILTER_RULE_VERSION,
     MAX_CANDIDATES,
     REPORT_TZ,
     ROOT,
@@ -18,6 +19,7 @@ from ai_news_agent import (
     analyze,
     collect_source,
     escape_markdown,
+    is_multimodal_relevant,
     is_model_relevant,
     load_sources,
     log,
@@ -57,8 +59,17 @@ def load_realtime_history() -> dict[str, Any]:
 def new_candidates(
     items: list[NewsItem], history: dict[str, Any]
 ) -> list[NewsItem]:
-    seen_urls = {record.get("url", "") for record in history["seen"]}
-    seen_titles = {record.get("title_key", "") for record in history["seen"]}
+    # Previously pushed notifications must never be sent twice. Unpushed items
+    # are reconsidered once when the filter version changes, which prevents a
+    # stale strict rule from permanently hiding useful multimodal updates.
+    notified_urls = {record.get("url", "") for record in history["notifications"]}
+    notified_titles = {record.get("title_key", "") for record in history["notifications"]}
+    current_seen = [
+        record for record in history["seen"]
+        if record.get("rule_version") == FILTER_RULE_VERSION
+    ]
+    seen_urls = {record.get("url", "") for record in current_seen}
+    seen_titles = {record.get("title_key", "") for record in current_seen}
     run_urls: set[str] = set()
     run_titles: set[str] = set()
     result: list[NewsItem] = []
@@ -68,6 +79,8 @@ def new_candidates(
         if (
             not url
             or not key
+            or url in notified_urls
+            or key in notified_titles
             or url in seen_urls
             or key in seen_titles
             or url in run_urls
@@ -87,7 +100,7 @@ def build_feishu_payload(items: list[dict[str, Any]], checked_at: datetime) -> d
             "content": (
                 f"⏱️ **发现时间：** {checked_at.strftime('%Y-%m-%d %H:%M')}（UTC+8）\n"
                 f"📊 **重大动态：** {len(items)} 条\n"
-                "🔎 官方信源｜模型与 AI 产品重大更新｜已自动去重"
+                "🔎 多模态模型优先｜重大通用模型补充｜已自动去重"
             ),
         },
         {"tag": "hr"},
@@ -131,7 +144,7 @@ def build_feishu_payload(items: list[dict[str, Any]], checked_at: datetime) -> d
                 "template": "red" if any(item["importance"] == "S" for item in items) else "orange",
                 "title": {
                     "tag": "plain_text",
-                    "content": "🚨 AI产品 / 模型重大动态",
+                    "content": "🚨 多模态优先｜AI模型重大动态",
                 },
             },
             "elements": elements,
@@ -171,6 +184,7 @@ def update_history(
             "url": normalize_url(item.url),
             "title_key": title_key(item.title),
             "seen_at": seen_at,
+            "rule_version": FILTER_RULE_VERSION,
         }
         for item in evaluated
     )
@@ -275,9 +289,17 @@ def main() -> int:
     # Reuse the daily analyzer so the conservative keyword fallback remains
     # available when GitHub Models is temporarily unavailable.
     selected = analyze(candidates, now.date())
+    sources_by_url = {normalize_url(item.url): item for item in candidates}
     selected = [
         item for item in selected
         if item.get("importance", "").upper() in PUSH_LEVELS
+        and (
+            item.get("importance", "").upper() == "S"
+            or (
+                (source := sources_by_url.get(normalize_url(item["url"]))) is not None
+                and is_multimodal_relevant(source)
+            )
+        )
     ]
 
     if selected:
