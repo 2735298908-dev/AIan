@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-03T00:56:27.248734+00:00",
+  "updated_at": "2026-08-04T00:55:48.706826+00:00",
   "items": [
     {
       "url": "https://openai.com/index/introducing-openai-presence",
@@ -86,6 +86,11 @@
       "url": "https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
       "title_key": "一镜成片随心参考seedance25正式发布",
       "reported_at": "2026-08-01T00:54:23.854531+00:00"
+    },
+    {
+      "url": "https://lumalabs.ai/news/ai-tools-edit-text-images",
+      "title_key": "7bestaitoolstoedittextinimages2026luma",
+      "reported_at": "2026-08-04T00:55:48.706826+00:00"
     }
   ]
 }
