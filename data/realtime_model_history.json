@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-05T00:16:52.070007+00:00",
+  "updated_at": "2026-08-05T06:45:22.577544+00:00",
   "seen": [
     {
       "url": "https://runway.com/news/customers/skyscanner",
@@ -79,6 +79,12 @@
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.222",
       "title_key": "v21222",
       "seen_at": "2026-08-05T00:16:52.070007+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://seed.bytedance.com/en/blog/seedrealtime-audio-visual-full-duplex-llm-released-toward-omni-modal-natural-interaction",
+      "title_key": "seedrealtime音视频全双工大模型发布走向全模态自然交互",
+      "seen_at": "2026-08-05T06:45:22.577544+00:00",
       "rule_version": 2
     }
   ],
