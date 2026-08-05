@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-04T00:55:48.706826+00:00",
+  "updated_at": "2026-08-05T00:57:37.476276+00:00",
   "items": [
     {
       "url": "https://openai.com/index/introducing-openai-presence",
@@ -91,6 +91,26 @@
       "url": "https://lumalabs.ai/news/ai-tools-edit-text-images",
       "title_key": "7bestaitoolstoedittextinimages2026luma",
       "reported_at": "2026-08-04T00:55:48.706826+00:00"
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-live",
+      "title_key": "officialmodelpageupdatedintroducinggptlive",
+      "reported_at": "2026-08-05T00:57:37.476276+00:00"
+    },
+    {
+      "url": "https://runway.com/news/company-news/electronic-arts-ai-summit-2026",
+      "title_key": "howeaisbringinggenerativeaiintolivingplayableworldsrunwaynews",
+      "reported_at": "2026-08-05T00:57:37.476276+00:00"
+    },
+    {
+      "url": "https://runway.com/news/company-news/spotify-block-ai-summit-2026",
+      "title_key": "howlegalleadersatblockandspotifygettoyesonairunwaynews",
+      "reported_at": "2026-08-05T00:57:37.476276+00:00"
+    },
+    {
+      "url": "https://runway.com/news/company-news/netflix-aif-2026",
+      "title_key": "netflixfuturecelonaicraftandwhatgetsmaderunwaynews",
+      "reported_at": "2026-08-05T00:57:37.476276+00:00"
     }
   ]
 }
