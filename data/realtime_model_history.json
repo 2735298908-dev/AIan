@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-07T04:04:37.041701+00:00",
+  "updated_at": "2026-08-07T16:11:08.355129+00:00",
   "seen": [
     {
       "url": "https://runway.com/news/customers/skyscanner",
@@ -104,6 +104,18 @@
       "title_key": "01470",
       "seen_at": "2026-08-07T04:04:37.041701+00:00",
       "rule_version": 2
+    },
+    {
+      "url": "https://lumalabs.ai/news/seedance-2.5-live-in-luma",
+      "title_key": "seedance25nowliveinlumaluma",
+      "seen_at": "2026-08-07T16:11:08.355129+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://lumalabs.ai/news/minimax-h3-now-available-in-luma-agents",
+      "title_key": "minimaxh3availablenowluma",
+      "seen_at": "2026-08-07T16:11:08.355129+00:00",
+      "rule_version": 2
     }
   ],
   "notifications": [
@@ -178,6 +190,42 @@
       "published_at": "2026-08-06T21:00:00+08:00",
       "original_title": "Into the Omniverse: How Open World Models Push the Frontier of Physical AI",
       "reported_at": "2026-08-07T00:44:50.583152+00:00"
+    },
+    {
+      "importance": "A",
+      "title": "Seedance 2.5 开放使用",
+      "model_or_product": "Seedance 2.5",
+      "version": "2.5",
+      "capability_change": "官方开放了 Seedance 2.5，重点涉及模型或产品能力。",
+      "type": "AIGC视频",
+      "pm_judgement": "该更新可能影响 AI 产品的能力边界、模型选型或成本。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "建议阅读官方原文，并结合业务场景完成小样本评测。",
+      "platform": "Luma AI",
+      "url": "https://lumalabs.ai/news/seedance-2.5-live-in-luma",
+      "published_at": "2026-08-07T02:04:32.343000+08:00",
+      "original_title": "Seedance 2.5: Now Live in Luma | Luma",
+      "reported_at": "2026-08-07T16:11:08.355129+00:00"
+    },
+    {
+      "importance": "A",
+      "title": "MiniMax H3 开放使用",
+      "model_or_product": "MiniMax H3",
+      "version": "",
+      "capability_change": "官方开放了 MiniMax H3，重点涉及模型或产品能力。",
+      "type": "AIGC视频",
+      "pm_judgement": "该更新可能影响 AI 产品的能力边界、模型选型或成本。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "建议阅读官方原文，并结合业务场景完成小样本评测。",
+      "platform": "Luma AI",
+      "url": "https://lumalabs.ai/news/minimax-h3-now-available-in-luma-agents",
+      "published_at": "2026-08-07T02:04:32.343000+08:00",
+      "original_title": "MiniMax H3 Available Now | Luma",
+      "reported_at": "2026-08-07T16:11:08.355129+00:00"
     }
   ]
 }
