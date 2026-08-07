@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-07T16:11:08.355129+00:00",
+  "updated_at": "2026-08-07T19:18:57.125552+00:00",
   "seen": [
     {
       "url": "https://runway.com/news/customers/skyscanner",
@@ -115,6 +115,18 @@
       "url": "https://lumalabs.ai/news/minimax-h3-now-available-in-luma-agents",
       "title_key": "minimaxh3availablenowluma",
       "seen_at": "2026-08-07T16:11:08.355129+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-5-4",
+      "title_key": "officialmodelpageupdatedintroducinggpt54",
+      "seen_at": "2026-08-07T19:18:57.125552+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-5-3-codex-spark",
+      "title_key": "officialmodelpageupdatedintroducinggpt53codexspark",
+      "seen_at": "2026-08-07T19:18:57.125552+00:00",
       "rule_version": 2
     }
   ],
