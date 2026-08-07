@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-07T00:44:50.583152+00:00",
+  "updated_at": "2026-08-07T04:04:37.041701+00:00",
   "seen": [
     {
       "url": "https://runway.com/news/customers/skyscanner",
@@ -97,6 +97,12 @@
       "url": "https://blogs.nvidia.com/blog/open-world-models-physical-ai",
       "title_key": "intotheomniversehowopenworldmodelspushthefrontierofphysicalai",
       "seen_at": "2026-08-07T00:44:50.583152+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.147.0",
+      "title_key": "01470",
+      "seen_at": "2026-08-07T04:04:37.041701+00:00",
       "rule_version": 2
     }
   ],
