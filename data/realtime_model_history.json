@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-05T06:45:22.577544+00:00",
+  "updated_at": "2026-08-07T00:44:50.583152+00:00",
   "seen": [
     {
       "url": "https://runway.com/news/customers/skyscanner",
@@ -86,6 +86,18 @@
       "title_key": "seedrealtime音视频全双工大模型发布走向全模态自然交互",
       "seen_at": "2026-08-05T06:45:22.577544+00:00",
       "rule_version": 2
+    },
+    {
+      "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
+      "title_key": "officialmodelpageupdatedimprovinggpt56solinchatgpt",
+      "seen_at": "2026-08-07T00:44:50.583152+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/open-world-models-physical-ai",
+      "title_key": "intotheomniversehowopenworldmodelspushthefrontierofphysicalai",
+      "seen_at": "2026-08-07T00:44:50.583152+00:00",
+      "rule_version": 2
     }
   ],
   "notifications": [
@@ -142,6 +154,24 @@
       "published_at": "2026-08-03T19:05:14.822000+08:00",
       "original_title": "7 Best AI Tools to Edit Text in Images (2026) | Luma",
       "reported_at": "2026-08-03T11:48:24.194227+00:00"
+    },
+    {
+      "importance": "A",
+      "title": "NVIDIA Generative AI 多模态能力开放权重",
+      "model_or_product": "NVIDIA Generative AI",
+      "version": "",
+      "capability_change": "官方开放了 NVIDIA Generative AI，重点涉及多模态能力、开放权重。",
+      "type": "开源生态",
+      "pm_judgement": "该更新可能影响 AI 产品的能力边界、模型选型或成本。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "建议阅读官方原文，并结合业务场景完成小样本评测。",
+      "platform": "NVIDIA Generative AI",
+      "url": "https://blogs.nvidia.com/blog/open-world-models-physical-ai",
+      "published_at": "2026-08-06T21:00:00+08:00",
+      "original_title": "Into the Omniverse: How Open World Models Push the Frontier of Physical AI",
+      "reported_at": "2026-08-07T00:44:50.583152+00:00"
     }
   ]
 }
