@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-08T04:31:07.826595+00:00",
+  "updated_at": "2026-08-08T07:18:07.063173+00:00",
   "seen": [
     {
       "url": "https://runway.com/news/customers/skyscanner",
@@ -145,6 +145,12 @@
       "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.31.0",
       "title_key": "v0310",
       "seen_at": "2026-08-08T04:31:07.826595+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-5-for-developers",
+      "title_key": "officialmodelpageupdatedintroducinggpt5fordevelopers",
+      "seen_at": "2026-08-08T07:18:07.063173+00:00",
       "rule_version": 2
     }
   ],
