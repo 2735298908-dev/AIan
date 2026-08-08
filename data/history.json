@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-07T00:56:20.884122+00:00",
+  "updated_at": "2026-08-08T00:54:48.977044+00:00",
   "items": [
     {
       "url": "https://openai.com/index/introducing-openai-presence",
@@ -126,6 +126,16 @@
       "url": "https://blogs.nvidia.com/blog/open-world-models-physical-ai",
       "title_key": "intotheomniversehowopenworldmodelspushthefrontierofphysicalai",
       "reported_at": "2026-08-07T00:56:20.884122+00:00"
+    },
+    {
+      "url": "https://lumalabs.ai/news/seedance-2.5-live-in-luma",
+      "title_key": "seedance25nowliveinlumaluma",
+      "reported_at": "2026-08-08T00:54:48.977044+00:00"
+    },
+    {
+      "url": "https://lumalabs.ai/news/minimax-h3-now-available-in-luma-agents",
+      "title_key": "minimaxh3availablenowluma",
+      "reported_at": "2026-08-08T00:54:48.977044+00:00"
     }
   ]
 }
