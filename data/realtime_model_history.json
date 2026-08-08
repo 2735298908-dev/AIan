@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-08T02:24:10.419866+00:00",
+  "updated_at": "2026-08-08T04:31:07.826595+00:00",
   "seen": [
     {
       "url": "https://runway.com/news/customers/skyscanner",
@@ -140,6 +140,12 @@
       "title_key": "v21225",
       "seen_at": "2026-08-08T02:24:10.419866+00:00",
       "rule_version": 2
+    },
+    {
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.31.0",
+      "title_key": "v0310",
+      "seen_at": "2026-08-08T04:31:07.826595+00:00",
+      "rule_version": 2
     }
   ],
   "notifications": [
@@ -250,6 +256,24 @@
       "published_at": "2026-08-07T02:04:32.343000+08:00",
       "original_title": "MiniMax H3 Available Now | Luma",
       "reported_at": "2026-08-07T16:11:08.355129+00:00"
+    },
+    {
+      "importance": "A",
+      "title": "ComfyUI API 接入下线或弃用调整",
+      "model_or_product": "ComfyUI",
+      "version": "v0.31.0",
+      "capability_change": "官方调整了 ComfyUI，重点涉及API 接入。",
+      "type": "AIGC视频",
+      "pm_judgement": "该更新可能影响 AI 产品的能力边界、模型选型或成本。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "建议阅读官方原文，并结合业务场景完成小样本评测。",
+      "platform": "ComfyUI",
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.31.0",
+      "published_at": "2026-08-08T11:10:59+08:00",
+      "original_title": "v0.31.0",
+      "reported_at": "2026-08-08T04:31:07.826595+00:00"
     }
   ]
 }
