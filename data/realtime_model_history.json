@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-07T20:02:17.878323+00:00",
+  "updated_at": "2026-08-08T02:24:10.419866+00:00",
   "seen": [
     {
       "url": "https://runway.com/news/customers/skyscanner",
@@ -133,6 +133,12 @@
       "url": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano",
       "title_key": "officialmodelpageupdatedintroducinggpt54miniandnano",
       "seen_at": "2026-08-07T20:02:17.878323+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.225",
+      "title_key": "v21225",
+      "seen_at": "2026-08-08T02:24:10.419866+00:00",
       "rule_version": 2
     }
   ],
