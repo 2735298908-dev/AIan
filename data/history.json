@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-08T00:54:48.977044+00:00",
+  "updated_at": "2026-08-09T00:56:44.108055+00:00",
   "items": [
     {
       "url": "https://openai.com/index/introducing-openai-presence",
@@ -136,6 +136,11 @@
       "url": "https://lumalabs.ai/news/minimax-h3-now-available-in-luma-agents",
       "title_key": "minimaxh3availablenowluma",
       "reported_at": "2026-08-08T00:54:48.977044+00:00"
+    },
+    {
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.31.0",
+      "title_key": "v0310",
+      "reported_at": "2026-08-09T00:56:44.108055+00:00"
     }
   ]
 }
