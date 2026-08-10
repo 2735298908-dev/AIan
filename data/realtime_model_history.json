@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-10T17:12:03.267870+00:00",
+  "updated_at": "2026-08-10T19:22:29.339412+00:00",
   "seen": [
     {
       "url": "https://runway.com/news/customers/skyscanner",
@@ -157,6 +157,12 @@
       "url": "https://huggingface.co/blog/nvidia/magpie-tts-multilingual-voice-agents",
       "title_key": "buildlowlatencymultilingualvoiceagentsopenweightsfulldeploymentcontrolwithnvidiamagpietts",
       "seen_at": "2026-08-10T17:12:03.267870+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows",
+      "title_key": "expandingdaybreakasthecyberdefensewindownarrows",
+      "seen_at": "2026-08-10T19:22:29.339412+00:00",
       "rule_version": 2
     }
   ],
