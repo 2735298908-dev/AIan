@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-11T17:15:36.523200+00:00",
+  "updated_at": "2026-08-11T18:09:06.397321+00:00",
   "seen": [
     {
       "url": "https://runway.com/news/customers/skyscanner",
@@ -175,6 +175,12 @@
       "url": "https://openai.com/index/introducing-gpt-5-3-codex",
       "title_key": "officialmodelpageupdatedintroducinggpt53codex",
       "seen_at": "2026-08-11T17:15:36.523200+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://lumalabs.ai/news/introducing-luma-scenes",
+      "title_key": "introducinglumascenesluma",
+      "seen_at": "2026-08-11T18:09:06.397321+00:00",
       "rule_version": 2
     }
   ],
