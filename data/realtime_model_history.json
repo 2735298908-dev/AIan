@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-11T13:46:43.998697+00:00",
+  "updated_at": "2026-08-11T17:15:36.523200+00:00",
   "seen": [
     {
       "url": "https://runway.com/news/customers/skyscanner",
@@ -169,6 +169,12 @@
       "url": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx",
       "title_key": "nvidianemotron35lightningandnemoswitchyarddeliverfastersmartermoreefficientagenticai",
       "seen_at": "2026-08-11T13:46:43.998697+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-5-3-codex",
+      "title_key": "officialmodelpageupdatedintroducinggpt53codex",
+      "seen_at": "2026-08-11T17:15:36.523200+00:00",
       "rule_version": 2
     }
   ],
