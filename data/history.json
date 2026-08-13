@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-12T00:55:14.443600+00:00",
+  "updated_at": "2026-08-13T00:57:45.533905+00:00",
   "items": [
     {
       "url": "https://openai.com/index/introducing-openai-presence",
@@ -146,6 +146,11 @@
       "url": "https://huggingface.co/blog/nvidia/magpie-tts-multilingual-voice-agents",
       "title_key": "buildlowlatencymultilingualvoiceagentsopenweightsfulldeploymentcontrolwithnvidiamagpietts",
       "reported_at": "2026-08-12T00:55:14.443600+00:00"
+    },
+    {
+      "url": "https://lumalabs.ai/news/introducing-luma-scenes",
+      "title_key": "introducinglumascenesluma",
+      "reported_at": "2026-08-13T00:57:45.533905+00:00"
     }
   ]
 }
