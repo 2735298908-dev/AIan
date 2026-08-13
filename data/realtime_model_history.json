@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-13T17:16:17.684536+00:00",
+  "updated_at": "2026-08-13T19:28:32.283859+00:00",
   "seen": [
     {
       "url": "https://runway.com/news/customers/skyscanner",
@@ -193,6 +193,12 @@
       "url": "https://openai.com/index/previewing-ultrafast",
       "title_key": "previewingultrafastmodegpt56solatupto14xthespeed",
       "seen_at": "2026-08-13T17:16:17.684536+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://openai.com/index/builders-guide-to-gpt-5-6",
+      "title_key": "thebuildersguidetogpt56",
+      "seen_at": "2026-08-13T19:28:32.283859+00:00",
       "rule_version": 2
     }
   ],
