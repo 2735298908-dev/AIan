@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-14T10:26:07.593744+00:00",
+  "updated_at": "2026-08-14T20:48:41.517561+00:00",
   "seen": [
     {
       "url": "https://runway.com/news/customers/skyscanner",
@@ -235,6 +235,12 @@
       "url": "https://openai.com/index/introducing-the-codex-app",
       "title_key": "introducingthecodexapp",
       "seen_at": "2026-08-14T10:26:07.593744+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-4-5",
+      "title_key": "officialmodelpageupdatedintroducinggpt45",
+      "seen_at": "2026-08-14T20:48:41.517561+00:00",
       "rule_version": 2
     }
   ],
