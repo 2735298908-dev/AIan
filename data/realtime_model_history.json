@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-13T19:28:32.283859+00:00",
+  "updated_at": "2026-08-14T00:01:20.606044+00:00",
   "seen": [
     {
       "url": "https://runway.com/news/customers/skyscanner",
@@ -199,6 +199,24 @@
       "url": "https://openai.com/index/builders-guide-to-gpt-5-6",
       "title_key": "thebuildersguidetogpt56",
       "seen_at": "2026-08-13T19:28:32.283859+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-5-2-codex",
+      "title_key": "officialmodelpageupdatedintroducinggpt52codex",
+      "seen_at": "2026-08-14T00:01:20.606044+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://openai.com/index/previewing-gpt-5-6-sol",
+      "title_key": "officialmodelpageupdatedpreviewinggpt56sol",
+      "seen_at": "2026-08-14T00:01:20.606044+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.232",
+      "title_key": "v21232",
+      "seen_at": "2026-08-14T00:01:20.606044+00:00",
       "rule_version": 2
     }
   ],
