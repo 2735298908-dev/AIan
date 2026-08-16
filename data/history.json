@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-15T00:55:41.962440+00:00",
+  "updated_at": "2026-08-16T00:56:41.708575+00:00",
   "items": [
     {
       "url": "https://openai.com/index/introducing-openai-presence",
@@ -151,6 +151,11 @@
       "url": "https://lumalabs.ai/news/introducing-luma-scenes",
       "title_key": "introducinglumascenesluma",
       "reported_at": "2026-08-13T00:57:45.533905+00:00"
+    },
+    {
+      "url": "https://openai.com/index/sora-2",
+      "title_key": "officialmodelpageupdatedsora2",
+      "reported_at": "2026-08-16T00:56:41.708575+00:00"
     }
   ]
 }
