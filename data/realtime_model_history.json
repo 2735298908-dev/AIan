@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-18T21:41:36.875116+00:00",
+  "updated_at": "2026-08-18T22:44:04.898107+00:00",
   "seen": [
     {
       "url": "https://runway.com/news/customers/skyscanner",
@@ -265,6 +265,18 @@
       "url": "https://openai.com/index/sora-feed-philosophy",
       "title_key": "officialmodelpageupdatedsorafeedphilosophy",
       "seen_at": "2026-08-18T21:41:36.875116+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.148.0",
+      "title_key": "01480",
+      "seen_at": "2026-08-18T22:44:04.898107+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://www.anthropic.com/research/Claude-accelerates-protein-design",
+      "title_key": "howclaudeisacceleratingproteindesignandanalyticalchemistry",
+      "seen_at": "2026-08-18T22:44:04.898107+00:00",
       "rule_version": 2
     }
   ],
