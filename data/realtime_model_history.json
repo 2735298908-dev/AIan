@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-14T22:43:28.776376+00:00",
+  "updated_at": "2026-08-18T21:41:36.875116+00:00",
   "seen": [
     {
       "url": "https://runway.com/news/customers/skyscanner",
@@ -260,6 +260,12 @@
       "title_key": "officialmodelpageupdatedgpt4oandmoretoolstochatgptfree",
       "seen_at": "2026-08-14T22:43:28.776376+00:00",
       "rule_version": 2
+    },
+    {
+      "url": "https://openai.com/index/sora-feed-philosophy",
+      "title_key": "officialmodelpageupdatedsorafeedphilosophy",
+      "seen_at": "2026-08-18T21:41:36.875116+00:00",
+      "rule_version": 2
     }
   ],
   "notifications": [
@@ -406,6 +412,24 @@
       "published_at": "2026-08-15T06:06:35.811000+08:00",
       "original_title": "Official model page updated: sora 2",
       "reported_at": "2026-08-14T22:43:28.776376+00:00"
+    },
+    {
+      "importance": "A",
+      "title": "sora API 接入能力升级",
+      "model_or_product": "sora",
+      "version": "",
+      "capability_change": "官方升级了 sora，重点涉及API 接入。",
+      "type": "全球大模型",
+      "pm_judgement": "该更新可能影响 AI 产品的能力边界、模型选型或成本。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "建议阅读官方原文，并结合业务场景完成小样本评测。",
+      "platform": "OpenAI Product Updates",
+      "url": "https://openai.com/index/sora-feed-philosophy",
+      "published_at": "2026-08-19T05:41:25.929000+08:00",
+      "original_title": "Official model page updated: sora feed philosophy",
+      "reported_at": "2026-08-18T21:41:36.875116+00:00"
     }
   ]
 }
