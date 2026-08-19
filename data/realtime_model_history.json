@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-19T15:48:58.809214+00:00",
+  "updated_at": "2026-08-19T18:56:10.247083+00:00",
   "seen": [
     {
       "url": "https://runway.com/news/customers/skyscanner",
@@ -283,6 +283,12 @@
       "url": "https://openai.com/index/replit",
       "title_key": "replitexpandsaccesstosoftwarecreationwithgpt56luna",
       "seen_at": "2026-08-19T15:48:58.809214+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://openai.com/index/our-commitment-to-zero-data-retention",
+      "title_key": "offeringzerodataretentionforfrontiermodels",
+      "seen_at": "2026-08-19T18:56:10.247083+00:00",
       "rule_version": 2
     }
   ],
