@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-18T22:44:04.898107+00:00",
+  "updated_at": "2026-08-19T15:48:58.809214+00:00",
   "seen": [
     {
       "url": "https://runway.com/news/customers/skyscanner",
@@ -277,6 +277,12 @@
       "url": "https://www.anthropic.com/research/Claude-accelerates-protein-design",
       "title_key": "howclaudeisacceleratingproteindesignandanalyticalchemistry",
       "seen_at": "2026-08-18T22:44:04.898107+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://openai.com/index/replit",
+      "title_key": "replitexpandsaccesstosoftwarecreationwithgpt56luna",
+      "seen_at": "2026-08-19T15:48:58.809214+00:00",
       "rule_version": 2
     }
   ],
