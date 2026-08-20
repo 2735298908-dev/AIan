@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-19T00:58:22.508629+00:00",
+  "updated_at": "2026-08-20T00:56:42.522148+00:00",
   "items": [
     {
       "url": "https://openai.com/index/introducing-openai-presence",
@@ -156,6 +156,11 @@
       "url": "https://openai.com/index/sora-2",
       "title_key": "officialmodelpageupdatedsora2",
       "reported_at": "2026-08-16T00:56:41.708575+00:00"
+    },
+    {
+      "url": "https://openai.com/index/sora-feed-philosophy",
+      "title_key": "officialmodelpageupdatedsorafeedphilosophy",
+      "reported_at": "2026-08-20T00:56:42.522148+00:00"
     }
   ]
 }
