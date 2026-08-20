@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-19T20:48:08.620443+00:00",
+  "updated_at": "2026-08-20T14:57:42.002012+00:00",
   "seen": [
     {
       "url": "https://runway.com/news/customers/skyscanner",
@@ -295,6 +295,12 @@
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.236",
       "title_key": "v21236",
       "seen_at": "2026-08-19T20:48:08.620443+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://mistral.ai/news/agentic-search",
+      "title_key": "introducingagenticsearchmistral",
+      "seen_at": "2026-08-20T14:57:42.002012+00:00",
       "rule_version": 2
     }
   ],
