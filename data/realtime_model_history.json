@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-20T14:57:42.002012+00:00",
+  "updated_at": "2026-08-20T17:48:25.405194+00:00",
   "seen": [
     {
       "url": "https://runway.com/news/customers/skyscanner",
@@ -301,6 +301,12 @@
       "url": "https://mistral.ai/news/agentic-search",
       "title_key": "introducingagenticsearchmistral",
       "seen_at": "2026-08-20T14:57:42.002012+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://bfl.ai/blog/flux-video-upscale",
+      "title_key": "fluxupscale2kand4kforvideo",
+      "seen_at": "2026-08-20T17:48:25.405194+00:00",
       "rule_version": 2
     }
   ],
