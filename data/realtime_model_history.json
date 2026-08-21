@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-21T16:54:53.293779+00:00",
+  "updated_at": "2026-08-21T17:48:46.918863+00:00",
   "seen": [
     {
       "url": "https://runway.com/news/customers/skyscanner",
@@ -314,6 +314,12 @@
       "title_key": "changelog82026",
       "seen_at": "2026-08-21T16:54:53.293779+00:00",
       "rule_version": 2
+    },
+    {
+      "url": "https://runway.com/news/company-news/the-next-phase-of-enterprise-video-generation",
+      "title_key": "runwaynewsthenextphaseofenterprisevideogeneration",
+      "seen_at": "2026-08-21T17:48:46.918863+00:00",
+      "rule_version": 2
     }
   ],
   "notifications": [
@@ -478,6 +484,24 @@
       "published_at": "2026-08-19T05:41:25.929000+08:00",
       "original_title": "Official model page updated: sora feed philosophy",
       "reported_at": "2026-08-18T21:41:36.875116+00:00"
+    },
+    {
+      "importance": "A",
+      "title": "Runway 视频生成正式发布",
+      "model_or_product": "Runway",
+      "version": "",
+      "capability_change": "官方正式发布了 Runway，重点涉及视频生成。",
+      "type": "AIGC视频",
+      "pm_judgement": "该更新可能影响 AI 产品的能力边界、模型选型或成本。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "建议阅读官方原文，并结合业务场景完成小样本评测。",
+      "platform": "Runway",
+      "url": "https://runway.com/news/company-news/the-next-phase-of-enterprise-video-generation",
+      "published_at": "2026-08-21T07:32:55.990000+08:00",
+      "original_title": "Runway News | The Next Phase of Enterprise Video Generation",
+      "reported_at": "2026-08-21T17:48:46.918863+00:00"
     }
   ]
 }
