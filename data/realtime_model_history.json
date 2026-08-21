@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-20T17:48:25.405194+00:00",
+  "updated_at": "2026-08-21T16:54:53.293779+00:00",
   "seen": [
     {
       "url": "https://runway.com/news/customers/skyscanner",
@@ -307,6 +307,12 @@
       "url": "https://bfl.ai/blog/flux-video-upscale",
       "title_key": "fluxupscale2kand4kforvideo",
       "seen_at": "2026-08-20T17:48:25.405194+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://updates.midjourney.com/changelog-8-20-26",
+      "title_key": "changelog82026",
+      "seen_at": "2026-08-21T16:54:53.293779+00:00",
       "rule_version": 2
     }
   ],
