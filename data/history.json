@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-21T00:57:38.828686+00:00",
+  "updated_at": "2026-08-22T00:53:30.174711+00:00",
   "items": [
     {
       "url": "https://openai.com/index/introducing-openai-presence",
@@ -161,6 +161,11 @@
       "url": "https://openai.com/index/sora-feed-philosophy",
       "title_key": "officialmodelpageupdatedsorafeedphilosophy",
       "reported_at": "2026-08-20T00:56:42.522148+00:00"
+    },
+    {
+      "url": "https://runway.com/news/company-news/the-next-phase-of-enterprise-video-generation",
+      "title_key": "runwaynewsthenextphaseofenterprisevideogeneration",
+      "reported_at": "2026-08-22T00:53:30.174711+00:00"
     }
   ]
 }
