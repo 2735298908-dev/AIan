@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-22T00:53:30.174711+00:00",
+  "updated_at": "2026-08-23T00:58:17.877221+00:00",
   "items": [
     {
       "url": "https://openai.com/index/introducing-openai-presence",
@@ -166,6 +166,11 @@
       "url": "https://runway.com/news/company-news/the-next-phase-of-enterprise-video-generation",
       "title_key": "runwaynewsthenextphaseofenterprisevideogeneration",
       "reported_at": "2026-08-22T00:53:30.174711+00:00"
+    },
+    {
+      "url": "https://updates.midjourney.com/changelog-8-20-26",
+      "title_key": "changelog82026",
+      "reported_at": "2026-08-23T00:58:17.877221+00:00"
     }
   ]
 }
