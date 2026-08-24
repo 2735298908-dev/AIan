@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-21T17:48:46.918863+00:00",
+  "updated_at": "2026-08-24T19:03:06.477518+00:00",
   "seen": [
     {
       "url": "https://runway.com/news/customers/skyscanner",
@@ -319,6 +319,18 @@
       "url": "https://runway.com/news/company-news/the-next-phase-of-enterprise-video-generation",
       "title_key": "runwaynewsthenextphaseofenterprisevideogeneration",
       "seen_at": "2026-08-21T17:48:46.918863+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://openai.com/index/gpt-5-6-in-kiro",
+      "title_key": "officialmodelpageupdatedgpt56inkiro",
+      "seen_at": "2026-08-24T19:03:06.477518+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://openai.com/index/gpt-5-1-for-developers",
+      "title_key": "officialmodelpageupdatedgpt51fordevelopers",
+      "seen_at": "2026-08-24T19:03:06.477518+00:00",
       "rule_version": 2
     }
   ],
