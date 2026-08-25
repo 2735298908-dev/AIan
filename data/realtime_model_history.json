@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-24T19:03:06.477518+00:00",
+  "updated_at": "2026-08-25T01:55:16.577880+00:00",
   "seen": [
     {
       "url": "https://runway.com/news/customers/skyscanner",
@@ -331,6 +331,12 @@
       "url": "https://openai.com/index/gpt-5-1-for-developers",
       "title_key": "officialmodelpageupdatedgpt51fordevelopers",
       "seen_at": "2026-08-24T19:03:06.477518+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.243",
+      "title_key": "v21243",
+      "seen_at": "2026-08-25T01:55:16.577880+00:00",
       "rule_version": 2
     }
   ],
