@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-26T20:09:20.249404+00:00",
+  "updated_at": "2026-08-28T05:27:37.166323+00:00",
   "seen": [
     {
       "url": "https://runway.com/news/customers/skyscanner",
@@ -343,6 +343,18 @@
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.150.0",
       "title_key": "01500",
       "seen_at": "2026-08-26T20:09:20.249404+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://updates.midjourney.com/edit-model-for-v8",
+      "title_key": "editmodelforv8",
+      "seen_at": "2026-08-28T05:27:37.166323+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.248",
+      "title_key": "v21248",
+      "seen_at": "2026-08-28T05:27:37.166323+00:00",
       "rule_version": 2
     }
   ],
