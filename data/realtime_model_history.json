@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-29T02:15:56.803243+00:00",
+  "updated_at": "2026-08-29T14:32:23.308132+00:00",
   "seen": [
     {
       "url": "https://runway.com/news/customers/skyscanner",
@@ -373,6 +373,12 @@
       "url": "https://updates.midjourney.com/edit-image-quality-update",
       "title_key": "editimagequalityupdate",
       "seen_at": "2026-08-29T02:15:56.803243+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.151.0",
+      "title_key": "01510",
+      "seen_at": "2026-08-29T14:32:23.308132+00:00",
       "rule_version": 2
     }
   ],
