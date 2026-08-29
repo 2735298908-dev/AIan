@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-28T18:47:59.803427+00:00",
+  "updated_at": "2026-08-29T02:15:56.803243+00:00",
   "seen": [
     {
       "url": "https://runway.com/news/customers/skyscanner",
@@ -367,6 +367,12 @@
       "url": "https://www.anthropic.com/news/model-hardware-standard-research-preview",
       "title_key": "previewingthemodelhardwarestandard",
       "seen_at": "2026-08-28T18:47:59.803427+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://updates.midjourney.com/edit-image-quality-update",
+      "title_key": "editimagequalityupdate",
+      "seen_at": "2026-08-29T02:15:56.803243+00:00",
       "rule_version": 2
     }
   ],
