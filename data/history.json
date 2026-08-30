@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-29T00:58:19.149071+00:00",
+  "updated_at": "2026-08-30T00:58:05.075888+00:00",
   "items": [
     {
       "url": "https://openai.com/index/introducing-openai-presence",
@@ -176,6 +176,11 @@
       "url": "https://updates.midjourney.com/edit-model-for-v8",
       "title_key": "editmodelforv8",
       "reported_at": "2026-08-29T00:58:19.149071+00:00"
+    },
+    {
+      "url": "https://updates.midjourney.com/edit-image-quality-update",
+      "title_key": "editimagequalityupdate",
+      "reported_at": "2026-08-30T00:58:05.075888+00:00"
     }
   ]
 }
