@@ -1,32 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-08-29T14:32:23.308132+00:00",
+  "updated_at": "2026-08-31T23:54:06.237289+00:00",
   "seen": [
-    {
-      "url": "https://runway.com/news/customers/skyscanner",
-      "title_key": "runwaynewshowskyscannereliminatedpreproductionguessworkwithrunway",
-      "seen_at": "2026-07-31T08:36:09.313338+00:00"
-    },
-    {
-      "url": "https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
-      "title_key": "onetakecreationflexiblereferencingintroducingseedance25",
-      "seen_at": "2026-07-31T08:42:33.254770+00:00"
-    },
-    {
-      "url": "https://openai.com/index/avatarin",
-      "title_key": "howavatarinbuilta247retailagentwithgptrealtime",
-      "seen_at": "2026-07-31T08:42:33.254770+00:00"
-    },
-    {
-      "url": "https://lumalabs.ai/news/introducing-layers",
-      "title_key": "introducinglayersluma",
-      "seen_at": "2026-07-31T08:42:33.254770+00:00"
-    },
-    {
-      "url": "https://runway.com/news/company-news/runway-characters-siggraph-2026",
-      "title_key": "runwaynewsbringingrunwaycharacterstosiggraphsbiggeststage",
-      "seen_at": "2026-08-01T06:42:41.815696+00:00"
-    },
     {
       "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
       "title_key": "officialmodelpageupdatedadvancingthepriceperformancefrontierwithgpt56",
@@ -379,6 +354,12 @@
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.151.0",
       "title_key": "01510",
       "seen_at": "2026-08-29T14:32:23.308132+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://runway.com/news/research/introducing-solaris",
+      "title_key": "runwaynewsintroducingsolaris",
+      "seen_at": "2026-08-31T23:54:06.237289+00:00",
       "rule_version": 2
     }
   ],
