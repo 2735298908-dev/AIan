@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-01T10:11:19.378026+00:00",
+  "updated_at": "2026-09-01T18:36:08.722018+00:00",
   "seen": [
     {
       "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
@@ -379,6 +379,24 @@
       "title_key": "officialmodelpageupdatedgpt55instant",
       "seen_at": "2026-09-01T10:11:19.378026+00:00",
       "rule_version": 2
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.257",
+      "title_key": "v21257",
+      "seen_at": "2026-09-01T18:36:08.722018+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://deepmind.google/blog/introducing-agentic-video-in-gemini",
+      "title_key": "introducingagenticvideounderstandingwithgemini",
+      "seen_at": "2026-09-01T18:36:08.722018+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://lumalabs.ai/news/seedance-review",
+      "title_key": "seedancereview2026featurespricingandlimitationsluma",
+      "seen_at": "2026-09-01T18:36:08.722018+00:00",
+      "rule_version": 2
     }
   ],
   "notifications": [
@@ -561,6 +579,24 @@
       "published_at": "2026-08-21T07:32:55.990000+08:00",
       "original_title": "Runway News | The Next Phase of Enterprise Video Generation",
       "reported_at": "2026-08-21T17:48:46.918863+00:00"
+    },
+    {
+      "importance": "A",
+      "title": "Seedance Review 2026 原生音频价格调整",
+      "model_or_product": "Seedance Review 2026",
+      "version": "",
+      "capability_change": "官方调整了 Seedance Review 2026，重点涉及原生音频、价格与成本。",
+      "type": "AIGC视频",
+      "pm_judgement": "该更新可能影响 AI 产品的能力边界、模型选型或成本。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "建议阅读官方原文，并结合业务场景完成小样本评测。",
+      "platform": "Luma AI",
+      "url": "https://lumalabs.ai/news/seedance-review",
+      "published_at": "2026-09-01T23:27:21.584000+08:00",
+      "original_title": "Seedance Review 2026: Features, Pricing, and Limitations | Luma",
+      "reported_at": "2026-09-01T18:36:08.722018+00:00"
     }
   ]
 }
