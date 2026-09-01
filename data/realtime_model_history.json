@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-31T23:54:06.237289+00:00",
+  "updated_at": "2026-09-01T05:17:23.280712+00:00",
   "seen": [
     {
       "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
@@ -360,6 +360,12 @@
       "url": "https://runway.com/news/research/introducing-solaris",
       "title_key": "runwaynewsintroducingsolaris",
       "seen_at": "2026-08-31T23:54:06.237289+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.152.0",
+      "title_key": "01520",
+      "seen_at": "2026-09-01T05:17:23.280712+00:00",
       "rule_version": 2
     }
   ],
