@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-01T18:36:08.722018+00:00",
+  "updated_at": "2026-09-01T21:49:52.528963+00:00",
   "seen": [
     {
       "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
@@ -397,6 +397,30 @@
       "title_key": "seedancereview2026featurespricingandlimitationsluma",
       "seen_at": "2026-09-01T18:36:08.722018+00:00",
       "rule_version": 2
+    },
+    {
+      "url": "https://blog.google/innovation-and-ai/technology/google-ai-updates-august-2026",
+      "title_key": "thelatestainewsweannouncedinaugust2026",
+      "seen_at": "2026-09-01T21:49:52.528963+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://lumalabs.ai/news/higgsfield-review",
+      "title_key": "higgsfieldreview2026isittherightaivideotoolluma",
+      "seen_at": "2026-09-01T21:49:52.528963+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://lumalabs.ai/news/kling-review",
+      "title_key": "klingreview2026isitthebestaivideogeneratorluma",
+      "seen_at": "2026-09-01T21:49:52.528963+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://lumalabs.ai/news/weave-review",
+      "title_key": "weavereview2026isitworthitforaivideocreationluma",
+      "seen_at": "2026-09-01T21:49:52.528963+00:00",
+      "rule_version": 2
     }
   ],
   "notifications": [
@@ -597,6 +621,60 @@
       "published_at": "2026-09-01T23:27:21.584000+08:00",
       "original_title": "Seedance Review 2026: Features, Pricing, and Limitations | Luma",
       "reported_at": "2026-09-01T18:36:08.722018+00:00"
+    },
+    {
+      "importance": "S",
+      "title": "Luma AI 镜头控制价格调整",
+      "model_or_product": "Luma AI",
+      "version": "",
+      "capability_change": "官方调整了 Luma AI，重点涉及镜头控制、价格与成本。",
+      "type": "AIGC视频",
+      "pm_judgement": "该更新可能影响 AI 产品的能力边界、模型选型或成本。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "建议阅读官方原文，并结合业务场景完成小样本评测。",
+      "platform": "Luma AI",
+      "url": "https://lumalabs.ai/news/higgsfield-review",
+      "published_at": "2026-09-02T03:19:50.465000+08:00",
+      "original_title": "Higgsfield Review 2026: Is It the Right AI Video Tool? | Luma",
+      "reported_at": "2026-09-01T21:49:52.528963+00:00"
+    },
+    {
+      "importance": "A",
+      "title": "Kling Review 2026 价格调整",
+      "model_or_product": "Kling Review 2026",
+      "version": "",
+      "capability_change": "官方调整了 Kling Review 2026，重点涉及价格与成本。公开信息包含 4K 等关键参数。",
+      "type": "AIGC视频",
+      "pm_judgement": "该更新可能影响 AI 产品的能力边界、模型选型或成本。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "建议阅读官方原文，并结合业务场景完成小样本评测。",
+      "platform": "Luma AI",
+      "url": "https://lumalabs.ai/news/kling-review",
+      "published_at": "2026-09-02T02:12:16.762000+08:00",
+      "original_title": "Kling Review 2026: Is It the Best AI Video Generator? | Luma",
+      "reported_at": "2026-09-01T21:49:52.528963+00:00"
+    },
+    {
+      "importance": "A",
+      "title": "Luma AI 价格调整",
+      "model_or_product": "Luma AI",
+      "version": "",
+      "capability_change": "官方调整了 Luma AI，重点涉及价格与成本。",
+      "type": "AIGC视频",
+      "pm_judgement": "该更新可能影响 AI 产品的能力边界、模型选型或成本。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "建议阅读官方原文，并结合业务场景完成小样本评测。",
+      "platform": "Luma AI",
+      "url": "https://lumalabs.ai/news/weave-review",
+      "published_at": "2026-09-02T02:12:16.762000+08:00",
+      "original_title": "Weave Review 2026: Is It Worth It for AI Video Creation? | Luma",
+      "reported_at": "2026-09-01T21:49:52.528963+00:00"
     }
   ]
 }
