@@ -1,13 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-09-02T09:41:43.819130+00:00",
+  "updated_at": "2026-09-02T14:32:34.395923+00:00",
   "seen": [
-    {
-      "url": "https://lumalabs.ai/news/ai-tools-edit-text-images",
-      "title_key": "7bestaitoolstoedittextinimages2026luma",
-      "seen_at": "2026-08-03T11:48:24.194227+00:00",
-      "rule_version": 2
-    },
     {
       "url": "https://runway.com/news/company-news/spotify-block-ai-summit-2026",
       "title_key": "howlegalleadersatblockandspotifygettoyesonairunwaynews",
@@ -414,6 +408,18 @@
       "url": "https://lumalabs.ai/news/luma-ai-to-launch-native-arabic-language-interface-for-saudi-and-arabic-speaking-creative-community",
       "title_key": "lumaaitolaunchnativearabiclanguageinterfaceforsaudiandarabicspeakingcreativecommunityluma",
       "seen_at": "2026-09-02T09:41:43.819130+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://openai.com/index/gpt-4-api-general-availability",
+      "title_key": "officialmodelpageupdatedgpt4apigeneralavailability",
+      "seen_at": "2026-09-02T14:32:34.395923+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
+      "title_key": "officialmodelpageupdatedadvancingthepriceperformancefrontierwithgpt56",
+      "seen_at": "2026-09-02T14:32:34.395923+00:00",
       "rule_version": 2
     }
   ],
