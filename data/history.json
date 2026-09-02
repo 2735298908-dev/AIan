@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-01T00:57:46.474235+00:00",
+  "updated_at": "2026-09-02T00:57:40.535102+00:00",
   "items": [
     {
       "url": "https://openai.com/index/introducing-openai-presence",
@@ -181,6 +181,16 @@
       "url": "https://updates.midjourney.com/edit-image-quality-update",
       "title_key": "editimagequalityupdate",
       "reported_at": "2026-08-30T00:58:05.075888+00:00"
+    },
+    {
+      "url": "https://lumalabs.ai/news/seedance-review",
+      "title_key": "seedancereview2026featurespricingandlimitationsluma",
+      "reported_at": "2026-09-02T00:57:40.535102+00:00"
+    },
+    {
+      "url": "https://runway.com/news/research/introducing-solaris",
+      "title_key": "runwaynewsintroducingsolaris",
+      "reported_at": "2026-09-02T00:57:40.535102+00:00"
     }
   ]
 }
