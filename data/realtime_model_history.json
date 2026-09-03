@@ -1,25 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-09-02T18:46:25.452445+00:00",
+  "updated_at": "2026-09-03T00:19:53.614122+00:00",
   "seen": [
-    {
-      "url": "https://runway.com/news/company-news/spotify-block-ai-summit-2026",
-      "title_key": "howlegalleadersatblockandspotifygettoyesonairunwaynews",
-      "seen_at": "2026-08-03T19:00:07.673306+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://runway.com/news/company-news/netflix-aif-2026",
-      "title_key": "netflixfuturecelonaicraftandwhatgetsmaderunwaynews",
-      "seen_at": "2026-08-03T19:00:07.673306+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://runway.com/news/company-news/electronic-arts-ai-summit-2026",
-      "title_key": "howeaisbringinggenerativeaiintolivingplayableworldsrunwaynews",
-      "seen_at": "2026-08-03T22:28:22.628806+00:00",
-      "rule_version": 2
-    },
     {
       "url": "https://openai.com/index/gpt-5-6",
       "title_key": "officialmodelpageupdatedgpt56",
@@ -432,6 +414,12 @@
       "url": "https://runway.com/news/company-news/runway-dev-mcp",
       "title_key": "introducingrunwaydevmcp",
       "seen_at": "2026-09-02T18:46:25.452445+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.259",
+      "title_key": "v21259",
+      "seen_at": "2026-09-03T00:19:53.614122+00:00",
       "rule_version": 2
     }
   ],
