@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-03T18:43:34.570461+00:00",
+  "updated_at": "2026-09-03T21:44:17.338663+00:00",
   "seen": [
     {
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.222",
@@ -432,6 +432,18 @@
       "url": "https://runway.com/research/introducing-gwm-worlds-2",
       "title_key": "runwayresearchintroducinggwmworlds2",
       "seen_at": "2026-09-03T18:43:34.570461+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://openai.com/index/gpt-5-6",
+      "title_key": "officialmodelpageupdatedgpt56",
+      "seen_at": "2026-09-03T21:44:17.338663+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot",
+      "title_key": "officialmodelpageupdatedgpt56preferredmodelmicrosoft365copilot",
+      "seen_at": "2026-09-03T21:44:17.338663+00:00",
       "rule_version": 2
     }
   ],
