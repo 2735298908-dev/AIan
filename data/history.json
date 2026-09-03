@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-02T00:57:40.535102+00:00",
+  "updated_at": "2026-09-03T00:58:53.322257+00:00",
   "items": [
     {
       "url": "https://openai.com/index/introducing-openai-presence",
@@ -191,6 +191,36 @@
       "url": "https://runway.com/news/research/introducing-solaris",
       "title_key": "runwaynewsintroducingsolaris",
       "reported_at": "2026-09-02T00:57:40.535102+00:00"
+    },
+    {
+      "url": "https://runway.com/news/company-news/runway-dev-mcp",
+      "title_key": "introducingrunwaydevmcp",
+      "reported_at": "2026-09-03T00:58:53.322257+00:00"
+    },
+    {
+      "url": "https://lumalabs.ai/news/higgsfield-review",
+      "title_key": "higgsfieldreview2026isittherightaivideotoolluma",
+      "reported_at": "2026-09-03T00:58:53.322257+00:00"
+    },
+    {
+      "url": "https://lumalabs.ai/news/kling-review",
+      "title_key": "klingreview2026isitthebestaivideogeneratorluma",
+      "reported_at": "2026-09-03T00:58:53.322257+00:00"
+    },
+    {
+      "url": "https://lumalabs.ai/news/luma-ai-to-launch-native-arabic-language-interface-for-saudi-and-arabic-speaking-creative-community",
+      "title_key": "lumaaitolaunchnativearabiclanguageinterfaceforsaudiandarabicspeakingcreativecommunityluma",
+      "reported_at": "2026-09-03T00:58:53.322257+00:00"
+    },
+    {
+      "url": "https://lumalabs.ai/news/weave-review",
+      "title_key": "weavereview2026isitworthitforaivideocreationluma",
+      "reported_at": "2026-09-03T00:58:53.322257+00:00"
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.257",
+      "title_key": "v21257",
+      "reported_at": "2026-09-03T00:58:53.322257+00:00"
     }
   ]
 }
