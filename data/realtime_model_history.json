@@ -1,19 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-09-03T14:36:55.031341+00:00",
+  "updated_at": "2026-09-03T18:43:34.570461+00:00",
   "seen": [
-    {
-      "url": "https://openai.com/index/gpt-5-6",
-      "title_key": "officialmodelpageupdatedgpt56",
-      "seen_at": "2026-08-04T17:05:44.068015+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://blogs.nvidia.com/blog/open-secure-ai-alliance-contributions",
-      "title_key": "aileadersproposesafeguidelinesforcybersecuritytransparency",
-      "seen_at": "2026-08-04T17:05:44.068015+00:00",
-      "rule_version": 2
-    },
     {
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.222",
       "title_key": "v21222",
@@ -432,6 +420,18 @@
       "url": "https://openai.com/index/gpt-5-1-codex-max",
       "title_key": "officialmodelpageupdatedgpt51codexmax",
       "seen_at": "2026-09-03T14:36:55.031341+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/local-ai-ifa-next-gen-agents-nv-pair-rtx-spark",
+      "title_key": "sparksflynvidiaaccelerateslocalaiatifa2026",
+      "seen_at": "2026-09-03T18:43:34.570461+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://runway.com/research/introducing-gwm-worlds-2",
+      "title_key": "runwayresearchintroducinggwmworlds2",
+      "seen_at": "2026-09-03T18:43:34.570461+00:00",
       "rule_version": 2
     }
   ],
