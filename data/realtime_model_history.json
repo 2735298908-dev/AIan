@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-03T00:19:53.614122+00:00",
+  "updated_at": "2026-09-03T09:54:35.374768+00:00",
   "seen": [
     {
       "url": "https://openai.com/index/gpt-5-6",
@@ -421,6 +421,12 @@
       "title_key": "v21259",
       "seen_at": "2026-09-03T00:19:53.614122+00:00",
       "rule_version": 2
+    },
+    {
+      "url": "https://lumalabs.ai/news/synthesia-review",
+      "title_key": "synthesiareview2026isitworthitforaivideogenerationluma",
+      "seen_at": "2026-09-03T09:54:35.374768+00:00",
+      "rule_version": 2
     }
   ],
   "notifications": [
@@ -711,6 +717,24 @@
       "published_at": "2026-09-02T22:25:16.960000+08:00",
       "original_title": "Introducing Runway Dev MCP",
       "reported_at": "2026-09-02T18:46:25.452445+00:00"
+    },
+    {
+      "importance": "A",
+      "title": "Luma AI 视频生成能力升级",
+      "model_or_product": "Luma AI",
+      "version": "",
+      "capability_change": "官方升级了 Luma AI，重点涉及视频生成。",
+      "type": "AIGC视频",
+      "pm_judgement": "该更新可能影响 AI 产品的能力边界、模型选型或成本。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "建议阅读官方原文，并结合业务场景完成小样本评测。",
+      "platform": "Luma AI",
+      "url": "https://lumalabs.ai/news/synthesia-review",
+      "published_at": "2026-09-03T14:57:30.517000+08:00",
+      "original_title": "Synthesia Review 2026: Is It Worth It for AI Video Generation? | Luma",
+      "reported_at": "2026-09-03T09:54:35.374768+00:00"
     }
   ]
 }
