@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-03T09:54:35.374768+00:00",
+  "updated_at": "2026-09-03T14:36:55.031341+00:00",
   "seen": [
     {
       "url": "https://openai.com/index/gpt-5-6",
@@ -426,6 +426,12 @@
       "url": "https://lumalabs.ai/news/synthesia-review",
       "title_key": "synthesiareview2026isitworthitforaivideogenerationluma",
       "seen_at": "2026-09-03T09:54:35.374768+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://openai.com/index/gpt-5-1-codex-max",
+      "title_key": "officialmodelpageupdatedgpt51codexmax",
+      "seen_at": "2026-09-03T14:36:55.031341+00:00",
       "rule_version": 2
     }
   ],
