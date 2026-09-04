@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-03T00:58:53.322257+00:00",
+  "updated_at": "2026-09-04T00:54:44.968945+00:00",
   "items": [
     {
       "url": "https://openai.com/index/introducing-openai-presence",
@@ -221,6 +221,16 @@
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.257",
       "title_key": "v21257",
       "reported_at": "2026-09-03T00:58:53.322257+00:00"
+    },
+    {
+      "url": "https://lumalabs.ai/news/synthesia-review",
+      "title_key": "synthesiareview2026isitworthitforaivideogenerationluma",
+      "reported_at": "2026-09-04T00:54:44.968945+00:00"
+    },
+    {
+      "url": "https://runway.com/research/introducing-gwm-worlds-2",
+      "title_key": "runwayresearchintroducinggwmworlds2",
+      "reported_at": "2026-09-04T00:54:44.968945+00:00"
     }
   ]
 }
