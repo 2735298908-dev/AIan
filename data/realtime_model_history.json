@@ -1,19 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-09-04T00:08:58.116406+00:00",
+  "updated_at": "2026-09-04T21:32:43.179761+00:00",
   "seen": [
-    {
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.222",
-      "title_key": "v21222",
-      "seen_at": "2026-08-05T00:16:52.070007+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://seed.bytedance.com/en/blog/seedrealtime-audio-visual-full-duplex-llm-released-toward-omni-modal-natural-interaction",
-      "title_key": "seedrealtime音视频全双工大模型发布走向全模态自然交互",
-      "seen_at": "2026-08-05T06:45:22.577544+00:00",
-      "rule_version": 2
-    },
     {
       "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
       "title_key": "officialmodelpageupdatedimprovinggpt56solinchatgpt",
@@ -450,6 +438,18 @@
       "url": "https://openai.com/index/gpt-6-astra",
       "title_key": "officialmodelpageupdatedgpt6astra",
       "seen_at": "2026-09-04T00:08:58.116406+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.261",
+      "title_key": "v21261",
+      "seen_at": "2026-09-04T21:32:43.179761+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://runway.com/news/company-news/introducing-team-plan",
+      "title_key": "runwaynewsintroducingteamplan",
+      "seen_at": "2026-09-04T21:32:43.179761+00:00",
       "rule_version": 2
     }
   ],
