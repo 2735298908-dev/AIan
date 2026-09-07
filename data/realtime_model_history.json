@@ -1,73 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-09-04T21:32:43.179761+00:00",
+  "updated_at": "2026-09-07T20:37:39.989648+00:00",
   "seen": [
-    {
-      "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
-      "title_key": "officialmodelpageupdatedimprovinggpt56solinchatgpt",
-      "seen_at": "2026-08-07T00:44:50.583152+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://blogs.nvidia.com/blog/open-world-models-physical-ai",
-      "title_key": "intotheomniversehowopenworldmodelspushthefrontierofphysicalai",
-      "seen_at": "2026-08-07T00:44:50.583152+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.147.0",
-      "title_key": "01470",
-      "seen_at": "2026-08-07T04:04:37.041701+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://lumalabs.ai/news/seedance-2.5-live-in-luma",
-      "title_key": "seedance25nowliveinlumaluma",
-      "seen_at": "2026-08-07T16:11:08.355129+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://lumalabs.ai/news/minimax-h3-now-available-in-luma-agents",
-      "title_key": "minimaxh3availablenowluma",
-      "seen_at": "2026-08-07T16:11:08.355129+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://openai.com/index/introducing-gpt-5-4",
-      "title_key": "officialmodelpageupdatedintroducinggpt54",
-      "seen_at": "2026-08-07T19:18:57.125552+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://openai.com/index/introducing-gpt-5-3-codex-spark",
-      "title_key": "officialmodelpageupdatedintroducinggpt53codexspark",
-      "seen_at": "2026-08-07T19:18:57.125552+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano",
-      "title_key": "officialmodelpageupdatedintroducinggpt54miniandnano",
-      "seen_at": "2026-08-07T20:02:17.878323+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.225",
-      "title_key": "v21225",
-      "seen_at": "2026-08-08T02:24:10.419866+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.31.0",
-      "title_key": "v0310",
-      "seen_at": "2026-08-08T04:31:07.826595+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://openai.com/index/introducing-gpt-5-for-developers",
-      "title_key": "officialmodelpageupdatedintroducinggpt5fordevelopers",
-      "seen_at": "2026-08-08T07:18:07.063173+00:00",
-      "rule_version": 2
-    },
     {
       "url": "https://huggingface.co/blog/nvidia/magpie-tts-multilingual-voice-agents",
       "title_key": "buildlowlatencymultilingualvoiceagentsopenweightsfulldeploymentcontrolwithnvidiamagpietts",
@@ -451,6 +385,18 @@
       "title_key": "runwaynewsintroducingteamplan",
       "seen_at": "2026-09-04T21:32:43.179761+00:00",
       "rule_version": 2
+    },
+    {
+      "url": "https://lumalabs.ai/news/invideo-ai",
+      "title_key": "invideoai2026featuresandlimitationsluma",
+      "seen_at": "2026-09-07T20:37:39.989648+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://lumalabs.ai/news/pika-ai-video-generation",
+      "title_key": "pika2026isitworthitforaivideogenerationluma",
+      "seen_at": "2026-09-07T20:37:39.989648+00:00",
+      "rule_version": 2
     }
   ],
   "notifications": [
@@ -759,6 +705,42 @@
       "published_at": "2026-09-03T14:57:30.517000+08:00",
       "original_title": "Synthesia Review 2026: Is It Worth It for AI Video Generation? | Luma",
       "reported_at": "2026-09-03T09:54:35.374768+00:00"
+    },
+    {
+      "importance": "A",
+      "title": "Luma AI 视频生成价格调整",
+      "model_or_product": "Luma AI",
+      "version": "",
+      "capability_change": "官方调整了 Luma AI，重点涉及视频生成、价格与成本。",
+      "type": "AIGC视频",
+      "pm_judgement": "该更新可能影响 AI 产品的能力边界、模型选型或成本。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "建议阅读官方原文，并结合业务场景完成小样本评测。",
+      "platform": "Luma AI",
+      "url": "https://lumalabs.ai/news/pika-ai-video-generation",
+      "published_at": "2026-09-08T00:21:42.785000+08:00",
+      "original_title": "Pika 2026: Is It Worth It for AI Video Generation? | Luma",
+      "reported_at": "2026-09-07T20:37:39.989648+00:00"
+    },
+    {
+      "importance": "A",
+      "title": "Luma AI 价格调整",
+      "model_or_product": "Luma AI",
+      "version": "",
+      "capability_change": "官方调整了 Luma AI，重点涉及价格与成本。",
+      "type": "AIGC视频",
+      "pm_judgement": "该更新可能影响 AI 产品的能力边界、模型选型或成本。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "建议阅读官方原文，并结合业务场景完成小样本评测。",
+      "platform": "Luma AI",
+      "url": "https://lumalabs.ai/news/invideo-ai",
+      "published_at": "2026-09-08T00:38:07.248000+08:00",
+      "original_title": "InVideo AI 2026: Features and Limitations | Luma",
+      "reported_at": "2026-09-07T20:37:39.989648+00:00"
     }
   ]
 }
