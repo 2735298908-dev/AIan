@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-08T00:55:06.832612+00:00",
+  "updated_at": "2026-09-09T00:55:01.948112+00:00",
   "items": [
     {
       "url": "https://openai.com/index/introducing-openai-presence",
@@ -236,6 +236,51 @@
       "url": "https://runway.com/news/company-news/introducing-team-plan",
       "title_key": "runwaynewsintroducingteamplan",
       "reported_at": "2026-09-06T00:53:10.224797+00:00"
+    },
+    {
+      "url": "https://lumalabs.ai/news/kling-pricing",
+      "title_key": "klingpricinghowmuchdoesitcostin2026luma",
+      "reported_at": "2026-09-09T00:55:01.948112+00:00"
+    },
+    {
+      "url": "https://lumalabs.ai/news/pika-ai-video-generation",
+      "title_key": "pika2026isitworthitforaivideogenerationluma",
+      "reported_at": "2026-09-09T00:55:01.948112+00:00"
+    },
+    {
+      "url": "https://lumalabs.ai/news/veo-pricing",
+      "title_key": "veopricinghowmuchdoesitcostin2026luma",
+      "reported_at": "2026-09-09T00:55:01.948112+00:00"
+    },
+    {
+      "url": "https://lumalabs.ai/news/heygen-pricing",
+      "title_key": "heygenpricinghowmuchdoesitcostin2026luma",
+      "reported_at": "2026-09-09T00:55:01.948112+00:00"
+    },
+    {
+      "url": "https://lumalabs.ai/news/higgsfield-pricing",
+      "title_key": "higgsfieldpricinghowmuchdoesitcostin2026luma",
+      "reported_at": "2026-09-09T00:55:01.948112+00:00"
+    },
+    {
+      "url": "https://lumalabs.ai/news/runway-pricing",
+      "title_key": "runwaypricinghowmuchdoesitcostin2026luma",
+      "reported_at": "2026-09-09T00:55:01.948112+00:00"
+    },
+    {
+      "url": "https://lumalabs.ai/news/seedance-pricing",
+      "title_key": "seedancepricinghowmuchdoesitcostin2026luma",
+      "reported_at": "2026-09-09T00:55:01.948112+00:00"
+    },
+    {
+      "url": "https://lumalabs.ai/news/weave-pricing",
+      "title_key": "weavepricinghowmuchdoesitcostin2026luma",
+      "reported_at": "2026-09-09T00:55:01.948112+00:00"
+    },
+    {
+      "url": "https://lumalabs.ai/news/invideo-ai",
+      "title_key": "invideoai2026featuresandlimitationsluma",
+      "reported_at": "2026-09-09T00:55:01.948112+00:00"
     }
   ]
 }
