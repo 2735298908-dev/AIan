@@ -1,19 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-09-08T21:54:14.364276+00:00",
+  "updated_at": "2026-09-09T21:44:15.233643+00:00",
   "seen": [
-    {
-      "url": "https://huggingface.co/blog/nvidia/magpie-tts-multilingual-voice-agents",
-      "title_key": "buildlowlatencymultilingualvoiceagentsopenweightsfulldeploymentcontrolwithnvidiamagpietts",
-      "seen_at": "2026-08-10T17:12:03.267870+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows",
-      "title_key": "expandingdaybreakasthecyberdefensewindownarrows",
-      "seen_at": "2026-08-10T19:22:29.339412+00:00",
-      "rule_version": 2
-    },
     {
       "url": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx",
       "title_key": "nvidianemotron35lightningandnemoswitchyarddeliverfastersmartermoreefficientagenticai",
@@ -462,6 +450,18 @@
       "url": "https://runway.com/news/company-news/kinetix-joins-runway",
       "title_key": "runwaynewsthekinetixteamisjoiningrunway",
       "seen_at": "2026-09-08T21:54:14.364276+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://openai.com/index/gpt-6-astra-next-generation-work",
+      "title_key": "officialmodelpageupdatedgpt6astranextgenerationwork",
+      "seen_at": "2026-09-09T21:44:15.233643+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.35.0",
+      "title_key": "v0350",
+      "seen_at": "2026-09-09T21:44:15.233643+00:00",
       "rule_version": 2
     }
   ],
@@ -951,6 +951,24 @@
       "published_at": "2026-09-09T03:37:00+08:00",
       "original_title": "Runway News | The Kinetix Team is Joining Runway",
       "reported_at": "2026-09-08T21:54:14.364276+00:00"
+    },
+    {
+      "importance": "A",
+      "title": "ComfyUI 多模态能力下线或弃用调整",
+      "model_or_product": "ComfyUI",
+      "version": "v0.35.0",
+      "capability_change": "官方调整了 ComfyUI，重点涉及多模态能力。",
+      "type": "AIGC视频",
+      "pm_judgement": "该更新可能影响 AI 产品的能力边界、模型选型或成本。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "建议阅读官方原文，并结合业务场景完成小样本评测。",
+      "platform": "ComfyUI",
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.35.0",
+      "published_at": "2026-09-10T03:55:08+08:00",
+      "original_title": "v0.35.0",
+      "reported_at": "2026-09-09T21:44:15.233643+00:00"
     }
   ]
 }
