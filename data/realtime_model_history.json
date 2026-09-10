@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-09T21:44:15.233643+00:00",
+  "updated_at": "2026-09-10T09:48:54.043024+00:00",
   "seen": [
     {
       "url": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx",
@@ -462,6 +462,12 @@
       "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.35.0",
       "title_key": "v0350",
       "seen_at": "2026-09-09T21:44:15.233643+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-5-4",
+      "title_key": "officialmodelpageupdatedintroducinggpt54",
+      "seen_at": "2026-09-10T09:48:54.043024+00:00",
       "rule_version": 2
     }
   ],
