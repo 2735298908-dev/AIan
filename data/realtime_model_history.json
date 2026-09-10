@@ -1,25 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-09-10T09:48:54.043024+00:00",
+  "updated_at": "2026-09-10T18:31:21.001941+00:00",
   "seen": [
-    {
-      "url": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx",
-      "title_key": "nvidianemotron35lightningandnemoswitchyarddeliverfastersmartermoreefficientagenticai",
-      "seen_at": "2026-08-11T13:46:43.998697+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://openai.com/index/introducing-gpt-5-3-codex",
-      "title_key": "officialmodelpageupdatedintroducinggpt53codex",
-      "seen_at": "2026-08-11T17:15:36.523200+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://lumalabs.ai/news/introducing-luma-scenes",
-      "title_key": "introducinglumascenesluma",
-      "seen_at": "2026-08-11T18:09:06.397321+00:00",
-      "rule_version": 2
-    },
     {
       "url": "https://deepmind.google/blog/introducing-gemini-3-7-flash",
       "title_key": "introducinggemini37flash",
@@ -468,6 +450,18 @@
       "url": "https://openai.com/index/introducing-gpt-5-4",
       "title_key": "officialmodelpageupdatedintroducinggpt54",
       "seen_at": "2026-09-10T09:48:54.043024+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-live-1-in-the-api",
+      "title_key": "officialmodelpageupdatedintroducinggptlive1intheapi",
+      "seen_at": "2026-09-10T18:31:21.001941+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano",
+      "title_key": "officialmodelpageupdatedintroducinggpt54miniandnano",
+      "seen_at": "2026-09-10T18:31:21.001941+00:00",
       "rule_version": 2
     }
   ],
@@ -975,6 +969,24 @@
       "published_at": "2026-09-10T03:55:08+08:00",
       "original_title": "v0.35.0",
       "reported_at": "2026-09-09T21:44:15.233643+00:00"
+    },
+    {
+      "importance": "A",
+      "title": "gpt live API 接入能力升级",
+      "model_or_product": "gpt live",
+      "version": "",
+      "capability_change": "官方升级了 gpt live，重点涉及API 接入。",
+      "type": "全球大模型",
+      "pm_judgement": "该更新可能影响 AI 产品的能力边界、模型选型或成本。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "建议阅读官方原文，并结合业务场景完成小样本评测。",
+      "platform": "OpenAI Product Updates",
+      "url": "https://openai.com/index/introducing-gpt-live-1-in-the-api",
+      "published_at": "2026-09-11T01:32:40.538000+08:00",
+      "original_title": "Official model page updated: introducing gpt live 1 in the api",
+      "reported_at": "2026-09-10T18:31:21.001941+00:00"
     }
   ]
 }
