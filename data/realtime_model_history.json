@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-10T18:31:21.001941+00:00",
+  "updated_at": "2026-09-10T21:40:34.771461+00:00",
   "seen": [
     {
       "url": "https://deepmind.google/blog/introducing-gemini-3-7-flash",
@@ -462,6 +462,24 @@
       "url": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano",
       "title_key": "officialmodelpageupdatedintroducinggpt54miniandnano",
       "seen_at": "2026-09-10T18:31:21.001941+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://github.com/openai/codex/releases/tag/voice-cygwin-108b38cf67cbb731",
+      "title_key": "cygwinbuildinputsandmatchingsourceforwindowsvoice",
+      "seen_at": "2026-09-10T21:40:34.771461+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://openai.com/index/introducing-chatgpt-financial-services",
+      "title_key": "introducingchatgptforfinancialservices",
+      "seen_at": "2026-09-10T21:40:34.771461+00:00",
+      "rule_version": 2
+    },
+    {
+      "url": "https://openai.com/index/introducing-the-agents-api",
+      "title_key": "introducingtheagentsapi",
+      "seen_at": "2026-09-10T21:40:34.771461+00:00",
       "rule_version": 2
     }
   ],
