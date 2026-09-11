@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-10T00:57:11.118539+00:00",
+  "updated_at": "2026-09-11T00:57:33.357935+00:00",
   "items": [
     {
       "url": "https://openai.com/index/introducing-openai-presence",
@@ -286,6 +286,11 @@
       "url": "https://runway.com/news/company-news/runway-for-adobe",
       "title_key": "runwaynewsintroducingrunwayforpremiereproaftereffects",
       "reported_at": "2026-09-10T00:57:11.118539+00:00"
+    },
+    {
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.35.0",
+      "title_key": "v0350",
+      "reported_at": "2026-09-11T00:57:33.357935+00:00"
     }
   ]
 }
