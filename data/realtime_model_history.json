@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-11T00:13:49.641455+00:00",
+  "updated_at": "2026-09-12T06:17:30.254880+00:00",
   "seen": [
     {
       "url": "https://deepmind.google/blog/introducing-gemini-3-7-flash",
@@ -487,6 +487,108 @@
       "title_key": "runwaynewstowardsinstantvideogeneration",
       "seen_at": "2026-09-11T00:13:49.641455+00:00",
       "rule_version": 2
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/local-ai-ifa-next-gen-agents-nv-pair-rtx-spark",
+      "title_key": "sparksflynvidiaaccelerateslocalaiatifa2026",
+      "seen_at": "2026-09-12T06:17:30.254880+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://blog.google/innovation-and-ai/technology/google-ai-updates-august-2026",
+      "title_key": "thelatestainewsweannouncedinaugust2026",
+      "seen_at": "2026-09-12T06:17:30.254880+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/gpt-6-astra",
+      "title_key": "gpt6astraanewgenerationofintelligence",
+      "seen_at": "2026-09-12T06:17:30.254880+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/introducing-the-agents-api",
+      "title_key": "introducingtheagentsapi",
+      "seen_at": "2026-09-12T06:17:30.254880+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/introducing-chatgpt-financial-services",
+      "title_key": "introducingchatgptforfinancialservices",
+      "seen_at": "2026-09-12T06:17:30.254880+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber",
+      "title_key": "introducinggemini38flashand38flashcyber",
+      "seen_at": "2026-09-12T06:17:30.254880+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://deepmind.google/blog/introducing-agentic-video-in-gemini",
+      "title_key": "introducingagenticvideounderstandingwithgemini",
+      "seen_at": "2026-09-12T06:17:30.254880+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.265",
+      "title_key": "v21265",
+      "seen_at": "2026-09-12T06:17:30.254880+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.261",
+      "title_key": "v21261",
+      "seen_at": "2026-09-12T06:17:30.254880+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.259",
+      "title_key": "v21259",
+      "seen_at": "2026-09-12T06:17:30.254880+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.59.0",
+      "title_key": "releasev0590",
+      "seen_at": "2026-09-12T06:17:30.254880+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-5",
+      "title_key": "officialmodelpageupdatedintroducinggpt5",
+      "seen_at": "2026-09-12T06:17:30.254880+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/gpt-5-6",
+      "title_key": "officialmodelpageupdatedgpt56",
+      "seen_at": "2026-09-12T06:17:30.254880+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot",
+      "title_key": "officialmodelpageupdatedgpt56preferredmodelmicrosoft365copilot",
+      "seen_at": "2026-09-12T06:17:30.254880+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-5-5",
+      "title_key": "officialmodelpageupdatedintroducinggpt55",
+      "seen_at": "2026-09-12T06:17:30.254880+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/gpt-5-6-in-kiro",
+      "title_key": "officialmodelpageupdatedgpt56inkiro",
+      "seen_at": "2026-09-12T06:17:30.254880+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
+      "title_key": "officialmodelpageupdatedadvancingthepriceperformancefrontierwithgpt56",
+      "seen_at": "2026-09-12T06:17:30.254880+00:00",
+      "rule_version": 3
     }
   ],
   "notifications": [
@@ -1029,6 +1131,42 @@
       "published_at": "2026-09-11T05:31:00+08:00",
       "original_title": "Runway News | Towards Instant Video Generation",
       "reported_at": "2026-09-11T00:13:49.641455+00:00"
+    },
+    {
+      "importance": "S",
+      "title": "GPT-6 Astra 计算机与浏览器操作正式发布",
+      "model_or_product": "GPT-6 Astra",
+      "version": "",
+      "capability_change": "官方正式发布了 GPT-6 Astra，重点涉及计算机与浏览器操作、代码与软件工程、网络安全、科学研究。",
+      "type": "全球大模型",
+      "pm_judgement": "这是代际旗舰模型更新，可能直接改变复杂 Agent、计算机操作和专业工作流的模型选型。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "优先评测复杂多步骤 Agent、计算机操作、工具调用、任务成功率、时延与成本。",
+      "platform": "OpenAI",
+      "url": "https://openai.com/index/gpt-6-astra",
+      "published_at": "2026-09-03T19:00:00+08:00",
+      "original_title": "GPT-6 Astra: A new generation of intelligence",
+      "reported_at": "2026-09-12T06:17:30.254880+00:00"
+    },
+    {
+      "importance": "S",
+      "title": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber 正式发布",
+      "model_or_product": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
+      "version": "3.8",
+      "capability_change": "官方正式发布了 Introducing Gemini 3.8 Flash and 3.8 Flash Cyber，重点涉及模型或产品能力。",
+      "type": "全球大模型",
+      "pm_judgement": "这是代际旗舰模型更新，可能直接改变复杂 Agent、计算机操作和专业工作流的模型选型。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "优先评测复杂多步骤 Agent、计算机操作、工具调用、任务成功率、时延与成本。",
+      "platform": "Google DeepMind",
+      "url": "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber",
+      "published_at": "2026-09-03T00:18:31+08:00",
+      "original_title": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
+      "reported_at": "2026-09-12T06:17:30.254880+00:00"
     }
   ]
 }
