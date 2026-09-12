@@ -17,7 +17,8 @@
         "/index/"
       ],
       "max_pages": 24,
-      "allow_page_fallback": true
+      "allow_page_fallback": true,
+      "fallback_feed_url": "https://openai.com/news/rss.xml"
     },
     {
       "platform": "Google AI",
