@@ -613,6 +613,28 @@ class AgentTests(unittest.TestCase):
         self.assertIn("计算机与浏览器操作", selected[0]["capability_change"])
         self.assertIn("代际旗舰模型", selected[0]["pm_judgement"])
 
+    def test_incremental_model_launch_is_not_called_generational_flagship(self):
+        item = agent.NewsItem(
+            platform="Google DeepMind",
+            category="全球大模型",
+            source_type="official_feed",
+            title="Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
+            url="https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber",
+            published_at="2026-09-02T10:00:00+08:00",
+            description=(
+                "Our newest Gemini models improve agentic workflows and cybersecurity."
+            ),
+        )
+        selected = agent.fallback_analysis([item])
+        self.assertEqual(selected[0]["importance"], "S")
+        self.assertEqual(
+            selected[0]["model_or_product"],
+            "Gemini 3.8 Flash and 3.8 Flash Cyber",
+        )
+        self.assertNotIn("代际旗舰", selected[0]["pm_judgement"])
+        self.assertIn("重要模型正式发布", selected[0]["pm_judgement"])
+        self.assertIn("网络安全", selected[0]["capability_change"])
+
     def test_protected_gpt6_canonical_page_is_kept_without_false_s_claim(self):
         source = {
             "platform": "OpenAI Product Updates",
