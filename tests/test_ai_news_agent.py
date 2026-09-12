@@ -67,6 +67,21 @@ UPDATED_MODEL_PAGE = b"""<!doctype html><html><head>
 SynthID watermarking, and the verification tool now provides API access.</i></p>
 </body></html>"""
 
+GPT6_RSS = b"""<?xml version="1.0"?>
+<rss version="2.0"><channel><item>
+  <title>GPT-6 Astra: A new generation of intelligence</title>
+  <link>https://openai.com/index/gpt-6-astra</link>
+  <pubDate>Thu, 03 Sep 2026 11:00:00 GMT</pubDate>
+  <description>Introducing GPT-6 Astra, our most intelligent and aligned model yet,
+  with state-of-the-art capabilities across computer use, coding, cybersecurity, and science.</description>
+</item></channel></rss>"""
+
+GPT6_SITEMAP = b"""<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
+  <loc>https://openai.com/index/gpt-6-astra/</loc>
+  <lastmod>2026-09-03T12:05:00Z</lastmod>
+</url></urlset>"""
+
 
 EMBEDDED_ARTICLE_LIST = b"""<script>
 {"ArticleMeta":{"PublishDate":1784649600000,"ResearchArea":[{"ResearchAreaName":"Models"}]},
@@ -576,6 +591,132 @@ class AgentTests(unittest.TestCase):
             modified,
         )
         self.assertIsNone(item)
+
+    def test_gpt6_flagship_launch_is_s_level(self):
+        item = agent.NewsItem(
+            platform="OpenAI",
+            category="全球大模型",
+            source_type="official_feed",
+            title="GPT-6 Astra: A new generation of intelligence",
+            url="https://openai.com/index/gpt-6-astra",
+            published_at="2026-09-03T19:00:00+08:00",
+            description=(
+                "Introducing GPT-6 Astra, our most intelligent and aligned model yet, "
+                "with state-of-the-art capabilities across computer use, coding, "
+                "cybersecurity, and science."
+            ),
+        )
+        selected = agent.fallback_analysis([item])
+        self.assertEqual(len(selected), 1)
+        self.assertEqual(selected[0]["importance"], "S")
+        self.assertEqual(selected[0]["model_or_product"], "GPT-6 Astra")
+        self.assertIn("计算机与浏览器操作", selected[0]["capability_change"])
+        self.assertIn("代际旗舰模型", selected[0]["pm_judgement"])
+
+    def test_protected_gpt6_canonical_page_is_kept_without_false_s_claim(self):
+        source = {
+            "platform": "OpenAI Product Updates",
+            "category": "全球大模型",
+            "source_type": "official_sitemap",
+            "allow_page_fallback": True,
+        }
+        item = agent.sitemap_page_fallback(
+            source,
+            "https://openai.com/index/gpt-6-astra/",
+            datetime(2026, 9, 4, 8, 8, tzinfo=self.tz),
+        )
+        self.assertIsNotNone(item)
+        selected = agent.fallback_analysis([item])
+        self.assertEqual(selected[0]["importance"], "A")
+        self.assertEqual(selected[0]["model_or_product"], "GPT-6 Astra")
+
+    def test_openai_sitemap_uses_official_feed_metadata_for_gpt6(self):
+        source = {
+            "platform": "OpenAI Product Updates",
+            "category": "全球大模型",
+            "kind": "sitemap",
+            "source_type": "official_sitemap",
+            "url": "https://openai.com/sitemap.xml/product/",
+            "include": ["/index/"],
+            "max_pages": 24,
+            "allow_page_fallback": True,
+            "fallback_feed_url": "https://openai.com/news/rss.xml",
+        }
+        start = datetime(2026, 9, 3, 0, 0, tzinfo=self.tz)
+        end = datetime(2026, 9, 4, 0, 0, tzinfo=self.tz)
+
+        def fake_fetch(url, timeout=agent.REQUEST_TIMEOUT):
+            if url == source["url"]:
+                return GPT6_SITEMAP
+            if url == source["fallback_feed_url"]:
+                return GPT6_RSS
+            raise OSError("protected page")
+
+        with patch.object(agent, "fetch_bytes", side_effect=fake_fetch):
+            items = agent.parse_sitemap(source, start, end)
+        self.assertEqual(len(items), 1)
+        self.assertEqual(items[0].source_type, "official_feed")
+        self.assertIn("computer use", items[0].description)
+        self.assertEqual(agent.fallback_analysis(items)[0]["importance"], "S")
+
+    def test_rich_feed_duplicate_beats_later_sitemap_fallback(self):
+        feed_item = agent.NewsItem(
+            platform="OpenAI",
+            category="全球大模型",
+            source_type="official_feed",
+            title="GPT-6 Astra: A new generation of intelligence",
+            url="https://openai.com/index/gpt-6-astra",
+            published_at="2026-09-03T19:00:00+08:00",
+            description="Introducing GPT-6 Astra with computer use and coding.",
+        )
+        fallback_item = agent.NewsItem(
+            platform="OpenAI Product Updates",
+            category="全球大模型",
+            source_type="official_sitemap",
+            title="Official model page updated: gpt 6 astra",
+            url="https://openai.com/index/gpt-6-astra",
+            published_at="2026-09-04T08:08:00+08:00",
+            description="Official sitemap detected a fresh model API or product-page update.",
+        )
+        unique = agent.deduplicate([fallback_item, feed_item], {"items": []})
+        self.assertEqual(unique, [feed_item])
+
+    def test_luma_competitor_pricing_page_is_noise(self):
+        item = agent.NewsItem(
+            platform="Luma AI",
+            category="AIGC视频",
+            source_type="official_sitemap",
+            title="Kling AI Pricing",
+            url="https://lumalabs.ai/news/kling-pricing",
+            published_at="2026-09-08T10:00:00+08:00",
+            description="Kling video generation pricing guide.",
+        )
+        self.assertFalse(agent.is_model_relevant(item))
+        self.assertEqual(agent.fallback_analysis([item]), [])
+
+    def test_luma_competitor_review_page_is_noise(self):
+        item = agent.NewsItem(
+            platform="Luma AI",
+            category="AIGC视频",
+            source_type="official_sitemap",
+            title="Kling Review 2026",
+            url="https://lumalabs.ai/news/kling-review",
+            published_at="2026-09-02T10:00:00+08:00",
+            description="A comparison of video generation features and pricing.",
+        )
+        self.assertFalse(agent.is_model_relevant(item))
+
+    def test_model_category_alone_does_not_make_company_news_relevant(self):
+        item = agent.NewsItem(
+            platform="Luma AI",
+            category="AIGC视频",
+            source_type="official_sitemap",
+            title="Luma AI launches an Arabic-language interface",
+            url="https://lumalabs.ai/news/native-arabic-language-interface",
+            published_at="2026-09-02T10:00:00+08:00",
+            description="The company expands localization for its creative community.",
+        )
+        self.assertFalse(agent.is_model_relevant(item))
 
     def test_report_day_defaults_to_yesterday(self):
         with patch.dict(os.environ, {"REPORT_DATE": "2026-07-22"}):

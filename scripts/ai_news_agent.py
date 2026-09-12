@@ -40,7 +40,7 @@ BROWSER_USER_AGENT = (
 REQUEST_TIMEOUT = int(os.getenv("REQUEST_TIMEOUT", "20"))
 MAX_CANDIDATES = int(os.getenv("MAX_CANDIDATES", "60"))
 MAX_REPORT_ITEMS = int(os.getenv("MAX_REPORT_ITEMS", "10"))
-FILTER_RULE_VERSION = 2
+FILTER_RULE_VERSION = 3
 
 S_KEYWORDS = (
     "flagship model", "frontier model", "foundation model", "reasoning model",
@@ -49,11 +49,12 @@ S_KEYWORDS = (
     "image model", "native image generation", "native audio", "text-to-video",
     "image-to-video", "coding agent", "agent platform", "computer use",
     "deep research", "api pricing", "price reduction", "open weights",
+    "agi era", "artificial general intelligence", "generational leap",
     "旗舰模型", "前沿模型", "基础模型", "推理模型", "大语言模型", "新一代模型",
     "通用模型", "多模态模型", "全模态模型", "视觉语言模型", "视频模型",
     "图像模型", "原生图像生成", "原生音频", "文生视频", "图生视频",
     "编程 agent", "智能体平台", "计算机使用", "深度研究", "api 定价",
-    "模型降价", "开放权重",
+    "模型降价", "开放权重", "agi 时代", "通用人工智能时代", "代际跃升",
 )
 A_KEYWORDS = (
     "language model", "text model", "llm", "reasoning", "context window",
@@ -124,9 +125,10 @@ NOISE_KEYWORDS = (
     "customer story", "case study", "webinar", "event recap", "partnership",
     "funding", "hiring", "careers", "tutorial", "how to", "sponsored",
     "seo", "comparison article", "customer spotlight", "field report",
-    "alternatives", "statistics",
+    "alternatives", "statistics", "team is joining", "team joins",
+    "acquisition announcement", "acquired by",
     "客户案例", "活动回顾", "合作伙伴", "融资", "招聘", "教程", "营销",
-    "对比文章", "行业统计",
+    "对比文章", "行业统计", "团队加入", "收购公告",
 )
 NOISE_URL_PARTS = (
     "/customers/", "/customer-stories/", "/case-studies/", "/case-study/",
@@ -158,11 +160,25 @@ GITHUB_RELEASE_MATERIAL_KEYWORDS = (
     "下线", "弃用", "图像生成", "视频生成", "原生音频",
 )
 MODEL_NAME_PATTERN = re.compile(
-    r"\b(?:(?:gpt[\s._-]*(?:live|imagegen))|(?:sora|dall-e)|"
+    r"\b(?:(?:gpt[\s._-]*(?:live|imagegen)(?:[\s._-]*\d[\w.-]*)?)|(?:sora|dall-e)|"
     r"(?:gpt|claude|gemini|llama|mistral|qwen|glm|deepseek|kimi|minimax|"
     r"flux|midjourney|seedance|veo|kling|wan|ray)[\s._-]*"
     r"(?:[a-z]+[\s._-]*)?\d[\w.-]*)\b",
     flags=re.I,
+)
+
+MAJOR_MODEL_RELEASE_SIGNALS = (
+    "introducing ", "announcing ", "we're introducing", "we are introducing",
+    "a new generation of intelligence", "our most intelligent and aligned model yet",
+    "new flagship model", "major model release", "正式发布", "旗舰模型发布",
+    "新一代智能", "代际跃升",
+)
+NON_LAUNCH_SIGNALS = (
+    "pricing", "price", "preferred model", "customer", "case study", "for work",
+    "integration", "available in", "定价", "价格", "客户案例", "业务版",
+)
+LUMA_EDITORIAL_NOISE_SLUGS = (
+    "-pricing", "-review", "pika-ai-video-generation", "invideo-ai",
 )
 
 
@@ -539,8 +555,30 @@ def parse_sitemap(source: dict[str, Any], start: datetime, end: datetime) -> lis
             continue
         candidates.append((url, modified))
 
+    feed_items_by_url: dict[str, NewsItem] = {}
+    fallback_feed_url = str(source.get("fallback_feed_url") or "").strip()
+    if fallback_feed_url:
+        feed_source = {
+            "platform": source["platform"],
+            "category": source["category"],
+            "source_type": "official_feed",
+            "url": fallback_feed_url,
+        }
+        try:
+            feed_items_by_url = {
+                normalize_url(item.url): item
+                for item in parse_feed(feed_source, start, end)
+            }
+        except Exception as exc:  # noqa: BLE001
+            log(f"官方 Feed 回退读取失败：{source['platform']} ({exc})")
+
     items: list[NewsItem] = []
     for url, modified in candidates[: source.get("max_pages", 12)]:
+        normalized_url = normalize_url(url)
+        feed_item = feed_items_by_url.get(normalized_url)
+        if feed_item is not None:
+            items.append(feed_item)
+            continue
         try:
             title, description, published = page_metadata(url)
         except Exception as exc:  # noqa: BLE001
@@ -655,7 +693,10 @@ def deduplicate(items: list[NewsItem], history: dict[str, Any]) -> list[NewsItem
     seen_urls: set[str] = set()
     seen_titles: set[str] = set()
     unique: list[NewsItem] = []
-    for item in sorted(items, key=lambda row: row.published_at, reverse=True):
+    # The same official URL may arrive from both RSS and a sitemap. Prefer the
+    # richer RSS/page metadata over a later sitemap fallback timestamp; otherwise
+    # a protected page can replace a complete launch announcement with generic copy.
+    for item in sorted(items, key=duplicate_quality_key, reverse=True):
         url = normalize_url(item.url)
         key = title_key(item.title)
         if not url or not key:
@@ -665,15 +706,81 @@ def deduplicate(items: list[NewsItem], history: dict[str, Any]) -> list[NewsItem
         seen_urls.add(url)
         seen_titles.add(key)
         unique.append(item)
-    return unique
+    return sorted(unique, key=lambda row: row.published_at, reverse=True)
+
+
+def has_multimodal_text_signal(item: NewsItem) -> bool:
+    text = f"{item.title} {item.description}".lower()
+    return any(keyword in text for keyword in MULTIMODAL_KEYWORDS)
 
 
 def is_multimodal_relevant(item: NewsItem) -> bool:
     """Return whether an update belongs to the user's primary multimodal focus."""
-    text = f"{item.title} {item.description}".lower()
-    return item.category in MULTIMODAL_CATEGORIES or any(
-        keyword in text for keyword in MULTIMODAL_KEYWORDS
+    return item.category in MULTIMODAL_CATEGORIES or has_multimodal_text_signal(item)
+
+
+def is_sitemap_fallback(item: NewsItem) -> bool:
+    return item.title.lower().startswith("official model page updated:")
+
+
+def duplicate_quality_key(item: NewsItem) -> tuple[int, int, int, str]:
+    """Rank duplicate records by usable content before recency."""
+    return (
+        int(not is_sitemap_fallback(item)),
+        int(item.source_type == "official_feed"),
+        min(len(item.description), 1000),
+        item.published_at,
     )
+
+
+def is_simple_official_model_page(item: NewsItem) -> bool:
+    """Recognize a model's canonical launch page without matching follow-up articles."""
+    if not is_sitemap_fallback(item):
+        return False
+    slug = urllib.parse.unquote(
+        urllib.parse.urlsplit(item.url).path.rstrip("/").rsplit("/", 1)[-1]
+    ).lower()
+    parts = [part for part in re.split(r"[-_.]+", slug) if part]
+    model_families = {
+        "gpt", "claude", "gemini", "llama", "mistral", "qwen", "glm",
+        "deepseek", "kimi", "minimax", "flux", "midjourney", "seedance",
+        "veo", "kling", "wan", "ray", "sora",
+    }
+    banned = {
+        "pricing", "preferred", "microsoft", "copilot", "developers", "work",
+        "customer", "safety", "overview", "api",
+    }
+    return (
+        2 <= len(parts) <= 4
+        and parts[0] in model_families
+        and any(any(char.isdigit() for char in part) for part in parts[1:])
+        and not any(part in banned for part in parts)
+    )
+
+
+def is_major_model_release(item: NewsItem) -> bool:
+    """Return whether an official item is a flagship/generational model launch."""
+    if item.source_type not in {"official_feed", "official_sitemap", "official_page_list"}:
+        return False
+    text = f"{item.title} {item.description}".lower()
+    if not MODEL_NAME_PATTERN.search(item.title.lower()):
+        return False
+    if item.platform == "OpenAI Product Updates" and item.source_type == "official_sitemap":
+        return False
+    if is_sitemap_fallback(item):
+        return False
+    title = item.title.lower()
+    if any(signal in title for signal in NON_LAUNCH_SIGNALS):
+        return False
+    return any(signal in text for signal in MAJOR_MODEL_RELEASE_SIGNALS)
+
+
+def is_source_specific_noise(item: NewsItem) -> bool:
+    """Reject editorial/SEO pages that inherit a model-focused source category."""
+    url = item.url.lower()
+    if item.platform == "Luma AI" and any(slug in url for slug in LUMA_EDITORIAL_NOISE_SLUGS):
+        return True
+    return False
 
 
 def candidate_score(item: NewsItem) -> int:
@@ -690,6 +797,10 @@ def candidate_score(item: NewsItem) -> int:
         score += 1
     if MODEL_NAME_PATTERN.search(text):
         score += 2
+    if is_simple_official_model_page(item):
+        score += 1
+    if is_major_model_release(item):
+        score += 8
     # Multimodal model changes are the primary signal. General models, Agent and
     # API/pricing remain as a secondary radar rather than competing equally.
     if is_multimodal_relevant(item):
@@ -706,10 +817,11 @@ def is_model_relevant(item: NewsItem) -> bool:
     title = item.title.lower()
     has_scope_term = any(keyword in text for keyword in PRODUCT_RELEVANCE_KEYWORDS)
     has_named_model = bool(MODEL_NAME_PATTERN.search(text))
-    has_multimodal_signal = is_multimodal_relevant(item)
-    has_direct_category = item.category in DIRECT_SCOPE_CATEGORIES
+    has_multimodal_signal = has_multimodal_text_signal(item)
     has_update_action = any(keyword in text for keyword in UPDATE_ACTION_KEYWORDS)
-    has_noise = any(keyword in text for keyword in NOISE_KEYWORDS) or any(
+    has_noise = is_source_specific_noise(item) or any(
+        keyword in text for keyword in NOISE_KEYWORDS
+    ) or any(
         part in item.url.lower() for part in NOISE_URL_PARTS
     )
     has_realtime_event = any(keyword in text for keyword in REALTIME_EVENT_KEYWORDS)
@@ -733,7 +845,9 @@ def is_model_relevant(item: NewsItem) -> bool:
         and not any(keyword in text for keyword in GITHUB_RELEASE_MATERIAL_KEYWORDS)
     )
     return (
-        (has_scope_term or has_named_model or has_multimodal_signal or has_direct_category)
+        # A source category is useful for ranking, but cannot make an unrelated
+        # company/SEO article model news by itself.
+        (has_scope_term or has_named_model or has_multimodal_signal)
         and has_update_action
         and not has_noise
         and not is_case_study
@@ -828,6 +942,9 @@ LOCALIZED_CAPABILITY_SIGNALS = (
     (("synthid", "watermark", "provenance verification"), "内容水印与验证"),
     (("tool calling", "function calling"), "工具调用"),
     (("computer use", "browser use"), "计算机与浏览器操作"),
+    (("coding", "software engineering"), "代码与软件工程"),
+    (("cybersecurity",), "网络安全"),
+    (("science", "scientific"), "科学研究"),
     (("subagent", "multi-agent"), "多 Agent 协作"),
     (("context window",), "上下文窗口"),
     (("open weights",), "开放权重"),
@@ -849,6 +966,26 @@ def localized_capabilities(item: NewsItem) -> list[str]:
 def infer_product_name(item: NewsItem) -> str:
     """Keep model/product names in their original spelling while removing English copy."""
     title = clean_text(item.title, 180)
+    if is_sitemap_fallback(item):
+        slug = urllib.parse.unquote(
+            urllib.parse.urlsplit(item.url).path.rstrip("/").rsplit("/", 1)[-1]
+        )
+        parts = [part for part in re.split(r"[-_.]+", slug) if part]
+        if len(parts) >= 2 and parts[0].lower() == "gpt":
+            if parts[1].isdigit():
+                version = parts[1]
+                suffix_start = 2
+                if len(parts) > 2 and parts[2].isdigit():
+                    version = f"{version}.{parts[2]}"
+                    suffix_start = 3
+                suffix = " ".join(part.title() for part in parts[suffix_start:])
+                return f"GPT-{version}{f' {suffix}' if suffix else ''}"
+            if parts[1].lower() in {"live", "imagegen"}:
+                suffix = "-".join(parts[2:])
+                return f"GPT-{parts[1].title()}{f'-{suffix}' if suffix else ''}"
+    prefix = title.split(":", 1)[0].strip()
+    if not contains_chinese(prefix) and len(prefix) <= 80 and MODEL_NAME_PATTERN.search(prefix):
+        return prefix
     patterns = (
         r"^(?:introducing|announcing|meet)\s+(.+?)(?:\s*[:|—–]\s*.*)?$",
         r"^new\s+(?:api\s+)?pricing\s+for\s+(.+)$",
@@ -1080,10 +1217,13 @@ def fallback_analysis(items: list[NewsItem]) -> list[dict[str, Any]]:
             continue
         score = candidate_score(item)
         multimodal = is_multimodal_relevant(item)
+        major_release = is_major_model_release(item)
         # Keep useful B-level multimodal capability changes such as editing,
         # reference control or availability updates. The supplementary text/
         # Agent radar stays stricter and never emits B-level entries.
-        if multimodal:
+        if major_release:
+            importance = "S"
+        elif multimodal:
             if score < 5:
                 continue
             importance = "S" if score >= 15 else "A" if score >= 9 else "B"
@@ -1097,6 +1237,16 @@ def fallback_analysis(items: list[NewsItem]) -> list[dict[str, Any]]:
             flags=re.I,
         )
         localized_title, localized_change, product_name = localize_fallback_copy(item)
+        pm_judgement = (
+            "这是代际旗舰模型更新，可能直接改变复杂 Agent、计算机操作和专业工作流的模型选型。"
+            if major_release
+            else "该更新可能影响 AI 产品的能力边界、模型选型或成本。"
+        )
+        recommended_action = (
+            "优先评测复杂多步骤 Agent、计算机操作、工具调用、任务成功率、时延与成本。"
+            if major_release
+            else "建议阅读官方原文，并结合业务场景完成小样本评测。"
+        )
         selected.append(
             {
                 "importance": importance,
@@ -1105,11 +1255,11 @@ def fallback_analysis(items: list[NewsItem]) -> list[dict[str, Any]]:
                 "version": version_match.group(0) if version_match else "",
                 "capability_change": localized_change,
                 "type": item.category,
-                "pm_judgement": "该更新可能影响 AI 产品的能力边界、模型选型或成本。",
+                "pm_judgement": pm_judgement,
                 "evaluation_basis": "待实测",
                 "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
                 "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
-                "recommended_action": "建议阅读官方原文，并结合业务场景完成小样本评测。",
+                "recommended_action": recommended_action,
                 "platform": item.platform,
                 "url": item.url,
                 "published_at": item.published_at,

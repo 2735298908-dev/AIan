@@ -18,6 +18,7 @@ from ai_news_agent import (
     NewsItem,
     analyze,
     collect_source,
+    duplicate_quality_key,
     escape_markdown,
     is_multimodal_relevant,
     is_model_relevant,
@@ -36,6 +37,7 @@ PUSH_LEVELS = {
     for level in os.getenv("REALTIME_PUSH_LEVELS", "S,A").split(",")
     if level.strip()
 }
+REALTIME_LOOKBACK_DAYS = max(1, int(os.getenv("REALTIME_LOOKBACK_DAYS", "14")))
 
 
 def empty_history() -> dict[str, Any]:
@@ -73,7 +75,7 @@ def new_candidates(
     run_urls: set[str] = set()
     run_titles: set[str] = set()
     result: list[NewsItem] = []
-    for item in sorted(items, key=lambda row: row.published_at, reverse=True):
+    for item in sorted(items, key=duplicate_quality_key, reverse=True):
         url = normalize_url(item.url)
         key = title_key(item.title)
         if (
@@ -252,9 +254,14 @@ def save_report(history: dict[str, Any], report_day: str) -> Path | None:
 def main() -> int:
     now = datetime.now(REPORT_TZ)
     history = load_realtime_history()
-    # The first run intentionally scans only today to avoid a noisy historical
-    # backfill. Later runs include yesterday to cover releases posted near midnight.
-    first_day = now.date() if not history["seen"] else now.date() - timedelta(days=1)
+    # The first run scans only today. Established monitors keep a rolling recovery
+    # window so delayed feeds, workflow outages and filter fixes cannot permanently
+    # hide a major launch that was first marked as seen but not notified.
+    first_day = (
+        now.date()
+        if not history["seen"]
+        else now.date() - timedelta(days=REALTIME_LOOKBACK_DAYS - 1)
+    )
     start = datetime.combine(first_day, dt_time.min, REPORT_TZ)
     end = now + timedelta(minutes=10)
     sources = load_sources()
