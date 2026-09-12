@@ -55,6 +55,30 @@ class RealtimeModelReleaseTests(unittest.TestCase):
         ]
         self.assertEqual(realtime.new_candidates([self.item], history), [])
 
+    def test_richer_duplicate_is_evaluated_first(self):
+        feed_item = agent.NewsItem(
+            platform="OpenAI",
+            category="全球大模型",
+            source_type="official_feed",
+            title="GPT-6 Astra: A new generation of intelligence",
+            url="https://openai.com/index/gpt-6-astra",
+            published_at="2026-09-03T19:00:00+08:00",
+            description="Introducing GPT-6 Astra with computer use and coding.",
+        )
+        fallback_item = agent.NewsItem(
+            platform="OpenAI Product Updates",
+            category="全球大模型",
+            source_type="official_sitemap",
+            title="Official model page updated: gpt 6 astra",
+            url="https://openai.com/index/gpt-6-astra",
+            published_at="2026-09-04T08:08:00+08:00",
+            description="Official sitemap detected a fresh model API update.",
+        )
+        self.assertEqual(
+            realtime.new_candidates([fallback_item, feed_item], realtime.empty_history()),
+            [feed_item],
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
