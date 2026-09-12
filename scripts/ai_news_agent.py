@@ -173,6 +173,10 @@ MAJOR_MODEL_RELEASE_SIGNALS = (
     "new flagship model", "major model release", "正式发布", "旗舰模型发布",
     "新一代智能", "代际跃升",
 )
+GENERATIONAL_MODEL_SIGNALS = (
+    "a new generation of intelligence", "our most intelligent and aligned model yet",
+    "generational leap", "flagship model", "代际跃升", "旗舰模型",
+)
 NON_LAUNCH_SIGNALS = (
     "pricing", "price", "preferred model", "customer", "case study", "for work",
     "integration", "available in", "定价", "价格", "客户案例", "业务版",
@@ -775,6 +779,14 @@ def is_major_model_release(item: NewsItem) -> bool:
     return any(signal in text for signal in MAJOR_MODEL_RELEASE_SIGNALS)
 
 
+def is_generational_model_release(item: NewsItem) -> bool:
+    """Separate a true generational/flagship launch from any important new model."""
+    if not is_major_model_release(item):
+        return False
+    text = f"{item.title} {item.description}".lower()
+    return any(signal in text for signal in GENERATIONAL_MODEL_SIGNALS)
+
+
 def is_source_specific_noise(item: NewsItem) -> bool:
     """Reject editorial/SEO pages that inherit a model-focused source category."""
     url = item.url.lower()
@@ -943,8 +955,9 @@ LOCALIZED_CAPABILITY_SIGNALS = (
     (("tool calling", "function calling"), "工具调用"),
     (("computer use", "browser use"), "计算机与浏览器操作"),
     (("coding", "software engineering"), "代码与软件工程"),
-    (("cybersecurity",), "网络安全"),
+    (("cybersecurity", "cyber"), "网络安全"),
     (("science", "scientific"), "科学研究"),
+    (("agentic workflow", "agentic task", "long-running agent"), "长任务与 Agent 工作流"),
     (("subagent", "multi-agent"), "多 Agent 协作"),
     (("context window",), "上下文窗口"),
     (("open weights",), "开放权重"),
@@ -983,9 +996,6 @@ def infer_product_name(item: NewsItem) -> str:
             if parts[1].lower() in {"live", "imagegen"}:
                 suffix = "-".join(parts[2:])
                 return f"GPT-{parts[1].title()}{f'-{suffix}' if suffix else ''}"
-    prefix = title.split(":", 1)[0].strip()
-    if not contains_chinese(prefix) and len(prefix) <= 80 and MODEL_NAME_PATTERN.search(prefix):
-        return prefix
     patterns = (
         r"^(?:introducing|announcing|meet)\s+(.+?)(?:\s*[:|—–]\s*.*)?$",
         r"^new\s+(?:api\s+)?pricing\s+for\s+(.+)$",
@@ -997,6 +1007,9 @@ def infer_product_name(item: NewsItem) -> str:
             name = clean_text(match.group(1), 80).strip(" .:-—–")
             if name and not name.lower().startswith(("a ", "an ", "the ")):
                 return name
+    prefix = title.split(":", 1)[0].strip()
+    if not contains_chinese(prefix) and len(prefix) <= 80 and MODEL_NAME_PATTERN.search(prefix):
+        return prefix
     model_match = MODEL_NAME_PATTERN.search(title)
     if model_match:
         return clean_text(model_match.group(0), 80)
@@ -1218,6 +1231,7 @@ def fallback_analysis(items: list[NewsItem]) -> list[dict[str, Any]]:
         score = candidate_score(item)
         multimodal = is_multimodal_relevant(item)
         major_release = is_major_model_release(item)
+        generational_release = is_generational_model_release(item)
         # Keep useful B-level multimodal capability changes such as editing,
         # reference control or availability updates. The supplementary text/
         # Agent radar stays stricter and never emits B-level entries.
@@ -1239,8 +1253,12 @@ def fallback_analysis(items: list[NewsItem]) -> list[dict[str, Any]]:
         localized_title, localized_change, product_name = localize_fallback_copy(item)
         pm_judgement = (
             "这是代际旗舰模型更新，可能直接改变复杂 Agent、计算机操作和专业工作流的模型选型。"
-            if major_release
-            else "该更新可能影响 AI 产品的能力边界、模型选型或成本。"
+            if generational_release
+            else (
+                "这是重要模型正式发布，可能影响模型选型、Agent 工作流及接入成本。"
+                if major_release
+                else "该更新可能影响 AI 产品的能力边界、模型选型或成本。"
+            )
         )
         recommended_action = (
             "优先评测复杂多步骤 Agent、计算机操作、工具调用、任务成功率、时延与成本。"
