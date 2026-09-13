@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-12T00:57:18.007522+00:00",
+  "updated_at": "2026-09-13T00:59:07.177322+00:00",
   "items": [
     {
       "url": "https://openai.com/index/introducing-openai-presence",
@@ -291,6 +291,26 @@
       "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.35.0",
       "title_key": "v0350",
       "reported_at": "2026-09-11T00:57:33.357935+00:00"
+    },
+    {
+      "url": "https://runway.com/news/research/towards-instant-video-generation",
+      "title_key": "runwaynewstowardsinstantvideogeneration",
+      "reported_at": "2026-09-13T00:59:07.177322+00:00"
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-live-1-in-the-api",
+      "title_key": "officialmodelpageupdatedintroducinggptlive1intheapi",
+      "reported_at": "2026-09-13T00:59:07.177322+00:00"
+    },
+    {
+      "url": "https://openai.com/index/gpt-6-astra",
+      "title_key": "officialmodelpageupdatedgpt6astra",
+      "reported_at": "2026-09-13T00:59:07.177322+00:00"
+    },
+    {
+      "url": "https://openai.com/index/gpt-5-6",
+      "title_key": "officialmodelpageupdatedgpt56",
+      "reported_at": "2026-09-13T00:59:07.177322+00:00"
     }
   ]
 }
