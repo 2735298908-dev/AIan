@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-14T01:11:42.945749+00:00",
+  "updated_at": "2026-09-14T19:26:24.155884+00:00",
   "seen": [
     {
       "url": "https://openai.com/index/sora-feed-philosophy",
@@ -516,6 +516,12 @@
       "url": "https://openai.com/index/introducing-aardvark",
       "title_key": "introducingaardvarkopenaisagenticsecurityresearcher",
       "seen_at": "2026-09-14T01:11:42.945749+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/local-ai-perplexity-windows-pcs",
+      "title_key": "perplexityportablecomputerisnowavailableonwindowspoweredbynvidiartx",
+      "seen_at": "2026-09-14T19:26:24.155884+00:00",
       "rule_version": 3
     }
   ],
