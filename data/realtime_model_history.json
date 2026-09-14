@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-14T19:26:24.155884+00:00",
+  "updated_at": "2026-09-14T23:11:12.283178+00:00",
   "seen": [
     {
       "url": "https://openai.com/index/sora-feed-philosophy",
@@ -522,6 +522,18 @@
       "url": "https://blogs.nvidia.com/blog/local-ai-perplexity-windows-pcs",
       "title_key": "perplexityportablecomputerisnowavailableonwindowspoweredbynvidiartx",
       "seen_at": "2026-09-14T19:26:24.155884+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-5-3-codex",
+      "title_key": "officialmodelpageupdatedintroducinggpt53codex",
+      "seen_at": "2026-09-14T23:11:12.283178+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/previewing-gpt-5-6-sol",
+      "title_key": "officialmodelpageupdatedpreviewinggpt56sol",
+      "seen_at": "2026-09-14T23:11:12.283178+00:00",
       "rule_version": 3
     }
   ],
