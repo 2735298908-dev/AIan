@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-14T23:11:12.283178+00:00",
+  "updated_at": "2026-09-15T07:50:19.390446+00:00",
   "seen": [
     {
       "url": "https://openai.com/index/sora-feed-philosophy",
@@ -534,6 +534,30 @@
       "url": "https://openai.com/index/previewing-gpt-5-6-sol",
       "title_key": "officialmodelpageupdatedpreviewinggpt56sol",
       "seen_at": "2026-09-14T23:11:12.283178+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano",
+      "title_key": "officialmodelpageupdatedintroducinggpt54miniandnano",
+      "seen_at": "2026-09-15T07:50:19.390446+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/gpt-5-5-instant",
+      "title_key": "officialmodelpageupdatedgpt55instant",
+      "seen_at": "2026-09-15T07:50:19.390446+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-5-4",
+      "title_key": "officialmodelpageupdatedintroducinggpt54",
+      "seen_at": "2026-09-15T07:50:19.390446+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/gpt-5-1",
+      "title_key": "officialmodelpageupdatedgpt51",
+      "seen_at": "2026-09-15T07:50:19.390446+00:00",
       "rule_version": 3
     }
   ],
