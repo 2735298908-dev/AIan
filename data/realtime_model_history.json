@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-15T21:26:50.059389+00:00",
+  "updated_at": "2026-09-16T00:26:35.725258+00:00",
   "seen": [
     {
       "url": "https://openai.com/index/sora-feed-philosophy",
@@ -594,6 +594,12 @@
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.273",
       "title_key": "v21273",
       "seen_at": "2026-09-15T21:26:50.059389+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.36.0",
+      "title_key": "v0360",
+      "seen_at": "2026-09-16T00:26:35.725258+00:00",
       "rule_version": 3
     }
   ],
@@ -1191,6 +1197,24 @@
       "published_at": "2026-09-16T01:05:57+08:00",
       "original_title": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
       "reported_at": "2026-09-15T18:15:42.536842+00:00"
+    },
+    {
+      "importance": "A",
+      "title": "ComfyUI API 接入下线或弃用调整",
+      "model_or_product": "ComfyUI",
+      "version": "v0.36.0",
+      "capability_change": "官方调整了 ComfyUI，重点涉及API 接入。",
+      "type": "AIGC视频",
+      "pm_judgement": "该更新可能影响 AI 产品的能力边界、模型选型或成本。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "建议阅读官方原文，并结合业务场景完成小样本评测。",
+      "platform": "ComfyUI",
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.36.0",
+      "published_at": "2026-09-16T06:26:17+08:00",
+      "original_title": "v0.36.0",
+      "reported_at": "2026-09-16T00:26:35.725258+00:00"
     }
   ]
 }
