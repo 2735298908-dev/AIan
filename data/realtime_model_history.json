@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-16T00:26:35.725258+00:00",
+  "updated_at": "2026-09-17T01:29:39.052295+00:00",
   "seen": [
     {
       "url": "https://openai.com/index/sora-feed-philosophy",
@@ -600,6 +600,12 @@
       "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.36.0",
       "title_key": "v0360",
       "seen_at": "2026-09-16T00:26:35.725258+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.274",
+      "title_key": "v21274",
+      "seen_at": "2026-09-17T01:29:39.052295+00:00",
       "rule_version": 3
     }
   ],
