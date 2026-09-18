@@ -1,25 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-09-17T13:33:23.664579+00:00",
+  "updated_at": "2026-09-18T00:25:22.959591+00:00",
   "seen": [
-    {
-      "url": "https://openai.com/index/sora-feed-philosophy",
-      "title_key": "officialmodelpageupdatedsorafeedphilosophy",
-      "seen_at": "2026-08-18T21:41:36.875116+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.148.0",
-      "title_key": "01480",
-      "seen_at": "2026-08-18T22:44:04.898107+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://www.anthropic.com/research/Claude-accelerates-protein-design",
-      "title_key": "howclaudeisacceleratingproteindesignandanalyticalchemistry",
-      "seen_at": "2026-08-18T22:44:04.898107+00:00",
-      "rule_version": 2
-    },
     {
       "url": "https://openai.com/index/replit",
       "title_key": "replitexpandsaccesstosoftwarecreationwithgpt56luna",
@@ -612,6 +594,12 @@
       "url": "https://runway.com/news/safety/moderation-in-real-time",
       "title_key": "runwaynewsmoderationinrealtime",
       "seen_at": "2026-09-17T13:33:23.664579+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.155.0",
+      "title_key": "01550",
+      "seen_at": "2026-09-18T00:25:22.959591+00:00",
       "rule_version": 3
     }
   ],
