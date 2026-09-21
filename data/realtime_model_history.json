@@ -1,49 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-09-18T00:25:22.959591+00:00",
+  "updated_at": "2026-09-21T21:07:11.505457+00:00",
   "seen": [
-    {
-      "url": "https://openai.com/index/replit",
-      "title_key": "replitexpandsaccesstosoftwarecreationwithgpt56luna",
-      "seen_at": "2026-08-19T15:48:58.809214+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://openai.com/index/our-commitment-to-zero-data-retention",
-      "title_key": "offeringzerodataretentionforfrontiermodels",
-      "seen_at": "2026-08-19T18:56:10.247083+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.236",
-      "title_key": "v21236",
-      "seen_at": "2026-08-19T20:48:08.620443+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://mistral.ai/news/agentic-search",
-      "title_key": "introducingagenticsearchmistral",
-      "seen_at": "2026-08-20T14:57:42.002012+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://bfl.ai/blog/flux-video-upscale",
-      "title_key": "fluxupscale2kand4kforvideo",
-      "seen_at": "2026-08-20T17:48:25.405194+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://updates.midjourney.com/changelog-8-20-26",
-      "title_key": "changelog82026",
-      "seen_at": "2026-08-21T16:54:53.293779+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://runway.com/news/company-news/the-next-phase-of-enterprise-video-generation",
-      "title_key": "runwaynewsthenextphaseofenterprisevideogeneration",
-      "seen_at": "2026-08-21T17:48:46.918863+00:00",
-      "rule_version": 2
-    },
     {
       "url": "https://openai.com/index/gpt-5-6-in-kiro",
       "title_key": "officialmodelpageupdatedgpt56inkiro",
@@ -600,6 +558,12 @@
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.155.0",
       "title_key": "01550",
       "seen_at": "2026-09-18T00:25:22.959591+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/higgsfield-from-prompt-to-production-with-astra",
+      "title_key": "higgsfieldaishipsnewvideofeaturesinadaywithgpt6astra",
+      "seen_at": "2026-09-21T21:07:11.505457+00:00",
       "rule_version": 3
     }
   ],
