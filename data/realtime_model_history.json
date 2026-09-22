@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-22T18:58:19.684807+00:00",
+  "updated_at": "2026-09-22T22:16:05.299845+00:00",
   "seen": [
     {
       "url": "https://openai.com/index/gpt-5-6-in-kiro",
@@ -576,6 +576,24 @@
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.280",
       "title_key": "v21280",
       "seen_at": "2026-09-22T18:58:19.684807+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/better-prompt-caching-for-gpt-6",
+      "title_key": "betterpromptcachingforgpt6",
+      "seen_at": "2026-09-22T22:16:05.299845+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
+      "title_key": "introducinggpt6solandluna",
+      "seen_at": "2026-09-22T22:16:05.299845+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/gpt-6-astra-next-generation-work",
+      "title_key": "officialmodelpageupdatedgpt6astranextgenerationwork",
+      "seen_at": "2026-09-22T22:16:05.299845+00:00",
       "rule_version": 3
     }
   ],
@@ -1209,6 +1227,24 @@
       "published_at": "2026-09-16T23:09:00+08:00",
       "original_title": "Runway News | Moderation in Real Time",
       "reported_at": "2026-09-17T13:33:23.664579+00:00"
+    },
+    {
+      "importance": "S",
+      "title": "GPT-6 Sol and Luna 正式发布",
+      "model_or_product": "GPT-6 Sol and Luna",
+      "version": "",
+      "capability_change": "官方正式发布了 GPT-6 Sol and Luna，重点涉及模型或产品能力。",
+      "type": "全球大模型",
+      "pm_judgement": "这是重要模型正式发布，可能影响模型选型、Agent 工作流及接入成本。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "优先评测复杂多步骤 Agent、计算机操作、工具调用、任务成功率、时延与成本。",
+      "platform": "OpenAI",
+      "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
+      "published_at": "2026-09-23T02:00:00+08:00",
+      "original_title": "Introducing GPT-6 Sol and Luna",
+      "reported_at": "2026-09-22T22:16:05.299845+00:00"
     }
   ]
 }
