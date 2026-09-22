@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-21T21:07:11.505457+00:00",
+  "updated_at": "2026-09-22T05:06:08.861908+00:00",
   "seen": [
     {
       "url": "https://openai.com/index/gpt-5-6-in-kiro",
@@ -564,6 +564,12 @@
       "url": "https://openai.com/index/higgsfield-from-prompt-to-production-with-astra",
       "title_key": "higgsfieldaishipsnewvideofeaturesinadaywithgpt6astra",
       "seen_at": "2026-09-21T21:07:11.505457+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/gpt-5-2-for-science-and-math",
+      "title_key": "officialmodelpageupdatedgpt52forscienceandmath",
+      "seen_at": "2026-09-22T05:06:08.861908+00:00",
       "rule_version": 3
     }
   ],
