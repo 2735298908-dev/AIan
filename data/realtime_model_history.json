@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-22T05:06:08.861908+00:00",
+  "updated_at": "2026-09-22T18:58:19.684807+00:00",
   "seen": [
     {
       "url": "https://openai.com/index/gpt-5-6-in-kiro",
@@ -570,6 +570,12 @@
       "url": "https://openai.com/index/gpt-5-2-for-science-and-math",
       "title_key": "officialmodelpageupdatedgpt52forscienceandmath",
       "seen_at": "2026-09-22T05:06:08.861908+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.280",
+      "title_key": "v21280",
+      "seen_at": "2026-09-22T18:58:19.684807+00:00",
       "rule_version": 3
     }
   ],
