@@ -1,19 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-09-22T22:16:05.299845+00:00",
+  "updated_at": "2026-09-23T23:45:37.535846+00:00",
   "seen": [
-    {
-      "url": "https://openai.com/index/gpt-5-6-in-kiro",
-      "title_key": "officialmodelpageupdatedgpt56inkiro",
-      "seen_at": "2026-08-24T19:03:06.477518+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://openai.com/index/gpt-5-1-for-developers",
-      "title_key": "officialmodelpageupdatedgpt51fordevelopers",
-      "seen_at": "2026-08-24T19:03:06.477518+00:00",
-      "rule_version": 2
-    },
     {
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.243",
       "title_key": "v21243",
@@ -594,6 +582,12 @@
       "url": "https://openai.com/index/gpt-6-astra-next-generation-work",
       "title_key": "officialmodelpageupdatedgpt6astranextgenerationwork",
       "seen_at": "2026-09-22T22:16:05.299845+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/gpt-5-new-era-of-work",
+      "title_key": "officialmodelpageupdatedgpt5neweraofwork",
+      "seen_at": "2026-09-23T23:45:37.535846+00:00",
       "rule_version": 3
     }
   ],
