@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-24T15:12:39.226243+00:00",
+  "updated_at": "2026-09-24T19:15:14.255582+00:00",
   "seen": [
     {
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.150.0",
@@ -588,6 +588,18 @@
       "url": "https://runway.com/news/company-news/runway-davinci-resolve",
       "title_key": "runwaynewsrunwayisnowindavinciresolve",
       "seen_at": "2026-09-24T15:12:39.226243+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar",
+      "title_key": "introducinggemini38livewithliveavatar",
+      "seen_at": "2026-09-24T19:15:14.255582+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+      "title_key": "claudediscoversanovelenzymesystem",
+      "seen_at": "2026-09-24T19:15:14.255582+00:00",
       "rule_version": 3
     }
   ],
@@ -1257,6 +1269,24 @@
       "published_at": "2026-09-24T07:29:00+08:00",
       "original_title": "Runway News | Runway is Now in DaVinci Resolve",
       "reported_at": "2026-09-24T15:12:39.226243+00:00"
+    },
+    {
+      "importance": "S",
+      "title": "Gemini 3.8 Live with Live Avatar 正式发布",
+      "model_or_product": "Gemini 3.8 Live with Live Avatar",
+      "version": "3.8",
+      "capability_change": "官方正式发布了 Gemini 3.8 Live with Live Avatar，重点涉及模型或产品能力。",
+      "type": "全球大模型",
+      "pm_judgement": "这是重要模型正式发布，可能影响模型选型、Agent 工作流及接入成本。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "优先评测复杂多步骤 Agent、计算机操作、工具调用、任务成功率、时延与成本。",
+      "platform": "Google DeepMind",
+      "url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar",
+      "published_at": "2026-09-25T00:20:39+08:00",
+      "original_title": "Introducing Gemini 3.8 Live with Live Avatar",
+      "reported_at": "2026-09-24T19:15:14.255582+00:00"
     }
   ]
 }
