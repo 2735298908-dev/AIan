@@ -1,13 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-09-24T19:15:14.255582+00:00",
+  "updated_at": "2026-09-25T22:27:06.108550+00:00",
   "seen": [
-    {
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.150.0",
-      "title_key": "01500",
-      "seen_at": "2026-08-26T20:09:20.249404+00:00",
-      "rule_version": 2
-    },
     {
       "url": "https://updates.midjourney.com/edit-model-for-v8",
       "title_key": "editmodelforv8",
@@ -600,6 +594,12 @@
       "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
       "title_key": "claudediscoversanovelenzymesystem",
       "seen_at": "2026-09-24T19:15:14.255582+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.283",
+      "title_key": "v21283",
+      "seen_at": "2026-09-25T22:27:06.108550+00:00",
       "rule_version": 3
     }
   ],
