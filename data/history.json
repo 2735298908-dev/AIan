@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-25T00:53:38.884111+00:00",
+  "updated_at": "2026-09-26T00:58:09.872020+00:00",
   "items": [
     {
       "url": "https://openai.com/index/introducing-openai-presence",
@@ -351,6 +351,11 @@
       "url": "https://runway.com/news/company-news/runway-davinci-resolve",
       "title_key": "runwaynewsrunwayisnowindavinciresolve",
       "reported_at": "2026-09-25T00:53:38.884111+00:00"
+    },
+    {
+      "url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar",
+      "title_key": "introducinggemini38livewithliveavatar",
+      "reported_at": "2026-09-26T00:58:09.872020+00:00"
     }
   ]
 }
