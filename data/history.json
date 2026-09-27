@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-26T00:58:09.872020+00:00",
+  "updated_at": "2026-09-27T00:57:43.175312+00:00",
   "items": [
     {
       "url": "https://openai.com/index/introducing-openai-presence",
@@ -356,6 +356,11 @@
       "url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar",
       "title_key": "introducinggemini38livewithliveavatar",
       "reported_at": "2026-09-26T00:58:09.872020+00:00"
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.283",
+      "title_key": "v21283",
+      "reported_at": "2026-09-27T00:57:43.175312+00:00"
     }
   ]
 }
