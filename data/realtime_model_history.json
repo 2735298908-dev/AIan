@@ -1,37 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-09-26T17:14:52.812531+00:00",
+  "updated_at": "2026-09-28T07:01:26.660862+00:00",
   "seen": [
-    {
-      "url": "https://updates.midjourney.com/edit-model-for-v8",
-      "title_key": "editmodelforv8",
-      "seen_at": "2026-08-28T05:27:37.166323+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.248",
-      "title_key": "v21248",
-      "seen_at": "2026-08-28T05:27:37.166323+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.251",
-      "title_key": "v21251",
-      "seen_at": "2026-08-28T18:47:59.803427+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://www.anthropic.com/news/model-hardware-standard-research-preview",
-      "title_key": "previewingthemodelhardwarestandard",
-      "seen_at": "2026-08-28T18:47:59.803427+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://updates.midjourney.com/edit-image-quality-update",
-      "title_key": "editimagequalityupdate",
-      "seen_at": "2026-08-29T02:15:56.803243+00:00",
-      "rule_version": 2
-    },
     {
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.151.0",
       "title_key": "01510",
@@ -606,6 +576,12 @@
       "url": "https://runway.com/news/developers/evaluating-runway-model-router",
       "title_key": "runwaynewsevaluatingcostvsqualityusingrunwaymodelrouter",
       "seen_at": "2026-09-26T17:14:52.812531+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.158.0",
+      "title_key": "01580",
+      "seen_at": "2026-09-28T07:01:26.660862+00:00",
       "rule_version": 3
     }
   ],
@@ -1311,6 +1287,24 @@
       "published_at": "2026-09-25T04:13:00+08:00",
       "original_title": "Runway News | Evaluating Cost vs. Quality Using Runway Model Router",
       "reported_at": "2026-09-26T17:14:52.812531+00:00"
+    },
+    {
+      "importance": "A",
+      "title": "OpenAI Codex 图像生成正式发布",
+      "model_or_product": "OpenAI Codex",
+      "version": "0.158.0",
+      "capability_change": "官方正式发布了 OpenAI Codex，重点涉及图像生成。",
+      "type": "Agent与AI编程",
+      "pm_judgement": "该更新可能影响 AI 产品的能力边界、模型选型或成本。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "建议阅读官方原文，并结合业务场景完成小样本评测。",
+      "platform": "OpenAI Codex",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.158.0",
+      "published_at": "2026-09-28T13:10:36+08:00",
+      "original_title": "0.158.0",
+      "reported_at": "2026-09-28T07:01:26.660862+00:00"
     }
   ]
 }
