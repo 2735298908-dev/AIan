@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-28T00:54:11.656321+00:00",
+  "updated_at": "2026-09-29T06:16:00.430728+00:00",
   "items": [
     {
       "url": "https://openai.com/index/introducing-openai-presence",
@@ -361,6 +361,11 @@
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.283",
       "title_key": "v21283",
       "reported_at": "2026-09-27T00:57:43.175312+00:00"
+    },
+    {
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.158.0",
+      "title_key": "01580",
+      "reported_at": "2026-09-29T06:16:00.430728+00:00"
     }
   ]
 }
