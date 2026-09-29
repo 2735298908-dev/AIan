@@ -1,13 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-09-28T07:01:26.660862+00:00",
+  "updated_at": "2026-09-29T20:52:32.510142+00:00",
   "seen": [
-    {
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.151.0",
-      "title_key": "01510",
-      "seen_at": "2026-08-29T14:32:23.308132+00:00",
-      "rule_version": 2
-    },
     {
       "url": "https://runway.com/news/research/introducing-solaris",
       "title_key": "runwaynewsintroducingsolaris",
@@ -582,6 +576,36 @@
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.158.0",
       "title_key": "01580",
       "seen_at": "2026-09-28T07:01:26.660862+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-6-1-sol",
+      "title_key": "introducinggpt61sol",
+      "seen_at": "2026-09-29T20:52:32.510142+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/devday-2026-recap",
+      "title_key": "devday2026recap",
+      "seen_at": "2026-09-29T20:52:32.510142+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.285",
+      "title_key": "v21285",
+      "seen_at": "2026-09-29T20:52:32.510142+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://runway.com/news/company-news/runway-openai-marketplace",
+      "title_key": "runwaynewsrunwayjoinstheopenaimarketplace",
+      "seen_at": "2026-09-29T20:52:32.510142+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities",
+      "title_key": "glm53andthespreadofadvancedcybercapabilities",
+      "seen_at": "2026-09-29T20:52:32.510142+00:00",
       "rule_version": 3
     }
   ],
@@ -1305,6 +1329,42 @@
       "published_at": "2026-09-28T13:10:36+08:00",
       "original_title": "0.158.0",
       "reported_at": "2026-09-28T07:01:26.660862+00:00"
+    },
+    {
+      "importance": "A",
+      "title": "Runway 正式发布",
+      "model_or_product": "Runway",
+      "version": "4.5",
+      "capability_change": "官方正式发布了 Runway，重点涉及模型或产品能力。",
+      "type": "AIGC视频",
+      "pm_judgement": "该更新可能影响 AI 产品的能力边界、模型选型或成本。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "建议阅读官方原文，并结合业务场景完成小样本评测。",
+      "platform": "Runway",
+      "url": "https://runway.com/news/company-news/runway-openai-marketplace",
+      "published_at": "2026-09-29T23:19:00+08:00",
+      "original_title": "Runway News | Runway Joins the OpenAI Marketplace",
+      "reported_at": "2026-09-29T20:52:32.510142+00:00"
+    },
+    {
+      "importance": "S",
+      "title": "GPT-6.1 Sol 计算机与浏览器操作正式发布",
+      "model_or_product": "GPT-6.1 Sol",
+      "version": "6.1",
+      "capability_change": "官方正式发布了 GPT-6.1 Sol，重点涉及计算机与浏览器操作、代码与软件工程、API 接入、价格与成本。",
+      "type": "全球大模型",
+      "pm_judgement": "这是重要模型正式发布，可能影响模型选型、Agent 工作流及接入成本。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "优先评测复杂多步骤 Agent、计算机操作、工具调用、任务成功率、时延与成本。",
+      "platform": "OpenAI",
+      "url": "https://openai.com/index/introducing-gpt-6-1-sol",
+      "published_at": "2026-09-29T18:00:00+08:00",
+      "original_title": "Introducing GPT-6.1 Sol",
+      "reported_at": "2026-09-29T20:52:32.510142+00:00"
     }
   ]
 }
