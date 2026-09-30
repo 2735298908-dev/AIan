@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-29T20:52:32.510142+00:00",
+  "updated_at": "2026-09-30T00:32:34.180281+00:00",
   "seen": [
     {
       "url": "https://runway.com/news/research/introducing-solaris",
@@ -606,6 +606,12 @@
       "url": "https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities",
       "title_key": "glm53andthespreadofadvancedcybercapabilities",
       "seen_at": "2026-09-29T20:52:32.510142+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.62.0",
+      "title_key": "releasev0620",
+      "seen_at": "2026-09-30T00:32:34.180281+00:00",
       "rule_version": 3
     }
   ],
