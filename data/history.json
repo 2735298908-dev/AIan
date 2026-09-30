@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-29T06:16:00.430728+00:00",
+  "updated_at": "2026-09-30T05:59:59.910073+00:00",
   "items": [
     {
       "url": "https://openai.com/index/introducing-openai-presence",
@@ -366,6 +366,11 @@
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.158.0",
       "title_key": "01580",
       "reported_at": "2026-09-29T06:16:00.430728+00:00"
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-6-1-sol",
+      "title_key": "introducinggpt61sol",
+      "reported_at": "2026-09-30T05:59:59.910073+00:00"
     }
   ]
 }
