@@ -1,37 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-10-01T06:05:35.101735+00:00",
+  "updated_at": "2026-10-01T19:36:08.521710+00:00",
   "seen": [
-    {
-      "url": "https://openai.com/index/gpt-5-1",
-      "title_key": "officialmodelpageupdatedgpt51",
-      "seen_at": "2026-09-01T10:11:19.378026+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://openai.com/index/gpt-5-5-instant",
-      "title_key": "officialmodelpageupdatedgpt55instant",
-      "seen_at": "2026-09-01T10:11:19.378026+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.257",
-      "title_key": "v21257",
-      "seen_at": "2026-09-01T18:36:08.722018+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://deepmind.google/blog/introducing-agentic-video-in-gemini",
-      "title_key": "introducingagenticvideounderstandingwithgemini",
-      "seen_at": "2026-09-01T18:36:08.722018+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://lumalabs.ai/news/seedance-review",
-      "title_key": "seedancereview2026featurespricingandlimitationsluma",
-      "seen_at": "2026-09-01T18:36:08.722018+00:00",
-      "rule_version": 2
-    },
     {
       "url": "https://blog.google/innovation-and-ai/technology/google-ai-updates-august-2026",
       "title_key": "thelatestainewsweannouncedinaugust2026",
@@ -612,6 +582,12 @@
       "url": "https://openai.com/index/gpt-5-1-for-developers",
       "title_key": "officialmodelpageupdatedgpt51fordevelopers",
       "seen_at": "2026-10-01T06:05:35.101735+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.287",
+      "title_key": "v21287",
+      "seen_at": "2026-10-01T19:36:08.521710+00:00",
       "rule_version": 3
     }
   ],
