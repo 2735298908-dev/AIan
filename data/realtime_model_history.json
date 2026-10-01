@@ -1,31 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-10-01T19:36:08.521710+00:00",
+  "updated_at": "2026-10-01T23:56:38.969193+00:00",
   "seen": [
-    {
-      "url": "https://blog.google/innovation-and-ai/technology/google-ai-updates-august-2026",
-      "title_key": "thelatestainewsweannouncedinaugust2026",
-      "seen_at": "2026-09-01T21:49:52.528963+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://lumalabs.ai/news/higgsfield-review",
-      "title_key": "higgsfieldreview2026isittherightaivideotoolluma",
-      "seen_at": "2026-09-01T21:49:52.528963+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://lumalabs.ai/news/kling-review",
-      "title_key": "klingreview2026isitthebestaivideogeneratorluma",
-      "seen_at": "2026-09-01T21:49:52.528963+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://lumalabs.ai/news/weave-review",
-      "title_key": "weavereview2026isitworthitforaivideocreationluma",
-      "seen_at": "2026-09-01T21:49:52.528963+00:00",
-      "rule_version": 2
-    },
     {
       "url": "https://lumalabs.ai/news/luma-ai-to-launch-native-arabic-language-interface-for-saudi-and-arabic-speaking-creative-community",
       "title_key": "lumaaitolaunchnativearabiclanguageinterfaceforsaudiandarabicspeakingcreativecommunityluma",
@@ -588,6 +564,12 @@
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.287",
       "title_key": "v21287",
       "seen_at": "2026-10-01T19:36:08.521710+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/gpus-openai-gpt-6-astra-ultrafast",
+      "title_key": "hownvidiagpushelpaccelerateopenaisgpt6astraultrafast",
+      "seen_at": "2026-10-01T23:56:38.969193+00:00",
       "rule_version": 3
     }
   ],
