@@ -1,37 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-10-01T23:56:38.969193+00:00",
+  "updated_at": "2026-10-02T23:01:37.948224+00:00",
   "seen": [
-    {
-      "url": "https://lumalabs.ai/news/luma-ai-to-launch-native-arabic-language-interface-for-saudi-and-arabic-speaking-creative-community",
-      "title_key": "lumaaitolaunchnativearabiclanguageinterfaceforsaudiandarabicspeakingcreativecommunityluma",
-      "seen_at": "2026-09-02T09:41:43.819130+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://openai.com/index/gpt-4-api-general-availability",
-      "title_key": "officialmodelpageupdatedgpt4apigeneralavailability",
-      "seen_at": "2026-09-02T14:32:34.395923+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
-      "title_key": "officialmodelpageupdatedadvancingthepriceperformancefrontierwithgpt56",
-      "seen_at": "2026-09-02T14:32:34.395923+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber",
-      "title_key": "introducinggemini38flashand38flashcyber",
-      "seen_at": "2026-09-02T18:46:25.452445+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://runway.com/news/company-news/runway-dev-mcp",
-      "title_key": "introducingrunwaydevmcp",
-      "seen_at": "2026-09-02T18:46:25.452445+00:00",
-      "rule_version": 2
-    },
     {
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.259",
       "title_key": "v21259",
@@ -570,6 +540,12 @@
       "url": "https://blogs.nvidia.com/blog/gpus-openai-gpt-6-astra-ultrafast",
       "title_key": "hownvidiagpushelpaccelerateopenaisgpt6astraultrafast",
       "seen_at": "2026-10-01T23:56:38.969193+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.288",
+      "title_key": "v21288",
+      "seen_at": "2026-10-02T23:01:37.948224+00:00",
       "rule_version": 3
     }
   ],
