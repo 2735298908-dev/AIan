@@ -1,67 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-10-02T23:01:37.948224+00:00",
+  "updated_at": "2026-10-05T22:43:23.387603+00:00",
   "seen": [
-    {
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.259",
-      "title_key": "v21259",
-      "seen_at": "2026-09-03T00:19:53.614122+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://lumalabs.ai/news/synthesia-review",
-      "title_key": "synthesiareview2026isitworthitforaivideogenerationluma",
-      "seen_at": "2026-09-03T09:54:35.374768+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://openai.com/index/gpt-5-1-codex-max",
-      "title_key": "officialmodelpageupdatedgpt51codexmax",
-      "seen_at": "2026-09-03T14:36:55.031341+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://blogs.nvidia.com/blog/local-ai-ifa-next-gen-agents-nv-pair-rtx-spark",
-      "title_key": "sparksflynvidiaaccelerateslocalaiatifa2026",
-      "seen_at": "2026-09-03T18:43:34.570461+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://runway.com/research/introducing-gwm-worlds-2",
-      "title_key": "runwayresearchintroducinggwmworlds2",
-      "seen_at": "2026-09-03T18:43:34.570461+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://openai.com/index/gpt-5-6",
-      "title_key": "officialmodelpageupdatedgpt56",
-      "seen_at": "2026-09-03T21:44:17.338663+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot",
-      "title_key": "officialmodelpageupdatedgpt56preferredmodelmicrosoft365copilot",
-      "seen_at": "2026-09-03T21:44:17.338663+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://openai.com/index/gpt-6-astra",
-      "title_key": "officialmodelpageupdatedgpt6astra",
-      "seen_at": "2026-09-04T00:08:58.116406+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.261",
-      "title_key": "v21261",
-      "seen_at": "2026-09-04T21:32:43.179761+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://runway.com/news/company-news/introducing-team-plan",
-      "title_key": "runwaynewsintroducingteamplan",
-      "seen_at": "2026-09-04T21:32:43.179761+00:00",
-      "rule_version": 2
-    },
     {
       "url": "https://lumalabs.ai/news/invideo-ai",
       "title_key": "invideoai2026featuresandlimitationsluma",
@@ -546,6 +486,12 @@
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.288",
       "title_key": "v21288",
       "seen_at": "2026-10-02T23:01:37.948224+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.160.1",
+      "title_key": "01601",
+      "seen_at": "2026-10-05T22:43:23.387603+00:00",
       "rule_version": 3
     }
   ],
