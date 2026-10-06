@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-05T22:43:23.387603+00:00",
+  "updated_at": "2026-10-06T03:04:53.304323+00:00",
   "seen": [
     {
       "url": "https://lumalabs.ai/news/invideo-ai",
@@ -492,6 +492,12 @@
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.160.1",
       "title_key": "01601",
       "seen_at": "2026-10-05T22:43:23.387603+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.290",
+      "title_key": "v21290",
+      "seen_at": "2026-10-06T03:04:53.304323+00:00",
       "rule_version": 3
     }
   ],
