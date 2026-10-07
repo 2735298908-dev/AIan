@@ -1,19 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-10-07T01:37:31.749478+00:00",
+  "updated_at": "2026-10-07T22:03:09.380305+00:00",
   "seen": [
-    {
-      "url": "https://lumalabs.ai/news/invideo-ai",
-      "title_key": "invideoai2026featuresandlimitationsluma",
-      "seen_at": "2026-09-07T20:37:39.989648+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://lumalabs.ai/news/pika-ai-video-generation",
-      "title_key": "pika2026isitworthitforaivideogenerationluma",
-      "seen_at": "2026-09-07T20:37:39.989648+00:00",
-      "rule_version": 2
-    },
     {
       "url": "https://lumalabs.ai/news/veo-pricing",
       "title_key": "veopricinghowmuchdoesitcostin2026luma",
@@ -516,6 +504,18 @@
       "url": "https://openai.com/index/sharing-ai-progress-in-mathematics",
       "title_key": "sharingaiprogressinmathematics",
       "seen_at": "2026-10-07T01:37:31.749478+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event",
+      "title_key": "nvidiamicrosoftkickoffanewbeginningforwindowspcswithrtxsparkandaiagents",
+      "seen_at": "2026-10-07T22:03:09.380305+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.293",
+      "title_key": "v21293",
+      "seen_at": "2026-10-07T22:03:09.380305+00:00",
       "rule_version": 3
     }
   ],
