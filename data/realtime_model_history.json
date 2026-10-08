@@ -1,49 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-10-07T22:03:09.380305+00:00",
+  "updated_at": "2026-10-08T09:06:07.855330+00:00",
   "seen": [
-    {
-      "url": "https://lumalabs.ai/news/veo-pricing",
-      "title_key": "veopricinghowmuchdoesitcostin2026luma",
-      "seen_at": "2026-09-08T04:46:24.230992+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://lumalabs.ai/news/heygen-pricing",
-      "title_key": "heygenpricinghowmuchdoesitcostin2026luma",
-      "seen_at": "2026-09-08T04:46:24.230992+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://lumalabs.ai/news/higgsfield-pricing",
-      "title_key": "higgsfieldpricinghowmuchdoesitcostin2026luma",
-      "seen_at": "2026-09-08T04:46:24.230992+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://lumalabs.ai/news/runway-pricing",
-      "title_key": "runwaypricinghowmuchdoesitcostin2026luma",
-      "seen_at": "2026-09-08T04:46:24.230992+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://lumalabs.ai/news/kling-pricing",
-      "title_key": "klingpricinghowmuchdoesitcostin2026luma",
-      "seen_at": "2026-09-08T04:46:24.230992+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://lumalabs.ai/news/seedance-pricing",
-      "title_key": "seedancepricinghowmuchdoesitcostin2026luma",
-      "seen_at": "2026-09-08T04:46:24.230992+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://lumalabs.ai/news/weave-pricing",
-      "title_key": "weavepricinghowmuchdoesitcostin2026luma",
-      "seen_at": "2026-09-08T04:46:24.230992+00:00",
-      "rule_version": 2
-    },
     {
       "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.59.0",
       "title_key": "releasev0590",
@@ -516,6 +474,12 @@
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.293",
       "title_key": "v21293",
       "seen_at": "2026-10-07T22:03:09.380305+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-5-for-developers",
+      "title_key": "officialmodelpageupdatedintroducinggpt5fordevelopers",
+      "seen_at": "2026-10-08T09:06:07.855330+00:00",
       "rule_version": 3
     }
   ],
