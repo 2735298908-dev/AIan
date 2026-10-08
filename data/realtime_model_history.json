@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-08T09:06:07.855330+00:00",
+  "updated_at": "2026-10-08T16:34:49.456402+00:00",
   "seen": [
     {
       "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.59.0",
@@ -480,6 +480,18 @@
       "url": "https://openai.com/index/introducing-gpt-5-for-developers",
       "title_key": "officialmodelpageupdatedintroducinggpt5fordevelopers",
       "seen_at": "2026-10-08T09:06:07.855330+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/gpt-5-3-instant",
+      "title_key": "officialmodelpageupdatedgpt53instant",
+      "seen_at": "2026-10-08T16:34:49.456402+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-4-5",
+      "title_key": "officialmodelpageupdatedintroducinggpt45",
+      "seen_at": "2026-10-08T16:34:49.456402+00:00",
       "rule_version": 3
     }
   ],
