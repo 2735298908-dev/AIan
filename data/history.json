@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-08T06:40:56.681736+00:00",
+  "updated_at": "2026-10-09T06:46:42.185544+00:00",
   "items": [
     {
       "url": "https://openai.com/index/introducing-openai-presence",
@@ -386,6 +386,16 @@
       "url": "https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities",
       "title_key": "glm53andthespreadofadvancedcybercapabilities",
       "reported_at": "2026-10-01T06:34:44.525457+00:00"
+    },
+    {
+      "url": "https://mistral.ai/news/mistral-large-4",
+      "title_key": "introducingmistrallarge4mistral",
+      "reported_at": "2026-10-09T06:46:42.185544+00:00"
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.293",
+      "title_key": "v21293",
+      "reported_at": "2026-10-09T06:46:42.185544+00:00"
     }
   ]
 }
