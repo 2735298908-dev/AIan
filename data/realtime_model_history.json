@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-09T09:12:33.503269+00:00",
+  "updated_at": "2026-10-09T20:58:35.670248+00:00",
   "seen": [
     {
       "url": "https://openai.com/index/gpt-6-astra-next-generation-work",
@@ -486,6 +486,12 @@
       "url": "https://openai.com/index/introducing-gpt-5-2",
       "title_key": "officialmodelpageupdatedintroducinggpt52",
       "seen_at": "2026-10-09T09:12:33.503269+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.296",
+      "title_key": "v21296",
+      "seen_at": "2026-10-09T20:58:35.670248+00:00",
       "rule_version": 3
     }
   ],
