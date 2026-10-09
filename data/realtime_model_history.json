@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-08T22:09:25.981450+00:00",
+  "updated_at": "2026-10-09T09:12:33.503269+00:00",
   "seen": [
     {
       "url": "https://openai.com/index/gpt-6-astra-next-generation-work",
@@ -480,6 +480,12 @@
       "url": "https://updates.midjourney.com/testing-thinking-mode",
       "title_key": "testingthinkingmode",
       "seen_at": "2026-10-08T22:09:25.981450+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-5-2",
+      "title_key": "officialmodelpageupdatedintroducinggpt52",
+      "seen_at": "2026-10-09T09:12:33.503269+00:00",
       "rule_version": 3
     }
   ],
