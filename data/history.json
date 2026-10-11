@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-10T06:24:46.277810+00:00",
+  "updated_at": "2026-10-11T06:29:43.295002+00:00",
   "items": [
     {
       "url": "https://openai.com/index/introducing-openai-presence",
@@ -401,6 +401,11 @@
       "url": "https://updates.midjourney.com/testing-thinking-mode",
       "title_key": "testingthinkingmode",
       "reported_at": "2026-10-10T06:24:46.277810+00:00"
+    },
+    {
+      "url": "https://openai.com/index/gpt-5-3-instant",
+      "title_key": "officialmodelpageupdatedgpt53instant",
+      "reported_at": "2026-10-11T06:29:43.295002+00:00"
     }
   ]
 }
