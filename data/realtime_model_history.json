@@ -1,163 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-10-09T20:58:35.670248+00:00",
+  "updated_at": "2026-10-13T19:20:23.019918+00:00",
   "seen": [
-    {
-      "url": "https://openai.com/index/gpt-6-astra-next-generation-work",
-      "title_key": "officialmodelpageupdatedgpt6astranextgenerationwork",
-      "seen_at": "2026-09-09T21:44:15.233643+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.35.0",
-      "title_key": "v0350",
-      "seen_at": "2026-09-09T21:44:15.233643+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://openai.com/index/introducing-gpt-5-4",
-      "title_key": "officialmodelpageupdatedintroducinggpt54",
-      "seen_at": "2026-09-10T09:48:54.043024+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://openai.com/index/introducing-gpt-live-1-in-the-api",
-      "title_key": "officialmodelpageupdatedintroducinggptlive1intheapi",
-      "seen_at": "2026-09-10T18:31:21.001941+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano",
-      "title_key": "officialmodelpageupdatedintroducinggpt54miniandnano",
-      "seen_at": "2026-09-10T18:31:21.001941+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://github.com/openai/codex/releases/tag/voice-cygwin-108b38cf67cbb731",
-      "title_key": "cygwinbuildinputsandmatchingsourceforwindowsvoice",
-      "seen_at": "2026-09-10T21:40:34.771461+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://openai.com/index/introducing-chatgpt-financial-services",
-      "title_key": "introducingchatgptforfinancialservices",
-      "seen_at": "2026-09-10T21:40:34.771461+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://openai.com/index/introducing-the-agents-api",
-      "title_key": "introducingtheagentsapi",
-      "seen_at": "2026-09-10T21:40:34.771461+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://runway.com/news/research/towards-instant-video-generation",
-      "title_key": "runwaynewstowardsinstantvideogeneration",
-      "seen_at": "2026-09-11T00:13:49.641455+00:00",
-      "rule_version": 2
-    },
-    {
-      "url": "https://blogs.nvidia.com/blog/local-ai-ifa-next-gen-agents-nv-pair-rtx-spark",
-      "title_key": "sparksflynvidiaaccelerateslocalaiatifa2026",
-      "seen_at": "2026-09-12T06:17:30.254880+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://blog.google/innovation-and-ai/technology/google-ai-updates-august-2026",
-      "title_key": "thelatestainewsweannouncedinaugust2026",
-      "seen_at": "2026-09-12T06:17:30.254880+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/gpt-6-astra",
-      "title_key": "gpt6astraanewgenerationofintelligence",
-      "seen_at": "2026-09-12T06:17:30.254880+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/introducing-the-agents-api",
-      "title_key": "introducingtheagentsapi",
-      "seen_at": "2026-09-12T06:17:30.254880+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/introducing-chatgpt-financial-services",
-      "title_key": "introducingchatgptforfinancialservices",
-      "seen_at": "2026-09-12T06:17:30.254880+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber",
-      "title_key": "introducinggemini38flashand38flashcyber",
-      "seen_at": "2026-09-12T06:17:30.254880+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://deepmind.google/blog/introducing-agentic-video-in-gemini",
-      "title_key": "introducingagenticvideounderstandingwithgemini",
-      "seen_at": "2026-09-12T06:17:30.254880+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.265",
-      "title_key": "v21265",
-      "seen_at": "2026-09-12T06:17:30.254880+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.261",
-      "title_key": "v21261",
-      "seen_at": "2026-09-12T06:17:30.254880+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.259",
-      "title_key": "v21259",
-      "seen_at": "2026-09-12T06:17:30.254880+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.59.0",
-      "title_key": "releasev0590",
-      "seen_at": "2026-09-12T06:17:30.254880+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/introducing-gpt-5",
-      "title_key": "officialmodelpageupdatedintroducinggpt5",
-      "seen_at": "2026-09-12T06:17:30.254880+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/gpt-5-6",
-      "title_key": "officialmodelpageupdatedgpt56",
-      "seen_at": "2026-09-12T06:17:30.254880+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot",
-      "title_key": "officialmodelpageupdatedgpt56preferredmodelmicrosoft365copilot",
-      "seen_at": "2026-09-12T06:17:30.254880+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/introducing-gpt-5-5",
-      "title_key": "officialmodelpageupdatedintroducinggpt55",
-      "seen_at": "2026-09-12T06:17:30.254880+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/gpt-5-6-in-kiro",
-      "title_key": "officialmodelpageupdatedgpt56inkiro",
-      "seen_at": "2026-09-12T06:17:30.254880+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
-      "title_key": "officialmodelpageupdatedadvancingthepriceperformancefrontierwithgpt56",
-      "seen_at": "2026-09-12T06:17:30.254880+00:00",
-      "rule_version": 3
-    },
     {
       "url": "https://openai.com/index/introducing-aardvark",
       "title_key": "introducingaardvarkopenaisagenticsecurityresearcher",
@@ -492,6 +336,12 @@
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.296",
       "title_key": "v21296",
       "seen_at": "2026-10-09T20:58:35.670248+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/france-ecosystem-agentic-computing",
+      "title_key": "nvidiaannouncesnewinvestmentsinfrancesstartupecosystem",
+      "seen_at": "2026-10-13T19:20:23.019918+00:00",
       "rule_version": 3
     }
   ],
