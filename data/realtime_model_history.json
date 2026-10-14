@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-14T01:58:24.074667+00:00",
+  "updated_at": "2026-10-14T13:48:09.762108+00:00",
   "seen": [
     {
       "url": "https://blogs.nvidia.com/blog/local-ai-perplexity-windows-pcs",
@@ -348,6 +348,18 @@
       "url": "https://openai.com/index/introducing-gpt-5",
       "title_key": "officialmodelpageupdatedintroducinggpt5",
       "seen_at": "2026-10-14T01:58:24.074667+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic",
+      "title_key": "theeusnextchapterinaiisagentic",
+      "seen_at": "2026-10-14T13:48:09.762108+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/gpt-5-6",
+      "title_key": "officialmodelpageupdatedgpt56",
+      "seen_at": "2026-10-14T13:48:09.762108+00:00",
       "rule_version": 3
     }
   ],
