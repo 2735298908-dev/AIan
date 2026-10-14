@@ -1,13 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-10-13T19:20:23.019918+00:00",
+  "updated_at": "2026-10-14T01:58:24.074667+00:00",
   "seen": [
-    {
-      "url": "https://openai.com/index/introducing-aardvark",
-      "title_key": "introducingaardvarkopenaisagenticsecurityresearcher",
-      "seen_at": "2026-09-14T01:11:42.945749+00:00",
-      "rule_version": 3
-    },
     {
       "url": "https://blogs.nvidia.com/blog/local-ai-perplexity-windows-pcs",
       "title_key": "perplexityportablecomputerisnowavailableonwindowspoweredbynvidiartx",
@@ -342,6 +336,18 @@
       "url": "https://blogs.nvidia.com/blog/france-ecosystem-agentic-computing",
       "title_key": "nvidiaannouncesnewinvestmentsinfrancesstartupecosystem",
       "seen_at": "2026-10-13T19:20:23.019918+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-5-5",
+      "title_key": "officialmodelpageupdatedintroducinggpt55",
+      "seen_at": "2026-10-14T01:58:24.074667+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-5",
+      "title_key": "officialmodelpageupdatedintroducinggpt5",
+      "seen_at": "2026-10-14T01:58:24.074667+00:00",
       "rule_version": 3
     }
   ],
