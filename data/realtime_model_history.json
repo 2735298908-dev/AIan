@@ -1,13 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-10-14T18:41:38.207556+00:00",
+  "updated_at": "2026-10-14T22:20:40.372072+00:00",
   "seen": [
-    {
-      "url": "https://blogs.nvidia.com/blog/local-ai-perplexity-windows-pcs",
-      "title_key": "perplexityportablecomputerisnowavailableonwindowspoweredbynvidiartx",
-      "seen_at": "2026-09-14T19:26:24.155884+00:00",
-      "rule_version": 3
-    },
     {
       "url": "https://openai.com/index/introducing-gpt-5-3-codex",
       "title_key": "officialmodelpageupdatedintroducinggpt53codex",
@@ -366,6 +360,36 @@
       "url": "https://openai.com/index/disney-sora-agreement",
       "title_key": "officialmodelpageupdateddisneysoraagreement",
       "seen_at": "2026-10-14T18:41:38.207556+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/uk-ecosystem-deployment",
+      "title_key": "nvidiaannouncesnewinvestmentsintheukstartupecosystem",
+      "seen_at": "2026-10-14T22:20:40.372072+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/gpt-4o-and-more-tools-to-chatgpt-free",
+      "title_key": "officialmodelpageupdatedgpt4oandmoretoolstochatgptfree",
+      "seen_at": "2026-10-14T22:20:40.372072+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/gpt-5-6-in-kiro",
+      "title_key": "officialmodelpageupdatedgpt56inkiro",
+      "seen_at": "2026-10-14T22:20:40.372072+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot",
+      "title_key": "officialmodelpageupdatedgpt56preferredmodelmicrosoft365copilot",
+      "seen_at": "2026-10-14T22:20:40.372072+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/gpt-4-api-general-availability",
+      "title_key": "officialmodelpageupdatedgpt4apigeneralavailability",
+      "seen_at": "2026-10-14T22:20:40.372072+00:00",
       "rule_version": 3
     }
   ],
