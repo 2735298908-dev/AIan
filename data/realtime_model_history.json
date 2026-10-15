@@ -1,31 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-10-15T00:35:27.772412+00:00",
+  "updated_at": "2026-10-15T17:07:35.695813+00:00",
   "seen": [
-    {
-      "url": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano",
-      "title_key": "officialmodelpageupdatedintroducinggpt54miniandnano",
-      "seen_at": "2026-09-15T07:50:19.390446+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/gpt-5-5-instant",
-      "title_key": "officialmodelpageupdatedgpt55instant",
-      "seen_at": "2026-09-15T07:50:19.390446+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/introducing-gpt-5-4",
-      "title_key": "officialmodelpageupdatedintroducinggpt54",
-      "seen_at": "2026-09-15T07:50:19.390446+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/gpt-5-1",
-      "title_key": "officialmodelpageupdatedgpt51",
-      "seen_at": "2026-09-15T07:50:19.390446+00:00",
-      "rule_version": 3
-    },
     {
       "url": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking",
       "title_key": "introducinggemini38liveand38liveextendedthinking",
@@ -384,6 +360,12 @@
       "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
       "title_key": "officialmodelpageupdatedadvancingthepriceperformancefrontierwithgpt56",
       "seen_at": "2026-10-15T00:35:27.772412+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://bfl.ai/blog/flux-3-image-klein",
+      "title_key": "flux3imagekleinopenweights56bparameters",
+      "seen_at": "2026-10-15T17:07:35.695813+00:00",
       "rule_version": 3
     }
   ],
@@ -1197,6 +1179,24 @@
       "published_at": "2026-10-15T01:46:03.625000+08:00",
       "original_title": "Official model page updated: disney sora agreement",
       "reported_at": "2026-10-14T18:41:38.207556+00:00"
+    },
+    {
+      "importance": "S",
+      "title": "FLUX 3 Image Klein 图像生成开放权重",
+      "model_or_product": "FLUX 3 Image Klein",
+      "version": "",
+      "capability_change": "官方开放了 FLUX 3 Image Klein，重点涉及图像生成、开放权重。",
+      "type": "多模态与图像",
+      "pm_judgement": "该更新可能影响 AI 产品的能力边界、模型选型或成本。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "建议阅读官方原文，并结合业务场景完成小样本评测。",
+      "platform": "FLUX / Black Forest Labs",
+      "url": "https://bfl.ai/blog/flux-3-image-klein",
+      "published_at": "2026-10-15T23:00:00+08:00",
+      "original_title": "FLUX 3 Image Klein: open weights, 5.6B parameters",
+      "reported_at": "2026-10-15T17:07:35.695813+00:00"
     }
   ]
 }
