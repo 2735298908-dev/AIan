@@ -1,19 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-10-14T22:20:40.372072+00:00",
+  "updated_at": "2026-10-15T00:35:27.772412+00:00",
   "seen": [
-    {
-      "url": "https://openai.com/index/introducing-gpt-5-3-codex",
-      "title_key": "officialmodelpageupdatedintroducinggpt53codex",
-      "seen_at": "2026-09-14T23:11:12.283178+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/previewing-gpt-5-6-sol",
-      "title_key": "officialmodelpageupdatedpreviewinggpt56sol",
-      "seen_at": "2026-09-14T23:11:12.283178+00:00",
-      "rule_version": 3
-    },
     {
       "url": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano",
       "title_key": "officialmodelpageupdatedintroducinggpt54miniandnano",
@@ -390,6 +378,12 @@
       "url": "https://openai.com/index/gpt-4-api-general-availability",
       "title_key": "officialmodelpageupdatedgpt4apigeneralavailability",
       "seen_at": "2026-10-14T22:20:40.372072+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
+      "title_key": "officialmodelpageupdatedadvancingthepriceperformancefrontierwithgpt56",
+      "seen_at": "2026-10-15T00:35:27.772412+00:00",
       "rule_version": 3
     }
   ],
