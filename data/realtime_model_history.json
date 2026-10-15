@@ -1,31 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-10-15T17:07:35.695813+00:00",
+  "updated_at": "2026-10-15T20:22:32.749642+00:00",
   "seen": [
-    {
-      "url": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking",
-      "title_key": "introducinggemini38liveand38liveextendedthinking",
-      "seen_at": "2026-09-15T18:15:42.536842+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/introducing-gpt-5-2-codex",
-      "title_key": "officialmodelpageupdatedintroducinggpt52codex",
-      "seen_at": "2026-09-15T18:15:42.536842+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/gpt-5-1-codex-max",
-      "title_key": "officialmodelpageupdatedgpt51codexmax",
-      "seen_at": "2026-09-15T18:15:42.536842+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/introducing-gpt-5-3-codex-spark",
-      "title_key": "officialmodelpageupdatedintroducinggpt53codexspark",
-      "seen_at": "2026-09-15T18:15:42.536842+00:00",
-      "rule_version": 3
-    },
     {
       "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.60.0",
       "title_key": "releasev0600",
@@ -366,6 +342,12 @@
       "url": "https://bfl.ai/blog/flux-3-image-klein",
       "title_key": "flux3imagekleinopenweights56bparameters",
       "seen_at": "2026-10-15T17:07:35.695813+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
+      "title_key": "officialmodelpageupdatedimprovinggpt56solinchatgpt",
+      "seen_at": "2026-10-15T20:22:32.749642+00:00",
       "rule_version": 3
     }
   ],
