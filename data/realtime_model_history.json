@@ -1,25 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-10-15T20:22:32.749642+00:00",
+  "updated_at": "2026-10-16T21:18:39.720228+00:00",
   "seen": [
-    {
-      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.60.0",
-      "title_key": "releasev0600",
-      "seen_at": "2026-09-15T21:26:50.059389+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.273",
-      "title_key": "v21273",
-      "seen_at": "2026-09-15T21:26:50.059389+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.36.0",
-      "title_key": "v0360",
-      "seen_at": "2026-09-16T00:26:35.725258+00:00",
-      "rule_version": 3
-    },
     {
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.274",
       "title_key": "v21274",
@@ -348,6 +330,30 @@
       "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
       "title_key": "officialmodelpageupdatedimprovinggpt56solinchatgpt",
       "seen_at": "2026-10-15T20:22:32.749642+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-5-4",
+      "title_key": "officialmodelpageupdatedintroducinggpt54",
+      "seen_at": "2026-10-16T21:18:39.720228+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-5-2-codex",
+      "title_key": "officialmodelpageupdatedintroducinggpt52codex",
+      "seen_at": "2026-10-16T21:18:39.720228+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-5-3-codex",
+      "title_key": "officialmodelpageupdatedintroducinggpt53codex",
+      "seen_at": "2026-10-16T21:18:39.720228+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano",
+      "title_key": "officialmodelpageupdatedintroducinggpt54miniandnano",
+      "seen_at": "2026-10-16T21:18:39.720228+00:00",
       "rule_version": 3
     }
   ],
