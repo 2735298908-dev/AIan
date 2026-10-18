@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-18T11:18:03.017881+00:00",
+  "updated_at": "2026-10-18T23:19:51.761447+00:00",
   "seen": [
     {
       "url": "https://openai.com/index/higgsfield-from-prompt-to-production-with-astra",
@@ -348,6 +348,12 @@
       "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-launch-event-invite",
       "title_key": "bethereforthebeginningcelebratethelaunchofnvidiartxspark",
       "seen_at": "2026-10-18T11:18:03.017881+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.42.0",
+      "title_key": "v0420",
+      "seen_at": "2026-10-18T23:19:51.761447+00:00",
       "rule_version": 3
     }
   ],
@@ -1179,6 +1185,24 @@
       "published_at": "2026-10-15T23:00:00+08:00",
       "original_title": "FLUX 3 Image Klein: open weights, 5.6B parameters",
       "reported_at": "2026-10-15T17:07:35.695813+00:00"
+    },
+    {
+      "importance": "A",
+      "title": "ComfyUI 下线或弃用调整",
+      "model_or_product": "ComfyUI",
+      "version": "v0.42.0",
+      "capability_change": "官方调整了 ComfyUI，重点涉及模型或产品能力。",
+      "type": "AIGC视频",
+      "pm_judgement": "该更新可能影响 AI 产品的能力边界、模型选型或成本。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "建议阅读官方原文，并结合业务场景完成小样本评测。",
+      "platform": "ComfyUI",
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.42.0",
+      "published_at": "2026-10-19T06:10:38+08:00",
+      "original_title": "v0.42.0",
+      "reported_at": "2026-10-18T23:19:51.761447+00:00"
     }
   ]
 }
