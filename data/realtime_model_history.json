@@ -1,25 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-10-16T21:18:39.720228+00:00",
+  "updated_at": "2026-10-18T11:18:03.017881+00:00",
   "seen": [
-    {
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.274",
-      "title_key": "v21274",
-      "seen_at": "2026-09-17T01:29:39.052295+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://runway.com/news/safety/moderation-in-real-time",
-      "title_key": "runwaynewsmoderationinrealtime",
-      "seen_at": "2026-09-17T13:33:23.664579+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.155.0",
-      "title_key": "01550",
-      "seen_at": "2026-09-18T00:25:22.959591+00:00",
-      "rule_version": 3
-    },
     {
       "url": "https://openai.com/index/higgsfield-from-prompt-to-production-with-astra",
       "title_key": "higgsfieldaishipsnewvideofeaturesinadaywithgpt6astra",
@@ -354,6 +336,18 @@
       "url": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano",
       "title_key": "officialmodelpageupdatedintroducinggpt54miniandnano",
       "seen_at": "2026-10-16T21:18:39.720228+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl",
+      "title_key": "openfromdatacentertodesktopnvidiaexpandsnemotronfamilywithhighestefficiencysupervlandboltmodels",
+      "seen_at": "2026-10-18T11:18:03.017881+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-launch-event-invite",
+      "title_key": "bethereforthebeginningcelebratethelaunchofnvidiartxspark",
+      "seen_at": "2026-10-18T11:18:03.017881+00:00",
       "rule_version": 3
     }
   ],
