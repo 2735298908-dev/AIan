@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-19T06:19:27.667766+00:00",
+  "updated_at": "2026-10-19T19:59:15.660168+00:00",
   "seen": [
     {
       "url": "https://openai.com/index/higgsfield-from-prompt-to-production-with-astra",
@@ -366,6 +366,12 @@
       "url": "https://openai.com/index/gpt-5-1-codex-max",
       "title_key": "officialmodelpageupdatedgpt51codexmax",
       "seen_at": "2026-10-19T06:19:27.667766+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/practical-guide-building-gpt-6",
+      "title_key": "officialmodelpageupdatedpracticalguidebuildinggpt6",
+      "seen_at": "2026-10-19T19:59:15.660168+00:00",
       "rule_version": 3
     }
   ],
