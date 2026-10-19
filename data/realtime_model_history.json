@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-18T23:19:51.761447+00:00",
+  "updated_at": "2026-10-19T01:22:06.399572+00:00",
   "seen": [
     {
       "url": "https://openai.com/index/higgsfield-from-prompt-to-production-with-astra",
@@ -354,6 +354,12 @@
       "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.42.0",
       "title_key": "v0420",
       "seen_at": "2026-10-18T23:19:51.761447+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-5-3-codex-spark",
+      "title_key": "officialmodelpageupdatedintroducinggpt53codexspark",
+      "seen_at": "2026-10-19T01:22:06.399572+00:00",
       "rule_version": 3
     }
   ],
