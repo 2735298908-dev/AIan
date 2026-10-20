@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-19T05:22:18.571793+00:00",
+  "updated_at": "2026-10-20T05:21:08.473406+00:00",
   "items": [
     {
       "url": "https://openai.com/index/introducing-openai-presence",
@@ -416,6 +416,11 @@
       "url": "https://bfl.ai/blog/flux-3-image-klein",
       "title_key": "flux3imagekleinopenweights56bparameters",
       "reported_at": "2026-10-17T05:01:03.096741+00:00"
+    },
+    {
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.42.0",
+      "title_key": "v0420",
+      "reported_at": "2026-10-20T05:21:08.473406+00:00"
     }
   ]
 }
