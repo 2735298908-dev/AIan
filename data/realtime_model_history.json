@@ -1,13 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-10-21T18:43:18.484835+00:00",
+  "updated_at": "2026-10-21T22:25:36.915209+00:00",
   "seen": [
-    {
-      "url": "https://openai.com/index/higgsfield-from-prompt-to-production-with-astra",
-      "title_key": "higgsfieldaishipsnewvideofeaturesinadaywithgpt6astra",
-      "seen_at": "2026-09-21T21:07:11.505457+00:00",
-      "rule_version": 3
-    },
     {
       "url": "https://openai.com/index/gpt-5-2-for-science-and-math",
       "title_key": "officialmodelpageupdatedgpt52forscienceandmath",
@@ -426,6 +420,12 @@
       "url": "https://openai.com/index/scaling-ai-research-for-complex-biological-data",
       "title_key": "usingthousandsofaiagentstouncovernewleadsinbiologicaldata",
       "seen_at": "2026-10-21T18:43:18.484835+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.307",
+      "title_key": "v21307",
+      "seen_at": "2026-10-21T22:25:36.915209+00:00",
       "rule_version": 3
     }
   ],
