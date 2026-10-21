@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-21T13:53:44.572761+00:00",
+  "updated_at": "2026-10-21T18:43:18.484835+00:00",
   "seen": [
     {
       "url": "https://openai.com/index/higgsfield-from-prompt-to-production-with-astra",
@@ -420,6 +420,12 @@
       "url": "https://openai.com/index/gpt-5-1",
       "title_key": "officialmodelpageupdatedgpt51",
       "seen_at": "2026-10-21T13:53:44.572761+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/scaling-ai-research-for-complex-biological-data",
+      "title_key": "usingthousandsofaiagentstouncovernewleadsinbiologicaldata",
+      "seen_at": "2026-10-21T18:43:18.484835+00:00",
       "rule_version": 3
     }
   ],
