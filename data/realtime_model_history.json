@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-21T01:40:12.202490+00:00",
+  "updated_at": "2026-10-21T13:53:44.572761+00:00",
   "seen": [
     {
       "url": "https://openai.com/index/higgsfield-from-prompt-to-production-with-astra",
@@ -384,6 +384,42 @@
       "url": "https://openai.com/index/gpt-5-5-instant",
       "title_key": "officialmodelpageupdatedgpt55instant",
       "seen_at": "2026-10-21T01:40:12.202490+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/europe-industrial-leaders-engineering-manufacturing",
+      "title_key": "europesindustrialleadersreinventengineeringandmanufacturingwithnvidia",
+      "seen_at": "2026-10-21T13:53:44.572761+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/local-ai-gtc-rtx-dgx-spark-station-sync",
+      "title_key": "bringingthesparktoeuropelocalintelligencepowersnextwaveofagents",
+      "seen_at": "2026-10-21T13:53:44.572761+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/media-agentic-security-european-public-service-broadcasting-global-content-production",
+      "title_key": "nvidiaadvancesagenticsecurityformediafromeuropeanpublicservicebroadcastingtoglobalcontentproduction",
+      "seen_at": "2026-10-21T13:53:44.572761+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/enterprise-platforms-agent-toolkit",
+      "title_key": "nvidiaagenttoolkitexpandsgroundingenterpriseagentsincompanydata",
+      "seen_at": "2026-10-21T13:53:44.572761+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/openai-models-google-cloud",
+      "title_key": "openaimodelsarecomingtogooglecloud",
+      "seen_at": "2026-10-21T13:53:44.572761+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/gpt-5-1",
+      "title_key": "officialmodelpageupdatedgpt51",
+      "seen_at": "2026-10-21T13:53:44.572761+00:00",
       "rule_version": 3
     }
   ],
