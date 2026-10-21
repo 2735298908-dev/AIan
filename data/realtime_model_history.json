@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-20T19:20:36.349329+00:00",
+  "updated_at": "2026-10-21T01:40:12.202490+00:00",
   "seen": [
     {
       "url": "https://openai.com/index/higgsfield-from-prompt-to-production-with-astra",
@@ -378,6 +378,12 @@
       "url": "https://openai.com/index/previewing-gpt-5-6-sol",
       "title_key": "officialmodelpageupdatedpreviewinggpt56sol",
       "seen_at": "2026-10-20T19:20:36.349329+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/gpt-5-5-instant",
+      "title_key": "officialmodelpageupdatedgpt55instant",
+      "seen_at": "2026-10-21T01:40:12.202490+00:00",
       "rule_version": 3
     }
   ],
