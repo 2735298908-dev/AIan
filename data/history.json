@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-21T05:20:29.411578+00:00",
+  "updated_at": "2026-10-22T05:24:29.086401+00:00",
   "items": [
     {
       "url": "https://openai.com/index/introducing-openai-presence",
@@ -421,6 +421,11 @@
       "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.42.0",
       "title_key": "v0420",
       "reported_at": "2026-10-20T05:21:08.473406+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/europe-industrial-leaders-engineering-manufacturing",
+      "title_key": "europesindustrialleadersreinventengineeringandmanufacturingwithnvidia",
+      "reported_at": "2026-10-22T05:24:29.086401+00:00"
     }
   ]
 }
