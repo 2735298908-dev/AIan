@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-22T07:41:28.418147+00:00",
+  "updated_at": "2026-10-22T13:52:13.836979+00:00",
   "seen": [
     {
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.280",
@@ -438,6 +438,18 @@
       "url": "https://openai.com/index/gpt-6-for-everyone",
       "title_key": "officialmodelpageupdatedgpt6foreveryone",
       "seen_at": "2026-10-22T07:41:28.418147+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://lumalabs.ai/news/wan-3.0-vs-veo-3.1",
+      "title_key": "wan30vsveo31whichisbetterforcinematicproductionluma",
+      "seen_at": "2026-10-22T13:52:13.836979+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://lumalabs.ai/news/wan-3.0-vs-kling-3.0",
+      "title_key": "wan30vskling30whichisbetterforthepriceluma",
+      "seen_at": "2026-10-22T13:52:13.836979+00:00",
       "rule_version": 3
     }
   ],
@@ -1323,6 +1335,42 @@
       "published_at": "2026-10-22T15:08:50.207000+08:00",
       "original_title": "Gemini Omni Flash vs Kling 3.0: Which Is Better for 4K Video Generation? | Luma",
       "reported_at": "2026-10-22T07:41:28.418147+00:00"
+    },
+    {
+      "importance": "S",
+      "title": "Wan 3.0 vs Kling 3.0 价格调整",
+      "model_or_product": "Wan 3.0 vs Kling 3.0",
+      "version": "3.0",
+      "capability_change": "官方调整了 Wan 3.0 vs Kling 3.0，重点涉及价格与成本。",
+      "type": "AIGC视频",
+      "pm_judgement": "该更新可能影响 AI 产品的能力边界、模型选型或成本。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "建议阅读官方原文，并结合业务场景完成小样本评测。",
+      "platform": "Luma AI",
+      "url": "https://lumalabs.ai/news/wan-3.0-vs-kling-3.0",
+      "published_at": "2026-10-22T20:59:08.260000+08:00",
+      "original_title": "Wan 3.0 vs Kling 3.0: Which Is Better for the Price? | Luma",
+      "reported_at": "2026-10-22T13:52:13.836979+00:00"
+    },
+    {
+      "importance": "A",
+      "title": "Wan 3.0 vs Veo 3.1 价格调整",
+      "model_or_product": "Wan 3.0 vs Veo 3.1",
+      "version": "3.0",
+      "capability_change": "官方调整了 Wan 3.0 vs Veo 3.1，重点涉及价格与成本。",
+      "type": "AIGC视频",
+      "pm_judgement": "该更新可能影响 AI 产品的能力边界、模型选型或成本。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "建议阅读官方原文，并结合业务场景完成小样本评测。",
+      "platform": "Luma AI",
+      "url": "https://lumalabs.ai/news/wan-3.0-vs-veo-3.1",
+      "published_at": "2026-10-22T21:35:13.480000+08:00",
+      "original_title": "Wan 3.0 vs Veo 3.1: Which Is Better for Cinematic Production? | Luma",
+      "reported_at": "2026-10-22T13:52:13.836979+00:00"
     }
   ]
 }
