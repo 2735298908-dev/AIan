@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-21T22:25:36.915209+00:00",
+  "updated_at": "2026-10-22T01:35:13.917645+00:00",
   "seen": [
     {
       "url": "https://openai.com/index/gpt-5-2-for-science-and-math",
@@ -426,6 +426,12 @@
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.307",
       "title_key": "v21307",
       "seen_at": "2026-10-21T22:25:36.915209+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/sora-is-here",
+      "title_key": "officialmodelpageupdatedsoraishere",
+      "seen_at": "2026-10-22T01:35:13.917645+00:00",
       "rule_version": 3
     }
   ],
@@ -1275,6 +1281,24 @@
       "published_at": "2026-10-19T06:10:38+08:00",
       "original_title": "v0.42.0",
       "reported_at": "2026-10-18T23:19:51.761447+00:00"
+    },
+    {
+      "importance": "A",
+      "title": "sora API 接入能力升级",
+      "model_or_product": "sora",
+      "version": "",
+      "capability_change": "官方升级了 sora，重点涉及API 接入。",
+      "type": "全球大模型",
+      "pm_judgement": "该更新可能影响 AI 产品的能力边界、模型选型或成本。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "建议阅读官方原文，并结合业务场景完成小样本评测。",
+      "platform": "OpenAI Product Updates",
+      "url": "https://openai.com/index/sora-is-here",
+      "published_at": "2026-10-22T09:35:05.195000+08:00",
+      "original_title": "Official model page updated: sora is here",
+      "reported_at": "2026-10-22T01:35:13.917645+00:00"
     }
   ]
 }
