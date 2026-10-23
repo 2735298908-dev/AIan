@@ -1,31 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-10-22T13:52:13.836979+00:00",
+  "updated_at": "2026-10-23T01:35:42.613680+00:00",
   "seen": [
-    {
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.280",
-      "title_key": "v21280",
-      "seen_at": "2026-09-22T18:58:19.684807+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/better-prompt-caching-for-gpt-6",
-      "title_key": "betterpromptcachingforgpt6",
-      "seen_at": "2026-09-22T22:16:05.299845+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
-      "title_key": "introducinggpt6solandluna",
-      "seen_at": "2026-09-22T22:16:05.299845+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/gpt-6-astra-next-generation-work",
-      "title_key": "officialmodelpageupdatedgpt6astranextgenerationwork",
-      "seen_at": "2026-09-22T22:16:05.299845+00:00",
-      "rule_version": 3
-    },
     {
       "url": "https://openai.com/index/gpt-5-new-era-of-work",
       "title_key": "officialmodelpageupdatedgpt5neweraofwork",
@@ -450,6 +426,36 @@
       "url": "https://lumalabs.ai/news/wan-3.0-vs-kling-3.0",
       "title_key": "wan30vskling30whichisbetterforthepriceluma",
       "seen_at": "2026-10-22T13:52:13.836979+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/introducing-aardvark",
+      "title_key": "introducingaardvarkopenaisagenticsecurityresearcher",
+      "seen_at": "2026-10-23T01:35:42.613680+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/powering-product-discovery-in-chatgpt",
+      "title_key": "poweringproductdiscoveryinchatgpt",
+      "seen_at": "2026-10-23T01:35:42.613680+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/introducing-new-capabilities-to-gpt-rosalind",
+      "title_key": "introducinggptrosalind55",
+      "seen_at": "2026-10-23T01:35:42.613680+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/introducing-openai-presence",
+      "title_key": "introducingopenaipresence",
+      "seen_at": "2026-10-23T01:35:42.613680+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/introducing-chatgpt-agent",
+      "title_key": "introducingchatgptagent",
+      "seen_at": "2026-10-23T01:35:42.613680+00:00",
       "rule_version": 3
     }
   ],
