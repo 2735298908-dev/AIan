@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-22T05:24:29.086401+00:00",
+  "updated_at": "2026-10-23T05:25:13.478275+00:00",
   "items": [
     {
       "url": "https://openai.com/index/introducing-openai-presence",
@@ -426,6 +426,21 @@
       "url": "https://blogs.nvidia.com/blog/europe-industrial-leaders-engineering-manufacturing",
       "title_key": "europesindustrialleadersreinventengineeringandmanufacturingwithnvidia",
       "reported_at": "2026-10-22T05:24:29.086401+00:00"
+    },
+    {
+      "url": "https://lumalabs.ai/news/wan-3.0-vs-kling-3.0",
+      "title_key": "wan30vskling30whichisbetterforthepriceluma",
+      "reported_at": "2026-10-23T05:25:13.478275+00:00"
+    },
+    {
+      "url": "https://lumalabs.ai/news/wan-3.0-vs-veo-3.1",
+      "title_key": "wan30vsveo31whichisbetterforcinematicproductionluma",
+      "reported_at": "2026-10-23T05:25:13.478275+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/cosmos-open-train-evaluate-deploy-world-models",
+      "title_key": "nvidiacosmosopensnewtoolstotrainevaluateanddeployworldmodels",
+      "reported_at": "2026-10-23T05:25:13.478275+00:00"
     }
   ]
 }
