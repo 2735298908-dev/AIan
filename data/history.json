@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-23T05:25:13.478275+00:00",
+  "updated_at": "2026-10-24T05:04:15.770667+00:00",
   "items": [
     {
       "url": "https://openai.com/index/introducing-openai-presence",
@@ -441,6 +441,16 @@
       "url": "https://blogs.nvidia.com/blog/cosmos-open-train-evaluate-deploy-world-models",
       "title_key": "nvidiacosmosopensnewtoolstotrainevaluateanddeployworldmodels",
       "reported_at": "2026-10-23T05:25:13.478275+00:00"
+    },
+    {
+      "url": "https://github.com/PixVerseAI/cli/releases/tag/v1.4.11",
+      "title_key": "v1411",
+      "reported_at": "2026-10-24T05:04:15.770667+00:00"
+    },
+    {
+      "url": "https://openai.com/index/disney-sora-agreement",
+      "title_key": "officialmodelpageupdateddisneysoraagreement",
+      "reported_at": "2026-10-24T05:04:15.770667+00:00"
     }
   ]
 }
