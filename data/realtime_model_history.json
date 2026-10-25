@@ -1,31 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-10-23T07:38:47.484616+00:00",
+  "updated_at": "2026-10-25T19:43:19.536623+00:00",
   "seen": [
-    {
-      "url": "https://openai.com/index/gpt-5-new-era-of-work",
-      "title_key": "officialmodelpageupdatedgpt5neweraofwork",
-      "seen_at": "2026-09-23T23:45:37.535846+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://runway.com/news/company-news/runway-davinci-resolve",
-      "title_key": "runwaynewsrunwayisnowindavinciresolve",
-      "seen_at": "2026-09-24T15:12:39.226243+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar",
-      "title_key": "introducinggemini38livewithliveavatar",
-      "seen_at": "2026-09-24T19:15:14.255582+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
-      "title_key": "claudediscoversanovelenzymesystem",
-      "seen_at": "2026-09-24T19:15:14.255582+00:00",
-      "rule_version": 3
-    },
     {
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.283",
       "title_key": "v21283",
@@ -480,6 +456,12 @@
       "url": "https://openai.com/index/gpt-6-astra-next-generation-work",
       "title_key": "officialmodelpageupdatedgpt6astranextgenerationwork",
       "seen_at": "2026-10-23T07:38:47.484616+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/better-prompt-caching-for-gpt-6",
+      "title_key": "officialmodelpageupdatedbetterpromptcachingforgpt6",
+      "seen_at": "2026-10-25T19:43:19.536623+00:00",
       "rule_version": 3
     }
   ],
