@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-26T19:23:26.965662+00:00",
+  "updated_at": "2026-10-26T23:55:43.163363+00:00",
   "seen": [
     {
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.158.0",
@@ -456,6 +456,12 @@
       "url": "https://openai.com/index/introducing-gpt-6-1-terra",
       "title_key": "introducinggpt61terra",
       "seen_at": "2026-10-26T19:23:26.965662+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.311",
+      "title_key": "v21311",
+      "seen_at": "2026-10-26T23:55:43.163363+00:00",
       "rule_version": 3
     }
   ],
