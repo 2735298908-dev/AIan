@@ -1,19 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-10-25T19:43:19.536623+00:00",
+  "updated_at": "2026-10-26T19:23:26.965662+00:00",
   "seen": [
-    {
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.283",
-      "title_key": "v21283",
-      "seen_at": "2026-09-25T22:27:06.108550+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://runway.com/news/developers/evaluating-runway-model-router",
-      "title_key": "runwaynewsevaluatingcostvsqualityusingrunwaymodelrouter",
-      "seen_at": "2026-09-26T17:14:52.812531+00:00",
-      "rule_version": 3
-    },
     {
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.158.0",
       "title_key": "01580",
@@ -462,6 +450,12 @@
       "url": "https://openai.com/index/better-prompt-caching-for-gpt-6",
       "title_key": "officialmodelpageupdatedbetterpromptcachingforgpt6",
       "seen_at": "2026-10-25T19:43:19.536623+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-6-1-terra",
+      "title_key": "introducinggpt61terra",
+      "seen_at": "2026-10-26T19:23:26.965662+00:00",
       "rule_version": 3
     }
   ],
@@ -1401,6 +1395,24 @@
       "published_at": "2026-10-23T15:35:50+08:00",
       "original_title": "v1.4.11",
       "reported_at": "2026-10-23T07:38:47.484616+00:00"
+    },
+    {
+      "importance": "S",
+      "title": "GPT-6.1 Terra 计算机与浏览器操作正式发布",
+      "model_or_product": "GPT-6.1 Terra",
+      "version": "6.1",
+      "capability_change": "官方正式发布了 GPT-6.1 Terra，重点涉及计算机与浏览器操作。",
+      "type": "全球大模型",
+      "pm_judgement": "这是重要模型正式发布，可能影响模型选型、Agent 工作流及接入成本。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "优先评测复杂多步骤 Agent、计算机操作、工具调用、任务成功率、时延与成本。",
+      "platform": "OpenAI",
+      "url": "https://openai.com/index/introducing-gpt-6-1-terra",
+      "published_at": "2026-10-26T08:00:00+08:00",
+      "original_title": "Introducing GPT-6.1 Terra",
+      "reported_at": "2026-10-26T19:23:26.965662+00:00"
     }
   ]
 }
