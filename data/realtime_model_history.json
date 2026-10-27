@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-26T23:55:43.163363+00:00",
+  "updated_at": "2026-10-27T16:42:58.047179+00:00",
   "seen": [
     {
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.158.0",
@@ -462,6 +462,12 @@
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.311",
       "title_key": "v21311",
       "seen_at": "2026-10-26T23:55:43.163363+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation",
+      "title_key": "genie4anewgenerationofworldsimulation",
+      "seen_at": "2026-10-27T16:42:58.047179+00:00",
       "rule_version": 3
     }
   ],
