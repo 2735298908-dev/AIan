@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-26T05:22:01.771984+00:00",
+  "updated_at": "2026-10-27T05:38:31.857831+00:00",
   "items": [
     {
       "url": "https://openai.com/index/introducing-openai-presence",
@@ -451,6 +451,16 @@
       "url": "https://openai.com/index/disney-sora-agreement",
       "title_key": "officialmodelpageupdateddisneysoraagreement",
       "reported_at": "2026-10-24T05:04:15.770667+00:00"
+    },
+    {
+      "url": "https://openai.com/index/sora-is-here",
+      "title_key": "officialmodelpageupdatedsoraishere",
+      "reported_at": "2026-10-27T05:38:31.857831+00:00"
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-6-1-terra",
+      "title_key": "introducinggpt61terra",
+      "reported_at": "2026-10-27T05:38:31.857831+00:00"
     }
   ]
 }
