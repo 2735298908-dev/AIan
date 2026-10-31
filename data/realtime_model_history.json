@@ -1,55 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-10-27T16:42:58.047179+00:00",
+  "updated_at": "2026-10-31T01:38:12.117216+00:00",
   "seen": [
-    {
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.158.0",
-      "title_key": "01580",
-      "seen_at": "2026-09-28T07:01:26.660862+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/introducing-gpt-6-1-sol",
-      "title_key": "introducinggpt61sol",
-      "seen_at": "2026-09-29T20:52:32.510142+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/devday-2026-recap",
-      "title_key": "devday2026recap",
-      "seen_at": "2026-09-29T20:52:32.510142+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.285",
-      "title_key": "v21285",
-      "seen_at": "2026-09-29T20:52:32.510142+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://runway.com/news/company-news/runway-openai-marketplace",
-      "title_key": "runwaynewsrunwayjoinstheopenaimarketplace",
-      "seen_at": "2026-09-29T20:52:32.510142+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities",
-      "title_key": "glm53andthespreadofadvancedcybercapabilities",
-      "seen_at": "2026-09-29T20:52:32.510142+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.62.0",
-      "title_key": "releasev0620",
-      "seen_at": "2026-09-30T00:32:34.180281+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://deepmind.google/blog/introducing-synthid-bio",
-      "title_key": "introducingsynthidbio",
-      "seen_at": "2026-09-30T19:26:54.766429+00:00",
-      "rule_version": 3
-    },
     {
       "url": "https://openai.com/index/gpt-5-1-for-developers",
       "title_key": "officialmodelpageupdatedgpt51fordevelopers",
@@ -468,6 +420,18 @@
       "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation",
       "title_key": "genie4anewgenerationofworldsimulation",
       "seen_at": "2026-10-27T16:42:58.047179+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-updates-models-agents-games",
+      "title_key": "thinlightandbuiltforeverythingnvidiartxsparkwindowslaptopsgainnewmodelsagenttoolsandgames",
+      "seen_at": "2026-10-31T01:38:12.117216+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.316",
+      "title_key": "v21316",
+      "seen_at": "2026-10-31T01:38:12.117216+00:00",
       "rule_version": 3
     }
   ],
