@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-03T02:56:37.081119+00:00",
+  "updated_at": "2026-11-03T18:28:24.051079+00:00",
   "seen": [
     {
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.160.1",
@@ -420,6 +420,12 @@
       "url": "https://runway.com/news/developers/runway-dev-plugins-for-coding-agents",
       "title_key": "runwaynewsrunwaydevisinclaudecodecodexandcursor",
       "seen_at": "2026-11-03T02:56:37.081119+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/cities-physical-agentic-ai-applications",
+      "title_key": "citiesworldwidebuildandscaleaiserviceswithnvidiaphysicalandagenticai",
+      "seen_at": "2026-11-03T18:28:24.051079+00:00",
       "rule_version": 3
     }
   ],
