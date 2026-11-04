@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-03T07:16:28.665806+00:00",
+  "updated_at": "2026-11-04T06:59:29.187717+00:00",
   "items": [
     {
       "url": "https://openai.com/index/introducing-openai-presence",
@@ -471,6 +471,11 @@
       "url": "https://runway.com/news/developers/runway-dev-plugins-for-coding-agents",
       "title_key": "runwaynewsrunwaydevisinclaudecodecodexandcursor",
       "reported_at": "2026-11-03T07:16:28.665806+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/cities-physical-agentic-ai-applications",
+      "title_key": "citiesworldwidebuildandscaleaiserviceswithnvidiaphysicalandagenticai",
+      "reported_at": "2026-11-04T06:59:29.187717+00:00"
     }
   ]
 }
