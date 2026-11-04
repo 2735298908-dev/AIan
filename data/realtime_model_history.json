@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-03T18:28:24.051079+00:00",
+  "updated_at": "2026-11-04T15:30:17.494856+00:00",
   "seen": [
     {
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.160.1",
@@ -426,6 +426,12 @@
       "url": "https://blogs.nvidia.com/blog/cities-physical-agentic-ai-applications",
       "title_key": "citiesworldwidebuildandscaleaiserviceswithnvidiaphysicalandagenticai",
       "seen_at": "2026-11-03T18:28:24.051079+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/daybreak-red-aws-govcloud",
+      "title_key": "daybreakredisnowavailableinawsgovclouduseast",
+      "seen_at": "2026-11-04T15:30:17.494856+00:00",
       "rule_version": 3
     }
   ],
