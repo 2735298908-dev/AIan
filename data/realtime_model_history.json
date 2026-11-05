@@ -1,19 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-11-05T02:32:48.485600+00:00",
+  "updated_at": "2026-11-05T18:48:50.700090+00:00",
   "seen": [
-    {
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.290",
-      "title_key": "v21290",
-      "seen_at": "2026-10-06T03:04:53.304323+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://blogs.nvidia.com/blog/local-ai-dgx-spark-64gb-sync",
-      "title_key": "nvidiadgxspark64gbgivesdevelopersmorewaystobuildandscalelocalai",
-      "seen_at": "2026-10-06T17:15:51.200685+00:00",
-      "rule_version": 3
-    },
     {
       "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.63.0",
       "title_key": "releasev0630",
@@ -438,6 +426,18 @@
       "url": "https://openai.com/index/gpt-5-2-for-science-and-math",
       "title_key": "officialmodelpageupdatedgpt52forscienceandmath",
       "seen_at": "2026-11-05T02:32:48.485600+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-6-cyber",
+      "title_key": "gpt6cyberadvancingthefrontierofalignedcybersecurityagents",
+      "seen_at": "2026-11-05T18:48:50.700090+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash",
+      "title_key": "geminiomni12flashfastandcosteffectivewithlongerclips",
+      "seen_at": "2026-11-05T18:48:50.700090+00:00",
       "rule_version": 3
     }
   ],
@@ -1413,6 +1413,24 @@
       "published_at": "2026-11-02T23:00:00+08:00",
       "original_title": "Runway News | Runway Dev is in Claude Code, Codex and Cursor",
       "reported_at": "2026-11-03T02:56:37.081119+00:00"
+    },
+    {
+      "importance": "S",
+      "title": "Gemini Omni 1.2 Flash 多模态能力正式发布",
+      "model_or_product": "Gemini Omni 1.2 Flash",
+      "version": "1.2",
+      "capability_change": "官方正式发布了 Gemini Omni 1.2 Flash，重点涉及多模态能力。",
+      "type": "全球大模型",
+      "pm_judgement": "这是重要模型正式发布，可能影响模型选型、Agent 工作流及接入成本。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "优先评测复杂多步骤 Agent、计算机操作、工具调用、任务成功率、时延与成本。",
+      "platform": "Google AI",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash",
+      "published_at": "2026-11-06T01:00:00+08:00",
+      "original_title": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
+      "reported_at": "2026-11-05T18:48:50.700090+00:00"
     }
   ]
 }
