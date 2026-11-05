@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-04T06:59:29.187717+00:00",
+  "updated_at": "2026-11-05T07:25:57.956875+00:00",
   "items": [
     {
       "url": "https://openai.com/index/introducing-openai-presence",
@@ -476,6 +476,11 @@
       "url": "https://blogs.nvidia.com/blog/cities-physical-agentic-ai-applications",
       "title_key": "citiesworldwidebuildandscaleaiserviceswithnvidiaphysicalandagenticai",
       "reported_at": "2026-11-04T06:59:29.187717+00:00"
+    },
+    {
+      "url": "https://openai.com/index/introducing-images-2-6",
+      "title_key": "introducingimages26",
+      "reported_at": "2026-11-05T07:25:57.956875+00:00"
     }
   ]
 }
