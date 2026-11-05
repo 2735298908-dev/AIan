@@ -1,13 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-11-04T15:30:17.494856+00:00",
+  "updated_at": "2026-11-05T02:32:48.485600+00:00",
   "seen": [
-    {
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.160.1",
-      "title_key": "01601",
-      "seen_at": "2026-10-05T22:43:23.387603+00:00",
-      "rule_version": 3
-    },
     {
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.290",
       "title_key": "v21290",
@@ -432,6 +426,18 @@
       "url": "https://openai.com/index/daybreak-red-aws-govcloud",
       "title_key": "daybreakredisnowavailableinawsgovclouduseast",
       "seen_at": "2026-11-04T15:30:17.494856+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/introducing-images-2-6",
+      "title_key": "introducingimages26",
+      "seen_at": "2026-11-05T02:32:48.485600+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/gpt-5-2-for-science-and-math",
+      "title_key": "officialmodelpageupdatedgpt52forscienceandmath",
+      "seen_at": "2026-11-05T02:32:48.485600+00:00",
       "rule_version": 3
     }
   ],
