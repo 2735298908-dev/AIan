@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-06T07:01:47.876522+00:00",
+  "updated_at": "2026-11-06T20:56:08.615579+00:00",
   "seen": [
     {
       "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event",
@@ -444,6 +444,18 @@
       "url": "https://lumalabs.ai/news/ai-image-video-models",
       "title_key": "bestaiimagetovideomodels8toolscomparedandrankedluma",
       "seen_at": "2026-11-06T07:01:47.876522+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science",
+      "title_key": "measuringhowaiagentshandleeverydaywetlabscience",
+      "seen_at": "2026-11-06T20:56:08.615579+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
+      "title_key": "v21319",
+      "seen_at": "2026-11-06T20:56:08.615579+00:00",
       "rule_version": 3
     }
   ],
