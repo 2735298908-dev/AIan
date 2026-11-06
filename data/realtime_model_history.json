@@ -1,13 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-11-06T00:22:56.333173+00:00",
+  "updated_at": "2026-11-06T07:01:47.876522+00:00",
   "seen": [
-    {
-      "url": "https://openai.com/index/sharing-ai-progress-in-mathematics",
-      "title_key": "sharingaiprogressinmathematics",
-      "seen_at": "2026-10-07T01:37:31.749478+00:00",
-      "rule_version": 3
-    },
     {
       "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event",
       "title_key": "nvidiamicrosoftkickoffanewbeginningforwindowspcswithrtxsparkandaiagents",
@@ -444,6 +438,12 @@
       "url": "https://openai.com/index/merge-builds-with-openai",
       "title_key": "mergebuildsproductandbusinesstoolswithopenaitechnology",
       "seen_at": "2026-11-06T00:22:56.333173+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://lumalabs.ai/news/ai-image-video-models",
+      "title_key": "bestaiimagetovideomodels8toolscomparedandrankedluma",
+      "seen_at": "2026-11-06T07:01:47.876522+00:00",
       "rule_version": 3
     }
   ],
@@ -1437,6 +1437,24 @@
       "published_at": "2026-11-06T01:00:00+08:00",
       "original_title": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
       "reported_at": "2026-11-05T18:48:50.700090+00:00"
+    },
+    {
+      "importance": "S",
+      "title": "Luma AI 视频生成能力升级",
+      "model_or_product": "Luma AI",
+      "version": "",
+      "capability_change": "官方升级了 Luma AI，重点涉及视频生成。",
+      "type": "AIGC视频",
+      "pm_judgement": "该更新可能影响 AI 产品的能力边界、模型选型或成本。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "建议阅读官方原文，并结合业务场景完成小样本评测。",
+      "platform": "Luma AI",
+      "url": "https://lumalabs.ai/news/ai-image-video-models",
+      "published_at": "2026-11-06T10:01:50.519000+08:00",
+      "original_title": "Best AI Image-to-Video Models: 8 Tools Compared and Ranked | Luma",
+      "reported_at": "2026-11-06T07:01:47.876522+00:00"
     }
   ]
 }
