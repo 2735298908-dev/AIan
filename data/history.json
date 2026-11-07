@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-06T07:25:40.382562+00:00",
+  "updated_at": "2026-11-07T06:37:24.729723+00:00",
   "items": [
     {
       "url": "https://openai.com/index/introducing-openai-presence",
@@ -481,6 +481,21 @@
       "url": "https://openai.com/index/introducing-images-2-6",
       "title_key": "introducingimages26",
       "reported_at": "2026-11-05T07:25:57.956875+00:00"
+    },
+    {
+      "url": "https://lumalabs.ai/news/ai-image-video-models",
+      "title_key": "bestaiimagetovideomodels8toolscomparedandrankedluma",
+      "reported_at": "2026-11-07T06:37:24.729723+00:00"
+    },
+    {
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash",
+      "title_key": "geminiomni12flashfastandcosteffectivewithlongerclips",
+      "reported_at": "2026-11-07T06:37:24.729723+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/nvidia-life-chris-alexiuk",
+      "title_key": "thewizardofopenweightschrisalexiukmakesaieasywithopenmodels",
+      "reported_at": "2026-11-07T06:37:24.729723+00:00"
     }
   ]
 }
