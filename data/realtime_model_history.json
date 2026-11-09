@@ -1,61 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-11-06T20:56:08.615579+00:00",
+  "updated_at": "2026-11-09T08:03:48.505654+00:00",
   "seen": [
-    {
-      "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event",
-      "title_key": "nvidiamicrosoftkickoffanewbeginningforwindowspcswithrtxsparkandaiagents",
-      "seen_at": "2026-10-07T22:03:09.380305+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.293",
-      "title_key": "v21293",
-      "seen_at": "2026-10-07T22:03:09.380305+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/introducing-gpt-5-for-developers",
-      "title_key": "officialmodelpageupdatedintroducinggpt5fordevelopers",
-      "seen_at": "2026-10-08T09:06:07.855330+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/gpt-5-3-instant",
-      "title_key": "officialmodelpageupdatedgpt53instant",
-      "seen_at": "2026-10-08T16:34:49.456402+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/introducing-gpt-4-5",
-      "title_key": "officialmodelpageupdatedintroducinggpt45",
-      "seen_at": "2026-10-08T16:34:49.456402+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.162.0",
-      "title_key": "01620",
-      "seen_at": "2026-10-08T22:09:25.981450+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://updates.midjourney.com/testing-thinking-mode",
-      "title_key": "testingthinkingmode",
-      "seen_at": "2026-10-08T22:09:25.981450+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/introducing-gpt-5-2",
-      "title_key": "officialmodelpageupdatedintroducinggpt52",
-      "seen_at": "2026-10-09T09:12:33.503269+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.296",
-      "title_key": "v21296",
-      "seen_at": "2026-10-09T20:58:35.670248+00:00",
-      "rule_version": 3
-    },
     {
       "url": "https://blogs.nvidia.com/blog/france-ecosystem-agentic-computing",
       "title_key": "nvidiaannouncesnewinvestmentsinfrancesstartupecosystem",
@@ -456,6 +402,12 @@
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
       "title_key": "v21319",
       "seen_at": "2026-11-06T20:56:08.615579+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/korea-secure-agentic-ai",
+      "title_key": "koreasaiecosystemadvancesandsecuresagenticaiwithnvidia",
+      "seen_at": "2026-11-09T08:03:48.505654+00:00",
       "rule_version": 3
     }
   ],
