@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-09T08:03:48.505654+00:00",
+  "updated_at": "2026-11-10T02:13:44.159362+00:00",
   "seen": [
     {
       "url": "https://blogs.nvidia.com/blog/france-ecosystem-agentic-computing",
@@ -408,6 +408,12 @@
       "url": "https://blogs.nvidia.com/blog/korea-secure-agentic-ai",
       "title_key": "koreasaiecosystemadvancesandsecuresagenticaiwithnvidia",
       "seen_at": "2026-11-09T08:03:48.505654+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321",
+      "title_key": "v21321",
+      "seen_at": "2026-11-10T02:13:44.159362+00:00",
       "rule_version": 3
     }
   ],
