@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-11T06:39:33.731783+00:00",
+  "updated_at": "2026-11-11T22:03:07.799970+00:00",
   "seen": [
     {
       "url": "https://blogs.nvidia.com/blog/france-ecosystem-agentic-computing",
@@ -432,6 +432,12 @@
       "url": "https://github.com/PixVerseAI/cli/releases/tag/v1.4.17",
       "title_key": "v1417",
       "seen_at": "2026-11-11T06:39:33.731783+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://runway.com/news/company-news/praxis-1-is-now-available",
+      "title_key": "runwaynewspraxis1isnowavailable",
+      "seen_at": "2026-11-11T22:03:07.799970+00:00",
       "rule_version": 3
     }
   ],
@@ -1461,6 +1467,24 @@
       "published_at": "2026-11-11T10:11:07+08:00",
       "original_title": "v1.4.17",
       "reported_at": "2026-11-11T06:39:33.731783+00:00"
+    },
+    {
+      "importance": "A",
+      "title": "Runway News | Praxis-1 开放权重",
+      "model_or_product": "Runway News | Praxis-1",
+      "version": "2.0",
+      "capability_change": "官方开放了 Runway News | Praxis-1，重点涉及开放权重。",
+      "type": "AIGC视频",
+      "pm_judgement": "该更新可能影响 AI 产品的能力边界、模型选型或成本。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "建议阅读官方原文，并结合业务场景完成小样本评测。",
+      "platform": "Runway",
+      "url": "https://runway.com/news/company-news/praxis-1-is-now-available",
+      "published_at": "2026-11-11T23:00:00+08:00",
+      "original_title": "Runway News | Praxis-1 Is Now Available",
+      "reported_at": "2026-11-11T22:03:07.799970+00:00"
     }
   ]
 }
