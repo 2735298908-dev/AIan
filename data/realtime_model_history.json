@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-10T23:28:32.784187+00:00",
+  "updated_at": "2026-11-11T06:39:33.731783+00:00",
   "seen": [
     {
       "url": "https://blogs.nvidia.com/blog/france-ecosystem-agentic-computing",
@@ -426,6 +426,12 @@
       "url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available",
       "title_key": "gemini4carbonisnowavailable",
       "seen_at": "2026-11-10T23:28:32.784187+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://github.com/PixVerseAI/cli/releases/tag/v1.4.17",
+      "title_key": "v1417",
+      "seen_at": "2026-11-11T06:39:33.731783+00:00",
       "rule_version": 3
     }
   ],
@@ -1437,6 +1443,24 @@
       "published_at": "2026-11-06T10:01:50.519000+08:00",
       "original_title": "Best AI Image-to-Video Models: 8 Tools Compared and Ranked | Luma",
       "reported_at": "2026-11-06T07:01:47.876522+00:00"
+    },
+    {
+      "importance": "S",
+      "title": "PixVerse 图像生成能力升级",
+      "model_or_product": "PixVerse",
+      "version": "v1.4.17",
+      "capability_change": "官方升级了 PixVerse，重点涉及图像生成、参考控制。公开信息包含 1K、1.5K、2K 等关键参数。",
+      "type": "AIGC视频",
+      "pm_judgement": "该更新可能影响 AI 产品的能力边界、模型选型或成本。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "建议阅读官方原文，并结合业务场景完成小样本评测。",
+      "platform": "PixVerse",
+      "url": "https://github.com/PixVerseAI/cli/releases/tag/v1.4.17",
+      "published_at": "2026-11-11T10:11:07+08:00",
+      "original_title": "v1.4.17",
+      "reported_at": "2026-11-11T06:39:33.731783+00:00"
     }
   ]
 }
