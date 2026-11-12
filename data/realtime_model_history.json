@@ -1,13 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-11-11T22:03:07.799970+00:00",
+  "updated_at": "2026-11-12T20:03:14.221287+00:00",
   "seen": [
-    {
-      "url": "https://blogs.nvidia.com/blog/france-ecosystem-agentic-computing",
-      "title_key": "nvidiaannouncesnewinvestmentsinfrancesstartupecosystem",
-      "seen_at": "2026-10-13T19:20:23.019918+00:00",
-      "rule_version": 3
-    },
     {
       "url": "https://openai.com/index/introducing-gpt-5-5",
       "title_key": "officialmodelpageupdatedintroducinggpt55",
@@ -438,6 +432,18 @@
       "url": "https://runway.com/news/company-news/praxis-1-is-now-available",
       "title_key": "runwaynewspraxis1isnowavailable",
       "seen_at": "2026-11-11T22:03:07.799970+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade",
+      "title_key": "googlesearchgetsamajorupgradewithgemini4hydrogen",
+      "seen_at": "2026-11-12T20:03:14.221287+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen",
+      "title_key": "introducinggemini4hydrogen",
+      "seen_at": "2026-11-12T20:03:14.221287+00:00",
       "rule_version": 3
     }
   ],
@@ -1485,6 +1491,24 @@
       "published_at": "2026-11-11T23:00:00+08:00",
       "original_title": "Runway News | Praxis-1 Is Now Available",
       "reported_at": "2026-11-11T22:03:07.799970+00:00"
+    },
+    {
+      "importance": "S",
+      "title": "Gemini 4 Hydrogen 正式发布",
+      "model_or_product": "Gemini 4 Hydrogen",
+      "version": "",
+      "capability_change": "官方正式发布了 Gemini 4 Hydrogen，重点涉及模型或产品能力。",
+      "type": "全球大模型",
+      "pm_judgement": "这是重要模型正式发布，可能影响模型选型、Agent 工作流及接入成本。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "优先评测复杂多步骤 Agent、计算机操作、工具调用、任务成功率、时延与成本。",
+      "platform": "Google DeepMind",
+      "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen",
+      "published_at": "2026-11-13T02:00:50+08:00",
+      "original_title": "Introducing Gemini 4 Hydrogen",
+      "reported_at": "2026-11-12T20:03:14.221287+00:00"
     }
   ]
 }
