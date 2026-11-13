@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-12T20:03:14.221287+00:00",
+  "updated_at": "2026-11-13T01:10:09.886062+00:00",
   "seen": [
     {
       "url": "https://openai.com/index/introducing-gpt-5-5",
@@ -444,6 +444,12 @@
       "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen",
       "title_key": "introducinggemini4hydrogen",
       "seen_at": "2026-11-12T20:03:14.221287+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-5-2",
+      "title_key": "officialmodelpageupdatedintroducinggpt52",
+      "seen_at": "2026-11-13T01:10:09.886062+00:00",
       "rule_version": 3
     }
   ],
