@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-13T07:20:39.597263+00:00",
+  "updated_at": "2026-11-14T07:03:32.698497+00:00",
   "items": [
     {
       "url": "https://openai.com/index/introducing-openai-presence",
@@ -501,6 +501,11 @@
       "url": "https://github.com/PixVerseAI/cli/releases/tag/v1.4.17",
       "title_key": "v1417",
       "reported_at": "2026-11-12T07:45:05.135417+00:00"
+    },
+    {
+      "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen",
+      "title_key": "introducinggemini4hydrogen",
+      "reported_at": "2026-11-14T07:03:32.698497+00:00"
     }
   ]
 }
