@@ -1,61 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-11-13T16:30:57.396529+00:00",
+  "updated_at": "2026-11-15T17:14:49.034112+00:00",
   "seen": [
-    {
-      "url": "https://openai.com/index/disney-sora-agreement",
-      "title_key": "officialmodelpageupdateddisneysoraagreement",
-      "seen_at": "2026-10-14T18:41:38.207556+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://blogs.nvidia.com/blog/uk-ecosystem-deployment",
-      "title_key": "nvidiaannouncesnewinvestmentsintheukstartupecosystem",
-      "seen_at": "2026-10-14T22:20:40.372072+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/gpt-4o-and-more-tools-to-chatgpt-free",
-      "title_key": "officialmodelpageupdatedgpt4oandmoretoolstochatgptfree",
-      "seen_at": "2026-10-14T22:20:40.372072+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/gpt-5-6-in-kiro",
-      "title_key": "officialmodelpageupdatedgpt56inkiro",
-      "seen_at": "2026-10-14T22:20:40.372072+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot",
-      "title_key": "officialmodelpageupdatedgpt56preferredmodelmicrosoft365copilot",
-      "seen_at": "2026-10-14T22:20:40.372072+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/gpt-4-api-general-availability",
-      "title_key": "officialmodelpageupdatedgpt4apigeneralavailability",
-      "seen_at": "2026-10-14T22:20:40.372072+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
-      "title_key": "officialmodelpageupdatedadvancingthepriceperformancefrontierwithgpt56",
-      "seen_at": "2026-10-15T00:35:27.772412+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://bfl.ai/blog/flux-3-image-klein",
-      "title_key": "flux3imagekleinopenweights56bparameters",
-      "seen_at": "2026-10-15T17:07:35.695813+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
-      "title_key": "officialmodelpageupdatedimprovinggpt56solinchatgpt",
-      "seen_at": "2026-10-15T20:22:32.749642+00:00",
-      "rule_version": 3
-    },
     {
       "url": "https://openai.com/index/introducing-gpt-5-4",
       "title_key": "officialmodelpageupdatedintroducinggpt54",
@@ -432,6 +378,12 @@
       "url": "https://openai.com/index/introducing-chatgpt-wallet",
       "title_key": "introducingchatgptwallet",
       "seen_at": "2026-11-13T16:30:57.396529+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://github.com/PixVerseAI/cli/releases/tag/v1.4.21",
+      "title_key": "v1421",
+      "seen_at": "2026-11-15T17:14:49.034112+00:00",
       "rule_version": 3
     }
   ],
@@ -1497,6 +1449,24 @@
       "published_at": "2026-11-13T02:00:50+08:00",
       "original_title": "Introducing Gemini 4 Hydrogen",
       "reported_at": "2026-11-12T20:03:14.221287+00:00"
+    },
+    {
+      "importance": "S",
+      "title": "PixVerse 视频生成能力升级",
+      "model_or_product": "PixVerse",
+      "version": "v1.4.21",
+      "capability_change": "官方升级了 PixVerse，重点涉及视频生成、参考控制。公开信息包含 480P、720P、4K 等关键参数。",
+      "type": "AIGC视频",
+      "pm_judgement": "该更新可能影响 AI 产品的能力边界、模型选型或成本。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "建议阅读官方原文，并结合业务场景完成小样本评测。",
+      "platform": "PixVerse",
+      "url": "https://github.com/PixVerseAI/cli/releases/tag/v1.4.21",
+      "published_at": "2026-11-15T18:46:46+08:00",
+      "original_title": "v1.4.21",
+      "reported_at": "2026-11-15T17:14:49.034112+00:00"
     }
   ]
 }
