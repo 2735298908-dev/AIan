@@ -1,31 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-11-15T17:14:49.034112+00:00",
+  "updated_at": "2026-11-16T20:32:47.626899+00:00",
   "seen": [
-    {
-      "url": "https://openai.com/index/introducing-gpt-5-4",
-      "title_key": "officialmodelpageupdatedintroducinggpt54",
-      "seen_at": "2026-10-16T21:18:39.720228+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/introducing-gpt-5-2-codex",
-      "title_key": "officialmodelpageupdatedintroducinggpt52codex",
-      "seen_at": "2026-10-16T21:18:39.720228+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/introducing-gpt-5-3-codex",
-      "title_key": "officialmodelpageupdatedintroducinggpt53codex",
-      "seen_at": "2026-10-16T21:18:39.720228+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano",
-      "title_key": "officialmodelpageupdatedintroducinggpt54miniandnano",
-      "seen_at": "2026-10-16T21:18:39.720228+00:00",
-      "rule_version": 3
-    },
     {
       "url": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl",
       "title_key": "openfromdatacentertodesktopnvidiaexpandsnemotronfamilywithhighestefficiencysupervlandboltmodels",
@@ -384,6 +360,24 @@
       "url": "https://github.com/PixVerseAI/cli/releases/tag/v1.4.21",
       "title_key": "v1421",
       "seen_at": "2026-11-15T17:14:49.034112+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/mlperf-training-endpoints-vera-rubin",
+      "title_key": "nvidiasweepsmlperftrainingandendpointsasverarubindebutswithleadingperformance",
+      "seen_at": "2026-11-16T20:32:47.626899+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/rubin-hpc",
+      "title_key": "nvidiaannouncesrubinhpcanewgputoaccelerateagentsforscienceengineeringandanalytics",
+      "seen_at": "2026-11-16T20:32:47.626899+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
+      "title_key": "morewaystomovecareforwardwithchatgptforhealthcare",
+      "seen_at": "2026-11-16T20:32:47.626899+00:00",
       "rule_version": 3
     }
   ],
