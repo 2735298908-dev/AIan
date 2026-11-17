@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-16T20:32:47.626899+00:00",
+  "updated_at": "2026-11-17T03:58:08.214625+00:00",
   "seen": [
     {
       "url": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl",
@@ -378,6 +378,12 @@
       "url": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
       "title_key": "morewaystomovecareforwardwithchatgptforhealthcare",
       "seen_at": "2026-11-16T20:32:47.626899+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.326",
+      "title_key": "v21326",
+      "seen_at": "2026-11-17T03:58:08.214625+00:00",
       "rule_version": 3
     }
   ],
