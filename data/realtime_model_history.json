@@ -1,19 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-11-17T03:58:08.214625+00:00",
+  "updated_at": "2026-11-17T22:27:57.282628+00:00",
   "seen": [
-    {
-      "url": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl",
-      "title_key": "openfromdatacentertodesktopnvidiaexpandsnemotronfamilywithhighestefficiencysupervlandboltmodels",
-      "seen_at": "2026-10-18T11:18:03.017881+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-launch-event-invite",
-      "title_key": "bethereforthebeginningcelebratethelaunchofnvidiartxspark",
-      "seen_at": "2026-10-18T11:18:03.017881+00:00",
-      "rule_version": 3
-    },
     {
       "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.42.0",
       "title_key": "v0420",
@@ -384,6 +372,30 @@
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.326",
       "title_key": "v21326",
       "seen_at": "2026-11-17T03:58:08.214625+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+      "title_key": "introducinggpt62astraandsol",
+      "seen_at": "2026-11-17T22:27:57.282628+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-4-5",
+      "title_key": "officialmodelpageupdatedintroducinggpt45",
+      "seen_at": "2026-11-17T22:27:57.282628+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
+      "title_key": "officialmodelpageupdatedadvancingthepriceperformancefrontierwithgpt56",
+      "seen_at": "2026-11-17T22:27:57.282628+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-5-for-developers",
+      "title_key": "officialmodelpageupdatedintroducinggpt5fordevelopers",
+      "seen_at": "2026-11-17T22:27:57.282628+00:00",
       "rule_version": 3
     }
   ],
@@ -1467,6 +1479,24 @@
       "published_at": "2026-11-15T18:46:46+08:00",
       "original_title": "v1.4.21",
       "reported_at": "2026-11-15T17:14:49.034112+00:00"
+    },
+    {
+      "importance": "S",
+      "title": "GPT-6.2 Astra and Sol 计算机与浏览器操作正式发布",
+      "model_or_product": "GPT-6.2 Astra and Sol",
+      "version": "6.2",
+      "capability_change": "官方正式发布了 GPT-6.2 Astra and Sol，重点涉及计算机与浏览器操作、代码与软件工程、API 接入。",
+      "type": "全球大模型",
+      "pm_judgement": "这是重要模型正式发布，可能影响模型选型、Agent 工作流及接入成本。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "优先评测复杂多步骤 Agent、计算机操作、工具调用、任务成功率、时延与成本。",
+      "platform": "OpenAI",
+      "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+      "published_at": "2026-11-18T01:45:00+08:00",
+      "original_title": "Introducing GPT-6.2 Astra and Sol",
+      "reported_at": "2026-11-17T22:27:57.282628+00:00"
     }
   ]
 }
