@@ -1,19 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-11-18T04:30:03.646486+00:00",
+  "updated_at": "2026-11-18T22:04:18.437176+00:00",
   "seen": [
-    {
-      "url": "https://openai.com/index/gpt-5-1-codex-max",
-      "title_key": "officialmodelpageupdatedgpt51codexmax",
-      "seen_at": "2026-10-19T06:19:27.667766+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/practical-guide-building-gpt-6",
-      "title_key": "officialmodelpageupdatedpracticalguidebuildinggpt6",
-      "seen_at": "2026-10-19T19:59:15.660168+00:00",
-      "rule_version": 3
-    },
     {
       "url": "https://openai.com/index/previewing-gpt-5-6-sol",
       "title_key": "officialmodelpageupdatedpreviewinggpt56sol",
@@ -408,6 +396,12 @@
       "url": "https://openai.com/index/introducing-gpt-5",
       "title_key": "officialmodelpageupdatedintroducinggpt5",
       "seen_at": "2026-11-18T04:30:03.646486+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://deepmind.google/blog/introducing-gemini-4-neon",
+      "title_key": "introducinggemini4neon",
+      "seen_at": "2026-11-18T22:04:18.437176+00:00",
       "rule_version": 3
     }
   ],
@@ -1509,6 +1503,24 @@
       "published_at": "2026-11-18T01:45:00+08:00",
       "original_title": "Introducing GPT-6.2 Astra and Sol",
       "reported_at": "2026-11-17T22:27:57.282628+00:00"
+    },
+    {
+      "importance": "S",
+      "title": "Gemini 4 Neon 正式发布",
+      "model_or_product": "Gemini 4 Neon",
+      "version": "",
+      "capability_change": "官方正式发布了 Gemini 4 Neon，重点涉及模型或产品能力。",
+      "type": "全球大模型",
+      "pm_judgement": "这是重要模型正式发布，可能影响模型选型、Agent 工作流及接入成本。",
+      "evaluation_basis": "待实测",
+      "evaluation_strengths": "待实测：暂不下优点结论，重点验证官方所述核心能力是否稳定。",
+      "evaluation_weaknesses": "待实测：重点验证边界场景、提示词遵循、稳定性、时延与成本。",
+      "recommended_action": "优先评测复杂多步骤 Agent、计算机操作、工具调用、任务成功率、时延与成本。",
+      "platform": "Google DeepMind",
+      "url": "https://deepmind.google/blog/introducing-gemini-4-neon",
+      "published_at": "2026-11-19T05:35:43+08:00",
+      "original_title": "Introducing Gemini 4 Neon",
+      "reported_at": "2026-11-18T22:04:18.437176+00:00"
     }
   ]
 }
