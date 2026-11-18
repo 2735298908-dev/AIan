@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-17T08:31:30.492612+00:00",
+  "updated_at": "2026-11-18T07:57:52.426175+00:00",
   "items": [
     {
       "url": "https://openai.com/index/introducing-openai-presence",
@@ -511,6 +511,11 @@
       "url": "https://github.com/PixVerseAI/cli/releases/tag/v1.4.21",
       "title_key": "v1421",
       "reported_at": "2026-11-16T07:19:23.672465+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/mlperf-training-endpoints-vera-rubin",
+      "title_key": "nvidiasweepsmlperftrainingandendpointsasverarubindebutswithleadingperformance",
+      "reported_at": "2026-11-18T07:57:52.426175+00:00"
     }
   ]
 }
