@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-18T22:04:18.437176+00:00",
+  "updated_at": "2026-11-19T03:37:49.716798+00:00",
   "seen": [
     {
       "url": "https://openai.com/index/previewing-gpt-5-6-sol",
@@ -402,6 +402,18 @@
       "url": "https://deepmind.google/blog/introducing-gemini-4-neon",
       "title_key": "introducinggemini4neon",
       "seen_at": "2026-11-18T22:04:18.437176+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.328",
+      "title_key": "v21328",
+      "seen_at": "2026-11-19T03:37:49.716798+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/practical-guide-building-gpt-6",
+      "title_key": "officialmodelpageupdatedpracticalguidebuildinggpt6",
+      "seen_at": "2026-11-19T03:37:49.716798+00:00",
       "rule_version": 3
     }
   ],
