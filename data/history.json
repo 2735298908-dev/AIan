@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-19T07:58:03.657416+00:00",
+  "updated_at": "2026-11-20T07:47:35.718758+00:00",
   "items": [
     {
       "url": "https://openai.com/index/introducing-openai-presence",
@@ -521,6 +521,16 @@
       "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
       "title_key": "introducinggpt62astraandsol",
       "reported_at": "2026-11-19T07:58:03.657416+00:00"
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.328",
+      "title_key": "v21328",
+      "reported_at": "2026-11-20T07:47:35.718758+00:00"
+    },
+    {
+      "url": "https://deepmind.google/blog/introducing-gemini-4-neon",
+      "title_key": "introducinggemini4neon",
+      "reported_at": "2026-11-20T07:47:35.718758+00:00"
     }
   ]
 }
