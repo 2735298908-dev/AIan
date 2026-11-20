@@ -1,13 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-11-19T22:14:30.914105+00:00",
+  "updated_at": "2026-11-20T03:27:01.897668+00:00",
   "seen": [
-    {
-      "url": "https://openai.com/index/gpt-5-5-instant",
-      "title_key": "officialmodelpageupdatedgpt55instant",
-      "seen_at": "2026-10-21T01:40:12.202490+00:00",
-      "rule_version": 3
-    },
     {
       "url": "https://blogs.nvidia.com/blog/europe-industrial-leaders-engineering-manufacturing",
       "title_key": "europesindustrialleadersreinventengineeringandmanufacturingwithnvidia",
@@ -414,6 +408,18 @@
       "url": "https://blogs.nvidia.com/blog/rtx-spark-desktop-local-ai-available-now",
       "title_key": "nvidiartxsparkcompactdesktopsoutnow",
       "seen_at": "2026-11-19T22:14:30.914105+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.171.0",
+      "title_key": "01710",
+      "seen_at": "2026-11-20T03:27:01.897668+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.329",
+      "title_key": "v21329",
+      "seen_at": "2026-11-20T03:27:01.897668+00:00",
       "rule_version": 3
     }
   ],
