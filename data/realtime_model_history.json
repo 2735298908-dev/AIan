@@ -1,49 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-11-20T03:27:01.897668+00:00",
+  "updated_at": "2026-11-20T21:14:23.684472+00:00",
   "seen": [
-    {
-      "url": "https://blogs.nvidia.com/blog/europe-industrial-leaders-engineering-manufacturing",
-      "title_key": "europesindustrialleadersreinventengineeringandmanufacturingwithnvidia",
-      "seen_at": "2026-10-21T13:53:44.572761+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://blogs.nvidia.com/blog/local-ai-gtc-rtx-dgx-spark-station-sync",
-      "title_key": "bringingthesparktoeuropelocalintelligencepowersnextwaveofagents",
-      "seen_at": "2026-10-21T13:53:44.572761+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://blogs.nvidia.com/blog/media-agentic-security-european-public-service-broadcasting-global-content-production",
-      "title_key": "nvidiaadvancesagenticsecurityformediafromeuropeanpublicservicebroadcastingtoglobalcontentproduction",
-      "seen_at": "2026-10-21T13:53:44.572761+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://blogs.nvidia.com/blog/enterprise-platforms-agent-toolkit",
-      "title_key": "nvidiaagenttoolkitexpandsgroundingenterpriseagentsincompanydata",
-      "seen_at": "2026-10-21T13:53:44.572761+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/openai-models-google-cloud",
-      "title_key": "openaimodelsarecomingtogooglecloud",
-      "seen_at": "2026-10-21T13:53:44.572761+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/gpt-5-1",
-      "title_key": "officialmodelpageupdatedgpt51",
-      "seen_at": "2026-10-21T13:53:44.572761+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/scaling-ai-research-for-complex-biological-data",
-      "title_key": "usingthousandsofaiagentstouncovernewleadsinbiologicaldata",
-      "seen_at": "2026-10-21T18:43:18.484835+00:00",
-      "rule_version": 3
-    },
     {
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.307",
       "title_key": "v21307",
@@ -420,6 +378,12 @@
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.329",
       "title_key": "v21329",
       "seen_at": "2026-11-20T03:27:01.897668+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/codex-security-now-in-research-preview",
+      "title_key": "codexsecuritynowinresearchpreview",
+      "seen_at": "2026-11-20T21:14:23.684472+00:00",
       "rule_version": 3
     }
   ],
