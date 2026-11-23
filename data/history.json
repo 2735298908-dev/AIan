@@ -1,17 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-11-22T07:29:17.228353+00:00",
+  "updated_at": "2026-11-23T08:16:54.141576+00:00",
   "items": [
-    {
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219",
-      "title_key": "v21219",
-      "reported_at": "2026-07-26T04:33:23.512314+00:00"
-    },
-    {
-      "url": "https://updates.midjourney.com/version-8-2",
-      "title_key": "version82",
-      "reported_at": "2026-07-26T04:33:23.512314+00:00"
-    },
     {
       "url": "https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
       "title_key": "一镜成片随心参考seedance25正式发布",
