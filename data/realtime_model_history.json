@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-24T00:59:14.774312+00:00",
+  "updated_at": "2026-11-24T11:03:43.254727+00:00",
   "seen": [
     {
       "url": "https://openai.com/index/better-prompt-caching-for-gpt-6",
@@ -306,6 +306,12 @@
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.172.0",
       "title_key": "01720",
       "seen_at": "2026-11-24T00:59:14.774312+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/introducing-chatgpt-financial-services",
+      "title_key": "introducingchatgptforfinancialservices",
+      "seen_at": "2026-11-24T11:03:43.254727+00:00",
       "rule_version": 3
     }
   ],
