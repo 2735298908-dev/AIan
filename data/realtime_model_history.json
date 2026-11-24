@@ -1,85 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-11-21T02:25:46.627725+00:00",
+  "updated_at": "2026-11-24T00:59:14.774312+00:00",
   "seen": [
-    {
-      "url": "https://lumalabs.ai/news/gemini-omni-flash-vs-kling-3.0",
-      "title_key": "geminiomniflashvskling30whichisbetterfor4kvideogenerationluma",
-      "seen_at": "2026-10-22T07:41:28.418147+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/gpt-6-for-everyone",
-      "title_key": "officialmodelpageupdatedgpt6foreveryone",
-      "seen_at": "2026-10-22T07:41:28.418147+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://lumalabs.ai/news/wan-3.0-vs-veo-3.1",
-      "title_key": "wan30vsveo31whichisbetterforcinematicproductionluma",
-      "seen_at": "2026-10-22T13:52:13.836979+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://lumalabs.ai/news/wan-3.0-vs-kling-3.0",
-      "title_key": "wan30vskling30whichisbetterforthepriceluma",
-      "seen_at": "2026-10-22T13:52:13.836979+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/introducing-aardvark",
-      "title_key": "introducingaardvarkopenaisagenticsecurityresearcher",
-      "seen_at": "2026-10-23T01:35:42.613680+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/powering-product-discovery-in-chatgpt",
-      "title_key": "poweringproductdiscoveryinchatgpt",
-      "seen_at": "2026-10-23T01:35:42.613680+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/introducing-new-capabilities-to-gpt-rosalind",
-      "title_key": "introducinggptrosalind55",
-      "seen_at": "2026-10-23T01:35:42.613680+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/introducing-openai-presence",
-      "title_key": "introducingopenaipresence",
-      "seen_at": "2026-10-23T01:35:42.613680+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/introducing-chatgpt-agent",
-      "title_key": "introducingchatgptagent",
-      "seen_at": "2026-10-23T01:35:42.613680+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://blogs.nvidia.com/blog/cosmos-open-train-evaluate-deploy-world-models",
-      "title_key": "nvidiacosmosopensnewtoolstotrainevaluateanddeployworldmodels",
-      "seen_at": "2026-10-23T07:38:47.484616+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.164.0",
-      "title_key": "01640",
-      "seen_at": "2026-10-23T07:38:47.484616+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://github.com/PixVerseAI/cli/releases/tag/v1.4.11",
-      "title_key": "v1411",
-      "seen_at": "2026-10-23T07:38:47.484616+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://openai.com/index/gpt-6-astra-next-generation-work",
-      "title_key": "officialmodelpageupdatedgpt6astranextgenerationwork",
-      "seen_at": "2026-10-23T07:38:47.484616+00:00",
-      "rule_version": 3
-    },
     {
       "url": "https://openai.com/index/better-prompt-caching-for-gpt-6",
       "title_key": "officialmodelpageupdatedbetterpromptcachingforgpt6",
@@ -378,6 +300,12 @@
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.330",
       "title_key": "v21330",
       "seen_at": "2026-11-21T02:25:46.627725+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.172.0",
+      "title_key": "01720",
+      "seen_at": "2026-11-24T00:59:14.774312+00:00",
       "rule_version": 3
     }
   ],
