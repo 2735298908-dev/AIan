@@ -1,13 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-11-24T11:03:43.254727+00:00",
+  "updated_at": "2026-11-25T04:19:28.184492+00:00",
   "seen": [
-    {
-      "url": "https://openai.com/index/better-prompt-caching-for-gpt-6",
-      "title_key": "officialmodelpageupdatedbetterpromptcachingforgpt6",
-      "seen_at": "2026-10-25T19:43:19.536623+00:00",
-      "rule_version": 3
-    },
     {
       "url": "https://openai.com/index/introducing-gpt-6-1-terra",
       "title_key": "introducinggpt61terra",
@@ -312,6 +306,18 @@
       "url": "https://openai.com/index/introducing-chatgpt-financial-services",
       "title_key": "introducingchatgptforfinancialservices",
       "seen_at": "2026-11-24T11:03:43.254727+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.332",
+      "title_key": "v21332",
+      "seen_at": "2026-11-25T04:19:28.184492+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/introducing-the-agents-api",
+      "title_key": "introducingtheagentsapi",
+      "seen_at": "2026-11-25T04:19:28.184492+00:00",
       "rule_version": 3
     }
   ],
