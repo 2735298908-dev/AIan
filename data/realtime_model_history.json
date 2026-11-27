@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-27T10:58:20.248468+00:00",
+  "updated_at": "2026-11-27T20:00:53.339565+00:00",
   "seen": [
     {
       "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-updates-models-agents-games",
@@ -330,6 +330,12 @@
       "url": "https://openai.com/index/openai-on-aws",
       "title_key": "openaimodelscodexandmanagedagentscometoaws",
       "seen_at": "2026-11-27T10:58:20.248468+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/devday-2026-recap",
+      "title_key": "devday2026recap",
+      "seen_at": "2026-11-27T20:00:53.339565+00:00",
       "rule_version": 3
     }
   ],
