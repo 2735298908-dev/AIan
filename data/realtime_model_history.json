@@ -1,25 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-11-25T04:19:28.184492+00:00",
+  "updated_at": "2026-11-27T10:58:20.248468+00:00",
   "seen": [
-    {
-      "url": "https://openai.com/index/introducing-gpt-6-1-terra",
-      "title_key": "introducinggpt61terra",
-      "seen_at": "2026-10-26T19:23:26.965662+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.311",
-      "title_key": "v21311",
-      "seen_at": "2026-10-26T23:55:43.163363+00:00",
-      "rule_version": 3
-    },
-    {
-      "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation",
-      "title_key": "genie4anewgenerationofworldsimulation",
-      "seen_at": "2026-10-27T16:42:58.047179+00:00",
-      "rule_version": 3
-    },
     {
       "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-updates-models-agents-games",
       "title_key": "thinlightandbuiltforeverythingnvidiartxsparkwindowslaptopsgainnewmodelsagenttoolsandgames",
@@ -318,6 +300,36 @@
       "url": "https://openai.com/index/introducing-the-agents-api",
       "title_key": "introducingtheagentsapi",
       "seen_at": "2026-11-25T04:19:28.184492+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-oss",
+      "title_key": "introducinggptoss",
+      "seen_at": "2026-11-27T10:58:20.248468+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/introducing-aardvark",
+      "title_key": "introducingaardvarkopenaisagenticsecurityresearcher",
+      "seen_at": "2026-11-27T10:58:20.248468+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/introducing-openai-presence",
+      "title_key": "introducingopenaipresence",
+      "seen_at": "2026-11-27T10:58:20.248468+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/previewing-gpt-5-6-sol",
+      "title_key": "previewinggpt56solanextgenerationmodel",
+      "seen_at": "2026-11-27T10:58:20.248468+00:00",
+      "rule_version": 3
+    },
+    {
+      "url": "https://openai.com/index/openai-on-aws",
+      "title_key": "openaimodelscodexandmanagedagentscometoaws",
+      "seen_at": "2026-11-27T10:58:20.248468+00:00",
       "rule_version": 3
     }
   ],
